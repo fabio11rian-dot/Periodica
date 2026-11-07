@@ -92,21 +92,22 @@
         <button id="btn-chutar" class="btn-chutar">Chutar</button>
       </div>
 
-      <table class="tabela-tentativas">
-        <thead>
-          <tr>
-            <th>Elemento</th>
-            <th>Nº Atômico</th>
-            <th>Massa Atômica</th>
-            <th>Bloco</th>
-            <th>Grupo</th>
-            <th>Período</th>
-            <th>Classificação</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody id="lista-tentativas"></tbody>
-      </table>
+      <div class="tentativas-wrapper" role="region" aria-label="Tentativas; deslize horizontalmente para ver todas as colunas" tabindex="0">
+        <table class="tabela-tentativas">
+          <thead>
+            <tr>    
+              <th>Elemento</th>
+              <th>Número Atômico</th>
+              <th>Bloco</th>
+              <th>Grupo</th>
+              <th>Período</th>
+              <th>Classificação</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="lista-tentativas"></tbody>
+        </table>
+      </div>
     </div>
   </div>
 
@@ -114,10 +115,11 @@
   <div id="aba-o-que-e" class="conteudo-aba">
     <div class="modal-container-detalhes" style="max-width: 650px; width: 100%;">
       <h2 style="margin-bottom: 15px; color: #11eebb;">O que é a Tabela Periódica?</h2>
-      
+     
       <p style="color: #cbd5e1; font-size: 1rem; line-height: 1.6; margin-bottom: 20px;">
         A Tabela Periódica é uma organização sistemática de todos os elementos químicos conhecidos, dispostos em função de suas propriedades periódicas e números atômicos crescentes.
       </p>
+
 
       <!-- Menu Suspenso 1: Períodos -->
       <details style="background: rgba(17, 238, 238, 0.05); border: 1px solid #11eebb33; border-radius: 8px; padding: 12px; margin-bottom: 10px;">
@@ -132,6 +134,7 @@
         </p>
       </details>
 
+
       <!-- Menu Suspenso 2: Grupos -->
       <details style="background: rgba(17, 238, 238, 0.05); border: 1px solid #11eebb33; border-radius: 8px; padding: 12px; margin-bottom: 10px;">
         <summary style="cursor: pointer; font-weight: bold; color: #11eebb; outline: none;">
@@ -141,6 +144,7 @@
           São as colunas verticais (total de 18). Elementos de um mesmo grupo possuem o mesmo número de elétrons na camada de valência, o que lhes confere propriedades químicas semelhantes.
         </p>
       </details>
+
 
       <!-- Menu Suspenso 3: Propriedades Periódicas -->
       <details style="background: rgba(17, 238, 238, 0.05); border: 1px solid #11eebb33; border-radius: 8px; padding: 12px;">
@@ -166,7 +170,7 @@
     </div>
   </div>
 
-  <!-- Aba 4: Dúvidas e sugestões -->
+
 <!-- Aba 4: Dúvidas e sugestões -->
 <div id="aba-duvidas" class="conteudo-aba">
   <div class="modal-container-detalhes" style="max-width: 650px; width: 100%; max-height: 70vh; height: 100%; overflow-y: auto;">
@@ -830,25 +834,25 @@
         config: "1s² 2s² 2p²", eletronegatividade: "2,55", raioAtomico: "70 pm", oxidacao: "+4, +2, -4",
         descoberta: "Antiguidade", descobridor: "? ? ? ? ?",
           etimologia: `
-          <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Carbon:</strong> deriva do latim 'carbo', carvão.</span>
+          <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #22c55e;"> Carbon:</strong> deriva do latim 'carbo', que significa 'carvão'.</span>
           `,
           contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">O carbono está entre os elementos que são conhecidos desda a antiguidade. Há cerca de 400.000 anos, o carbono já era manipulado pelos homens das cavernas, no uso cot=ntrolado do fogo. Os homens antigos aprenderam que a combustão da madeira gerava o carvão vegetal, que queimava mais e por mais tempo.</li>
-                <li style="margin-bottom: 8px;">Há cerca de 30.000 anos pigmentos derivados de carvã já eram utilizados para desenhar nas paredes de cavernas.</li>
-                <li style="margin-bottom: 8px;">Por volta de 1500 a.C., o carbono passou a ser adicionado ao ferro pelos hititas, formando uma liga metálica muito mais resistente e durável: o aço.</li>
-                <li style="margin-bottom: 8px;">Aproximadamente em 500 a.C., na China antiga, os artesãos eram capazes de controlar a proporção de carvão para ajustar o calor e as propriedades do ferro fundido. Por volta de 400 a.C., na Índia, os diamantes passaram a ser encontrados em cascalhos nos rios, sendo registradas como pedras preciosas e como tesouro pelo pensador Kautilya.</li>
-                <li style="margin-bottom: 8px;">Em 1694, os italianos Giuseppe Averani e Cipriano Targioni observaram que os diamantes eram destruidos ao concentrar a luz solar sobre eles através de uma lente de aumento.</li>
+                <li style="margin-bottom: 8px;">O carbono está entre os elementos que são conhecidos desde a antiguidade. Há cerca de 400.000 anos, o carbono já era manipulado pelos homens das cavernas, no uso controlado do fogo. Os homens antigos aprenderam que a combustão da madeira gerava o carvão vegetal, que queimava mais e por mais tempo.</li>
+                <li style="margin-bottom: 8px;">Há cerca de 30.000 anos pigmentos derivados de carvão já eram utilizados para desenhar nas paredes de cavernas.</li>
+                <li style="margin-bottom: 8px;">Por volta de 1500 a.C., o carbono passou a ser adicionado ao ferro pelos hititas, forming uma liga metálica muito mais resistente e durável: o aço.</li>
+                <li style="margin-bottom: 8px;">Aproximadamente em 500 a.C., na China antiga, os artesãos eram capazes de controlar a proporção de carvão para ajustar o calor e as propriedades do ferro fundido. Por volta de 400 a.C., na Índia, os diamantes passaram a ser encontrados em cascalhos nos rios, sendo registrados como pedras preciosas e como tesouro pelo pensador Kautilya.</li>
+                <li style="margin-bottom: 8px;">Em 1694, os italianos Giuseppe Averani e Cipriano Targioni observaram que os diamantes eram destruídos ao concentrar a luz solar sobre eles através de uma lente de aumento.</li>
                 <li style="margin-bottom: 8px;">Em 1722, René Antoine Ferchault de Réaumur propôs pela primeira vez que algum elemento fosse responsável por transformar o ferro em aço.</li>
-                <li style="margin-bottom: 8px;">A primeira vez que o carbono foi tratado como elemento químico foi quando o química francês Antoine Lavoisier o nomeou e realizou diversos experimentos sobre sua natueza, o classificando como um elemento químico fundamental na primeira versão do que viria a ser a tabela periódica.</li>
+                <li style="margin-bottom: 8px;">A primeira vez que o carbono foi tratado como elemento químico foi quando o químico francês Antoine Lavoisier o nomeou e realizou diversos experimentos sobre sua natureza, classificando-o como um elemento químico fundamental na primeira versão do que viria a ser a tabela periódica.</li>
                 <li style="margin-bottom: 8px;">Em 1772, Lavoisier conseguiu comprar um diamante, que colocou em um pote de vidro fechado. Ele então focou os raios de sol no diamante por meio de uma grande lupa e viu o diamante queimar e desaparecer. Porém, ele constatou que a massa do pote não diminuiu, devido à formação de dióxido de carbono. Assim, Lavoisier concluiu que o diamante possui a mesma composição do carvão, sendo ambos feitos de carbono.</li>
                 <li style="margin-bottom: 8px;">Em 1779, o químico sueco Carl Scheele chegou a uma conclusão parecida, ao queimar o grafite e concluir que formava dióxido de carbono, concluindo que o grafite também era composto principalmente de carbono.</li>
-                <li style="margin-bottom: 8px;">Em 1796, novamente o diamante era analisado, dessa vez por Smithson Tennant, que provou que o diamante não era somente um composto de carbono, mas uma forma de carbono puro. Tennat futuramente concluiu, também, que em quantidades iguais o diamante e o carvão formavam a mesma quantidade de dióxido de carbono.</li>
-                <li style="margin-bottom: 8px;">Em 1828, Friedrich Wöhler conseguiu sintetizar a ureia a partir de reagente inorgânicos, demonstrando que compostos orgânicos (compostos por carbono) não dependiam de qualquer "força vital", unindo enfim a química orgânica e inorgânica.</li>
+                <li style="margin-bottom: 8px;">Em 1796, novamente o diamante era analisado, dessa vez por Smithson Tennant, que provou que o diamante não era somente um composto de carbono, mas uma forma de carbono puro. Tennant futuramente concluiu, também, que em quantidades iguais o diamante e o carvão formavam a mesma quantidade de dióxido de carbono.</li>
+                <li style="margin-bottom: 8px;">Em 1828, Friedrich Wöhler conseguiu sintetizar a ureia a partir de reagentes inorgânicos, demonstrando que compostos orgânicos (compostos por carbono) não dependiam de qualquer "força vital", unindo enfim a química orgânica e inorgânica.</li>
                 <li style="margin-bottom: 8px;">Em 1855, Benjamin Brodie produziu grafite puro a partir do carbono, provando que o grafite era outra forma de carbono puro (diferente do que se pensava na época, de que era composto de chumbo).</li>
-                <li style="margin-bottom: 8px;">Em 1858, Friedrich August Kekulé fez uma proposição que revolucionou a química: ele propôs que os átomos de carbono poderiam se ligar entre si formando cadeias e anéis, estabelecendo as bases da estrutura molecular orgânica. Em 1874, Jacobus van 't Hoff e Joseph Le Bel propuseram a geometria tetraédica para as ligações de carbono, outra base muito importante para a química orgânica.</li>
-                <li style="margin-bottom: 8px;">Em 1955, Francis Brundy e colegas da General Electric foram capazes de transformar o grafite em diamante através de alta temperatura e pressão, após diversas tentativas falhas. Isso é possível devido à semelhança molecular de ambos, que são duas formas alotrópicas do mesmo elemento.</li>
+                <li style="margin-bottom: 8px;">Em 1858, Friedrich August Kekulé fez uma proposição que revolucionou a química: ele propôs que os átomos de carbono poderiam se ligar entre si formando cadeias e anéis, estabelecendo as bases da estrutura molecular orgânica. Em 1874, Jacobus van 't Hoff e Joseph Le Bel propuseram a geometria tetraédrica para as ligações de carbono, outra base muito importante para a química orgânica.</li>
+                <li style="margin-bottom: 8px;">Em 1955, Francis Bundy e colegas da General Electric foram capazes de transformar o grafite em diamante através de alta temperatura e pressão, após diversas tentativas falhas. Isso é possível devido à semelhança molecular de ambos, que são duas formas alotrópicas do mesmo elemento.</li>
                 <li style="margin-bottom: 8px;">Em 1996, o prêmio Nobel da Química foi dedicado a Richard Smalley, Robert Curl e Harold Kroto, pela descoberta dos fulerenos (C<sub>60</sub>), forma alotrópica do carbono com estrutura esférica.</li>
                 <li style="margin-bottom: 8px;">Em 2010, Andre Geim e Konstantin Novoselov receberam o prêmio Nobel da Química pela descoberta e isolamento do grafeno, forma alotrópica do carbono com espessura de um átomo, o que descobriram em 2004 e deu início à era dos materiais bidimensionais.</li>
               </ul>
@@ -859,76 +863,72 @@
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">As características do carbono variam dependendo da forma alotrópica em que se apresenta. Todas as suas formas alotrópicas são sólidas em temperatura ambiente e possuem um alto ponto de ebulição.</li>
                 <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">O diamante é um sólido cristalino, transparente e incolor, sendo o material mais duro conhecido e um material precioso.</li>
-                <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">O grafite é preto e brilhante, ainda que macio, disposto em camadas de anéis hexoganais de carbono.</li>
-                <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Os fluerenos e grafenos são semelhantes a pós pretos ou marrons-escuro, muito parecidos com a fuligem.</li>
-                <li style="margin-bottom: 8px;">Devido ao seu estado tetravalente, o carbono possui a capacidade única de formar cadeias complexas, seladas por átomos de hidrogênio ou íons. Se faz presente em toda e qualquer substância orgânica conhecida, sendo considerada a base das substâncias que compõem todos os seres vivos.</li>
+                <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">O grafite é preto e brilhante, ainda que macio, disposto em camadas de anéis hexagonais de carbono.</li>
+                <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Os fulerenos e grafenos são semelhantes a pós pretos ou marrons-escuros, muito parecidos com a fuligem.</li>
+                <li style="margin-bottom: 8px;">Devido ao seu estado tetravalente, o carbono possui a capacidade única de formar cadeias complexas, seladas por átomos de hidrogênio ou íons. Faz-se presente em toda e qualquer substância orgânica conhecida, sendo considerada a base das substâncias que compõem todos os seres vivos.</li>
               </ul>
             </div>
           `, 
           OndeEncontrado: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;">O carbono pode ser encontrado em formas minerais, na forma de hidrocarbonetos, carvão, gás natural, óleo cru e xisto betumoso. Pode ser visto em formas alotrópicas (como grafite ou diamante) ou de carbonatos (como giz, calcários ou dolomita).</li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Toda e qualquer forma de vida, desde as bactérias até as sequoias, é composta essencialmente por compostos de carbono. O DNA, as proteínas, açúcares, gorduras, enzimas, organelas das células, tecidos, a casca das árvores, as unhas dos pés... absolutamente todo o corpo dos seres vivos é feito de carbono, dispostos em cadeias de todos os formatos e estruturas imagináveis.</li>
+                <li style="margin-bottom: 8px;">É o quarto elemento mais abundante do universo, sendo formado principalmente pelo processo triplo-alfa no núcleo de estrelas gigantes, pela fusão de três núcleos de hélio. Também pode ser encontrado nos detritos de supernovas.</li>
+                <li style="margin-bottom: 8px;">Faz-se presente na atmosfera de diversos planetas, principalmente na forma de CO<sub>2</sub>. Na Terra, o gás carbônico é encontrado dissolvido nos oceanos e é produzido em massa pelas plantas e algas.</li>
+                <li style="margin-bottom: 8px;">O carbono pode ser encontrado em formas minerais, na forma de hidrocarbonetos (oriundos de seres vivos decompostos ao longo de milhões de anos), carvão, gás natural, óleo cru e xisto betumoso. Pode ser visto em formas alotrópicas (como grafite ou diamante) ou de carbonatos (como giz, calcários ou dolomita).</li>
               </ul>
             </div>
           `,
           Aplicacoes: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">O carbono impuro e amorfo, na forma de carvão vegetal ou coque, é utilizado como combustível na fundição de metais, especialmente na indústria do aço, ainda que seu uso seja muito contestado pela alta emissão de CO<sub>2</sub>.</li>
+                <li style="margin-bottom: 8px;">O grafite é amplamente utilizado na fabricação de lápis e materiais de escrita, em escovas de motores elétricos, em lubrificantes, em eletrodos e no revestimento de fornos.</li>
+                <li style="margin-bottom: 8px;">O carvão ativado é aplicado na purificação e filtração, como em respiradores e exaustores de cozinhas.</li>
+                <li style="margin-bottom: 8px;">A fibra de carbono é muito utilizada por ser altamente resistente e muito leve. É usada em raquetes de tênis, esquis, varas de pesca e até mesmo em aeronaves.</li>
+                <li style="margin-bottom: 8px;">Os diamantes são usados para cortar ou perfurar rochas, devido à sua alta dureza. Também são muito utilizados em ferramentas de corte de cristais, em filmes para proteger superfícies e especialmente na fabricação de joias de alta classe.</li>
+                <li style="margin-bottom: 8px;">Os hidrocarbonetos, compostos somente por carbono e hidrogênio, são essenciais para a indústria. Além de produzirem combustíveis, são muito usados como matéria-prima para polímeros, fibras, tintas, óleos, solventes, plásticos e diversas outras substâncias.</li>
+                <li style="margin-bottom: 8px;">Outros compostos orgânicos fundamentais para a indústria incluem álcoois, fármacos, fibras, produtos de limpeza, corantes, suplementos, perfumes e basicamente milhões de outros compostos..</li>
+                <li style="margin-bottom: 8px;">É adicionado ao ferro para a fabricação do aço, uma das mais importantes ligas metálicas para a indústria. O aço, por sua vez, é utilizado em construções, na fabricação de automóveis, na produção de todos os tipos de ferramentas e até na produção de outras ligas.</li>
+                <li style="margin-bottom: 8px;">O isótopo carbono-14 é muito utilizado para a datação arqueológica, possibilitando descobrir a idade de objetos milenares.</li>
+                <li style="list-style-type: none; margin-top: 10px; padding-left: 10px; border-left: 2px solid #22c55e;">
+                  <em><strong style="color:#22c55e;">Nota dos autores:</strong> dentre todos os elementos pesquisados, o carbono foi o que mais apresentou aplicações diversas na indústria, não só pela sua variedade de alótropos como por estar presente em dezenas de milhões de compostos químicos conhecidos, tanto inorgânicos quanto, principalmente, orgânicos. Assim, estas são só algumas dessas aplicações; recomendamos que, caso permaneça curioso, possa pesquisar em nossas referências todas as demais aplicações desse elemento.</em>
+                  <p style="margin-top: 10px;">
+                  <em>Para se ter uma ideia, pense em um setor da indústria, qualquer um. Pensou? Envolve carbono, muito carbono, em diversas partes e, se brincar, no processo inteiro. É possivelmente o elemento mais trabalhado pelo ser humano.</em>
+                  </p>
+                </li>
+              </ul>
             </div>
-          `,  
+          `,   
           curiosidades: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">Em toda a química, são conhecidos mais compostos que possuem carbono do que compostos que não possuem. Em outras palavras, o carbono está presente na maioria das substâncias conhecidas pela química, especialmente em compostos orgânicos.</li>
                 <li style="margin-bottom: 8px;">O carbono carrega o título de elemento com maior ponto de ebulição.</li>
-                <li style="margin-bottom: 8px;">Assim como outros elementos conhecidos desde a antiguidade, o carbono é mencionado em diversos textos antigos, incluindo escrituras hindus (Vedas, Ramayana e Mahabharata) eaté mesmo na Bíblia (especialmente no livro de Provérbios).</li>
+                <li style="margin-bottom: 8px;">Assim como outros elementos conhecidos desde a antiguidade, o carbono é mencionado em diversos textos antigos, incluindo escrituras hindus (Vedas, Ramayana e Mahabharata) e até mesmo na Bíblia (especialmente no livro de Provérbios).</li>
                 <li style="margin-bottom: 8px;">O carbono é o elemento com mais formas alotrópicas descobertas. As formas mais conhecidas e com mais aplicações são as seguintes:</li>
                     <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">
-                      <strong style="color: #22c55e;">Diamante:</strong> do grego 'adamas' (invencível), é encontrado sob grandes profundidades, sendo formado sob altíssimas pressões e temperaturas no manto e transportado para a superfície através de erupções vulcânicas. É fomrado por uma estrutura cristalina tridimensional, sendo transparente, isolante elétrico e o material mais duro conhecido. É incolor, ainda que impurezas e deformações estrutuais possam modificar a sua coloração.
+                      <strong style="color: #22c55e;">Diamante:</strong> do grego 'adamas' (invencível), é encontrado sob grandes profundidades, sendo formado sob altíssimas pressões e temperaturas no manto e transportado para a superfície através de erupções vulcânicas. É formado por uma estrutura cristalina tridimensional, sendo transparente, isolante elétrico e o material mais duro conhecido. É incolor, ainda que impurezas e deformações estruturais possam modificar a sua coloração.
                     </li>
                     <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">
-                      <strong style="color: #22c55e;">Grafite:</strong> do grego 'graphein' (escrever), é encontrado em rochas metamórficas, ígneas e sedimentares em depósitos minerais, podendo também ser sintetizado em escala industrial pelo tratamento do petróleo sob altas temperaturas. Consiste em camadas de anéis de hexagonais de carbono, por isso deixa marcas escuras ao seu friccionado sobre superfícies, e por isso é muito utilizado para marcações e para a escrita.
+                      <strong style="color: #22c55e;">Grafite:</strong> do grego 'graphein' (escrever), é encontrado em rochas metamórficas, ígneas e sedimentares em depósitos minerais, podendo também ser sintetizado em escala industrial pelo tratamento do petróleo sob altas temperaturas. Consiste em camadas de anéis hexagonais de carbono, por isso deixa marcas escuras ao ser friccionado sobre superfícies, sendo muito utilizado para marcações e para a escrita.
                     </li>
                     <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">
                       <strong style="color: #22c55e;">Fulereno:</strong> sendo uma homenagem ao arquiteto Richard Buckminster Fuller, é um composto que contém átomos de carbono conectados em uma estrutura esférica, semelhante a uma bola de futebol, de fórmula C<sub>60</sub>. É formado por 60 átomos de carbono dispostos em uma estrutura de pentágonos e hexágonos.
                     </li>
                     <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">
-                      <strong style="color: #22c55e;">Grafeno:</strong>  a mais recente das formas alotrópicas do carbono, nomeado em alusão ao grafite, é uma única folha de átomos de carbono, disposotos em uma rede hexagonal com espessura de somente um átomo.
+                      <strong style="color: #22c55e;">Grafeno:</strong> a mais recente das formas alotrópicas do carbono, nomeado em alusão ao grafite, é uma única folha de átomos de carbono, dispostos em uma rede hexagonal com espessura de somente um átomo.
                     </li>
                     <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">
-                      além destas principais, existe também a lonsdaleíta (diamante hexagonal), caoíta, o carbono tubular e algumas formas amorfas de carbono, como o negro de fumo, o carvão comum e o coque.
+                      Além destas principais, existe também a lonsdaleíta (diamante hexagonal), caoíta, o carbono tubular e algumas formas amorfas de carbono, como o negro de fumo, o carvão comum e o coque.
                     </li>
                 <li style="margin-bottom: 8px;">Foi o primeiro elemento descoberto capaz de formar substâncias simples distintas, sendo a base para a descoberta do conceito de alotropia.</li>
                 <li style="margin-bottom: 8px;">A unidade de massa atômica usada na tabela periódica é baseada no carbono-12, o isótopo de carbono mais abundante da natureza. Assim, a unidade de massa atômica (u) de qualquer elemento ou substância corresponde a aproximadamente <sup>1</sup>/<sub>12</sub> da massa de um mol de átomos de carbono-12.</li>
-                <li style="margin-bottom: 8px;">Todo o carbono presente em nossos corpos provavelmente á fizeram parte do dióxido de carbono da atmosfera.</li>
-                <li style="margin-bottom: 8px;">O diamante trata-se do melhor condutor térmico dentre todos os materiais volumétricos conhecidos, por ocnta disso parece tão frio ao toque.</li>
-                <li style="margin-bottom: 8px;">É o quarto elemeneto mais abundante do universo, sendo formado principalmente pelo processo triplo-alfa no núcleo de estrelas gigantes, pela fusão de três núcleos de hélio.</li>
+                <li style="margin-bottom: 8px;">Todo o carbono presente em nossos corpos provavelmente já fez parte do dióxido de carbono da atmosfera.</li>
+                <li style="margin-bottom: 8px;">O diamante trata-se do melhor condutor térmico dentre todos os materiais volumétricos conhecidos; por conta disso, parece tão frio ao toque.</li>
+                <li style="margin-bottom: 8px;">Já foram encontrados diamantes em regiões atingidas por meteoritos. Esses diamantes, porém, são conhecidos como lonsdaleíta, outro alótropo de carbono, com uma estrutura cristalina hexagonal.</li>
                 <li style="margin-bottom: 8px;">Por sermos feitos basicamente de carbono, é possível para o ser humano ser transformado em diamantes sintéticos através das cinzas de sua cremação.</li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Por conta de todas as suas aplicações, por se fazer presente em tantos compostos e alótropos, por ser tão antigo, por ser a base da vida e de toda uma ramificação da química e por ser todos os marcos que desempenhou na história da química, recebe por diversas vezes o título de Rei dos Elementos.</li>
               </ul>
             </div>
           `, 
@@ -936,13 +936,13 @@
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">
-                  CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Carbon Element Facts</strong>. 
-                  Disponível em: <a href="https://www.chemicool.com/elements/carbon.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/carbon.html</a>. 
+                  ATOMIC LAB. <strong style="color: #ffffff; font-weight: bold;">Carbon (C) - Element Properties and Data</strong>. 
+                  Disponível em: <a href="https://atomic-lab.net/elements/c-carbon" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://atomic-lab.net/elements/c-carbon</a>. 
                   Acesso em: 30 ago. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                  WEBQC. <strong style="color: #ffffff; font-weight: bold;">Propriedades do elemento Carbono (C) - Tabela Periódica</strong>. 
-                  Disponível em: <a href="https://pt.webqc.org/periodictable-Carbono-C.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Carbono-C.html</a>. 
+                  CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Carbon Element Facts</strong>. 
+                  Disponível em: <a href="https://www.chemicool.com/elements/carbon.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/carbon.html</a>. 
                   Acesso em: 30 ago. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
@@ -956,13 +956,8 @@
                   Acesso em: 30 ago. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                  ROYAL SOCIETY OF CHEMISTRY. <strong style="color: #ffffff; font-weight: bold;">Carbon - Element information, properties and uses | Periodic Table</strong>. 
-                  Disponível em: <a href="https://periodic-table.rsc.org/element/6/carbon" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/6/carbon</a>. 
-                  Acesso em: 30 ago. 2026.
-                </li>
-                <li style="margin-bottom: 8px;">
-                  PUBCHEM (NIH). <strong style="color: #ffffff; font-weight: bold;">Periodic Table of Elements: Carbon</strong>. 
-                  Disponível em: <a href="https://pubchem.ncbi.nlm.nih.gov/element/Carbon" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pubchem.ncbi.nlm.nih.gov/element/Carbon</a>. 
+                  MANUAL DA QUÍMICA. <strong style="color: #ffffff; font-weight: bold;">Carbono: características, propriedades e alótropos</strong>. 
+                  Disponível em: <a href="https://www.manualdaquimica.com/quimica-organica/carbono.htm" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.manualdaquimica.com/quimica-organica/carbono.htm</a>. 
                   Acesso em: 30 ago. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
@@ -971,18 +966,23 @@
                   Acesso em: 30 ago. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                  ATOMIC LAB. <strong style="color: #ffffff; font-weight: bold;">Carbon (C) - Element Properties and Data</strong>. 
-                  Disponível em: <a href="https://atomic-lab.net/elements/c-carbon" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://atomic-lab.net/elements/c-carbon</a>. 
-                  Acesso em: 30 ago. 2026.
-                </li>
-                <li style="margin-bottom: 8px;">
-                  MANUAL DA QUÍMICA. <strong style="color: #ffffff; font-weight: bold;">Carbono: características, propriedades e alótropos</strong>. 
-                  Disponível em: <a href="https://www.manualdaquimica.com/quimica-organica/carbono.htm" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.manualdaquimica.com/quimica-organica/carbono.htm</a>. 
+                  PUBCHEM (NIH). <strong style="color: #ffffff; font-weight: bold;">Periodic Table of Elements: Carbon</strong>. 
+                  Disponível em: <a href="https://pubchem.ncbi.nlm.nih.gov/element/Carbon" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pubchem.ncbi.nlm.nih.gov/element/Carbon</a>. 
                   Acesso em: 30 ago. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
                   QUÍMICA NOVA NA ESCOLA (SBQ). <strong style="color: #ffffff; font-weight: bold;">Elemento Químico: Carbono</strong>. 
                   Disponível em: <a href="https://qnesc.sbq.org.br/online/qnesc05/elemento.pdf" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://qnesc.sbq.org.br/online/qnesc05/elemento.pdf</a>. 
+                  Acesso em: 30 ago. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                  ROYAL SOCIETY OF CHEMISTRY. <strong style="color: #ffffff; font-weight: bold;">Carbon - Element information, properties and uses | Periodic Table</strong>. 
+                  Disponível em: <a href="https://periodic-table.rsc.org/element/6/carbon" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/6/carbon</a>. 
+                  Acesso em: 30 ago. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                  WEBQC. <strong style="color: #ffffff; font-weight: bold;">Propriedades do elemento Carbono (C) - Tabela Periódica</strong>. 
+                  Disponível em: <a href="https://pt.webqc.org/periodictable-Carbono-C.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Carbono-C.html</a>. 
                   Acesso em: 30 ago. 2026.
                 </li>
               </ul>
@@ -3762,7 +3762,7 @@
                     <li style="margin-bottom: 8px;">
                         ENCYCLOPÆDIA BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Technetium</strong>. 
                         Disponível em: <a href="https://www.britannica.com/science/technetium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/technetium</a>. 
-                        Acesso em: 11 out. 2026.
+                        Acesso e  m: 11 out. 2026.
                     </li>
                     <li style="margin-bottom: 8px;">
                         ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Technetium - Element information, properties and uses</strong>. 
@@ -3776,30 +3776,29 @@
         },
       44: {
         numero: 44, simbolo: "Ru", nome: "Rutênio", familia: "metais-de-transicao", familiaNome: "Metais de Transição",
-        massa: "107,87 u", grupo: "12", periodo: "5", estado: "Sólido", origem: "Natural",
+        massa: "10  7,87 u", grupo: "12", periodo: "5", estado: "Sólido", origem: "Natural",
         pontoFusao: "609,9 °C", pontoEbulicao: "767 °C", densidade: "10,50 g/cm³", fase: "Sólido (20°C)",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s¹", eletronegatividade: "1,95", raioAtomico: "159 pm", oxidacao: "+1",
-        descoberta: "1817", descobridor: "Friedrich Stromeyer", bloco:"d",
+        descoberta: "1828", descobridor: "Gottfried Osann", bloco:"d",
         etimologia: `
-          <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Cadmium:</strong> Deriva de "cadmia", nome latino para a calamina, antigo minério de zinco.</span>
+          <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Ruthenium:</strong> Deriva de "ruthenia", nome latino para a Rússia.</span>
           `,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;"> 
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;">Em 1825, o químico Gottfried Osann investigou a platina obtida dos Montes Urais e anunciou a descoberta de três novos elementos: o plurânio, o polínio e o rutênio. Apesar desses dois primeiros nunca terem sido isolados ou confirmados, o terceiro se provou verdadeiro, ainda que osann somente tivesse avistado alguns indícios de sua existência.</li>
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Em 1808, polonês Jedrzej Sniadecki acreditava ter descoberto um novo metal obtido em meio à platina, que chamou de véstio. Após químicos franceses refazerem os seus experimentos, anos mais tarde, não chegaram a nenhum metal novo, o que levou a Sniadecki assumir estar errado e retirar a sua reinvindicação. Hoje acredita-se que esse elemento era o rutênio.</li>
+                <li style="margin-bottom: 8px;">Em 1828, o químico Gottfried Osann, junto de Jons Jacob Berzellius, investigaro a platina obtida dos Montes Urais, a dissolvendo em água régia e analisando os resíduos deixados pelos minérios. Osann acreditava ter encontrado três novos elementos: o plurânio, o polínio e o rutênio, ainda que Berzelius se mantivesse cético. Apesar desses dois primeiros nunca terem sido isolados ou confirmados, o terceiro se provou verdadeiro anos mais tarde.</li>
                 <li style="margin-bottom: 8px;">Em 1844, o russo Karl Klaus foi capaz de extrair, purificar e enfim confirmar a existência do rutênio como um novo metal. Klaus optou por manter onome atribuido por Gottfried Osann anos antes, em homenagem ao nome latino da Rússia, <i>Ruthenia</i>.</li>
-                <li style="margin-bottom: 8px;"></li>
               </ul>
             </div>
           `,
           caracteristicas: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É um metal prateado e brilhante, bastante raro.</li>
                 <li style="margin-bottom: 8px;"></li>
                 <li style="margin-bottom: 8px;"></li>
                 <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;">O cádmio é venenoso, carcinogênico e teratogênico, por isso exige muitas medidas de segurança.</li>
               </ul>
             </div>
           `,
@@ -5650,58 +5649,61 @@
         numero: 77, simbolo: "Ir", nome: "Irídio", familia: "metais-de-transicao", familiaNome: "Metal de Transição", 
         massa: "192,22 u", grupo: "9", periodo: "6", estado: "Sólido", origem: "Natural", bloco: "d",
         pontoFusao: "2446 °C", pontoEbulicao: "4428 °C", densidade: "22,56 g/cm³", fase: "Sólido", 
-        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 4f¹⁴ 5d⁷ 6s²", eletronegatividade: "2,20", raioAtomico: "135 pm", oxidacao: "-3, -1, +1, +2, +3, +4, +5, +6, +7, +8, +9", 
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s² 4f¹⁴ 5d⁷", eletronegatividade: "2,20", raioAtomico: "135 pm", oxidacao: "-3, -2, -1, 0, +1, +2, +3, +4, +5, +6, +7, +8, +9", 
         descoberta: "1803", descobridor: "Smithson Tennant",
-
         etimologia: `
-      <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Osmium:</strong> deriva da palavra grega 'osme', que significa "cheiro" ou "odor", devido ao forte e característico odor de seu óxido volátil, o tetróxido de ósmio.</span>
-      `,
+        <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Iridium:</strong> tem origem no latim iris ("arco-íris"), em referência às marcantes e variadas cores de seus sais e compostos químicos.</span>
+        `,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
-                <li style="margin-bottom: 8px;">Em 1803, em Londres, o químico britânico Smithson Tennant, trabalhando em parceria com William Hyde Wollaston no refino da platina, analisou o resíduo metálico escuro e insolúvel que permanecia após a dissolução de amostras de platina bruta em água régia. Enquanto outros químicos acreditavam que o pó escuro fosse grafita, Tennant suspeitou tratar-se de uma substância inédita.</li>
-                <li style="margin-bottom: 8px;">Ao tratar esse resíduo com fusão alcalina e reações ácidas sequenciadas, Tennant conseguiu separar o material em dois novos elementos metálicos: o irídio e o ósmio. O ósmio recebeu essa denominação por conta do cheiro irritante, penetrante e característico exalado pelo tetróxido de ósmio gerado nas reações.</li>
-                <li style="margin-bottom: 8px;">O anúncio formal de sua descoberta e caracterização foi apresentado à Sociedade Real de Londres em 1804.</li>
+                <li style="margin-bottom: 8px;">Em 1803, o químico Smithson Tennant analisou o resíduo escuro e insolúvel que permanecia após a dissolução da platina bruta em água régia (uma mistura de ácido clorídrico e ácido nítrico). Enquanto a maioria dos pesquisadores da época supunha que o material fosse apenas grafite, Tennant tratou o resíduo alternadamente com álcalis e ácidos concentrados, visando separar e identificar dois novos elementos metálicos: o irídio e o ósmio.</li>
+                <li style="margin-bottom: 8px;">Paralelamente, os químicos franceses Collet-Descotils, Fourcroy e Vauquelin também identificaram o elemento nos resíduos de minérios de platina. Tennant anunciou a descoberta na Royal Institution, em Londres.</li>
+                <li style="margin-bottom: 8px;">Em 1813, Humphry Davy e John George Children demonstraram que o irídio podia ser fundido aplicando intensas correntes elétricas geradas por grandes baterias galvânicas.</li>
               </ul>
             </div>
           `,
           caracteristicas: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">É um metal de transição sólido, prateado e brilhante com tom azulado, sendo extremamente duro, rígido, quebradiço e difícil de usinar ou fundir.</li>
-                <li style="margin-bottom: 8px;">É o elemento natural de maior densidade da tabela periódica, apresentando cerca de 22,587 g/cm<sup>3</sup> a 22,61 g/cm<sup>3</sup> à temperatura ambiente. Além disso, possui elevados pontos de fusão e ebulição.</li>
-                <li style="margin-bottom: 8px;">É um metal nobre altamente resistente à corrosão e ao ataque de ácidos concentrados, embora reaja com oxigênio a 200 °C formando OsO<sub>4</sub> e se dissolva em álcalis fundidos com oxidantes.</li>
+                <li style="margin-bottom: 8px;">É um metal de transição pertencente ao grupo da platina. Sendo um sólido de coloração branco-prateada, extremamente duro, denso, brilhante e quebradiço.</li>
+                <li style="margin-bottom: 8px;">É o metal mais resistente à corrosão conhecido pela ciência, sendo totalmente inatacável por ar, água, ácidos minerais concentrados e até pela água régia em estado massivo, embora possa ser corroído por sais fundidos como cloreto de sódio (NaCl), cianeto de sódio (NaCN) ou peróxido de sódio em altas temperaturas.</li>
+                <li style="margin-bottom: 8px;">Possui densidade extraordinária, sendo o segundo elemento natural mais denso da tabela periódica, atrás apenas do ósmio.</li>
+                <li style="margin-bottom: 8px;">Não possui qualquer papel biológico conhecido e apresenta baixa toxicidade na forma metálica, embora seus pós possam causar irritação e seus sais sejam solúveis e relativamente tóxicos quando ingeridos.</li>
               </ul>
             </div>
           `,
           OndeEncontrado: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">Apresenta baixíssima abundância na crosta terrestre, estimada entre 0,001 ppm e 50 ppt.</li>
-                <li style="margin-bottom: 8px;">Ocorre em estado nativo na forma de ligas naturais com outros metais do grupo da platina. São exemplos dessas ligas: o osmirídio, o iridiósmio, a siserskita e o aurosmirídio.</li>
-                <li style="margin-bottom: 8px;">É obtido comercialmente como subproduto do refino e da extração de minérios sulfetados de níquel e cobre.</li>
-                <li style="margin-bottom: 8px;">Os maiores produtores mundiais e detentores de reservas do metal incluem a África do Sul, a Rússia, o Zimbábue e o Canadá.</li>
+                <li style="margin-bottom: 8px;">Apresenta abundância na crosta terrestre extremamente baixa, estimada entre 0,0004 ppm e 0,001 ppm, sendo um dos elementos estáveis mais raros do planeta devido ao seu caráter siderofílico, que fez com que a maior parte do metal migrasse para o núcleo terrestre durante a formação da Terra.</li>
+                <li style="margin-bottom: 8px;">Ocorre raramente em estado metálico nativo livre, sendo encontrado concentrado em ligas naturais associadas a outros metais nobres, como a iridosmina, platinirídio, aurosmirídio e na platina nativa, além de minérios sulfídricos como a irarsita.</li>
+                <li style="margin-bottom: 8px;">É extraído e purificado comercialmente como subproduto do refino de metais base como níquel e cobre, bem como do processamento de minérios da platina.</li>
+                <li style="margin-bottom: 8px;">Suas principais jazidas e reservas mundiais situam-se na África do Sul (no Complexo Bushveld, que concentra cerca de 80% das reservas globais), Rússia (depósitos de Norilsk-Talnakh), Canadá (Bacia de Sudbury), Estados Unidos (Alasca e Stillwater Complex), Mianmar, Brasil e Austrália.</li>
+                <li style="margin-bottom: 8px;">A produção global anual de irídio é extremamente restrita, variando entre 3 e 7,5 toneladas, sendo recuperadas apenas cerca de 7,5 toneladas do metal para cada 190 toneladas de platina extraídas.</li>
               </ul>
             </div>
           `,
           Aplicacoes: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                  <li style="margin-bottom: 8px;">É empregado em ligas de altíssima dureza e resistência ao desgaste em conjunto com o irídio e a platina, aplicadas em pontas de canetas-tinteiro, pivôs de instrumentos de precisão, agulhas de gramofone, rolamentos e contatos elétricos.</li>
-                  <li style="margin-bottom: 8px;">A liga de platina com 10% de ósmio é utilizada na confecção de implantes médicos cirúrgicos, como eletrodos de marcapassos e válvulas cardíacas ou pulmonares artificiais.</li>
-                  <li style="margin-bottom: 8px;">O tetróxido de ósmio é amplamente utilizado em microscopia eletrônica como agente de contraste e fixador de tecidos biológicos gordurosos. Além de atuar como catalisador em sínteses orgânicas e na indústria farmacêutica em reações de di-hidroxilação assimétrica desenvolvidas por Barry Sharpless.</li>
-                  <li style="margin-bottom: 8px;">É utilizado no campo da perícia criminal para a revelação e detecção de impressões digitais.</li>
-                  <li style="margin-bottom: 8px;">Desde 2014, o metal passou a ser negociado no mercado financeiro como metal precioso de investimento e na confecção de joias certificadas pelo Instituto do Ósmio na Alemanha.</li>
+                <li style="margin-bottom: 8px;">É utilizado como agente endurecedor e estabilizante em ligas de platina e ósmio, conferindo elevada resistência química e térmica a componentes industriais.</li>
+                <li style="margin-bottom: 8px;">É empregado na fabricação de cadinhos de alta pureza e utensílios capazes de operar sob temperaturas extremas de até 2100 °C para o crescimento de monocristais de semicondutores e processamento de cerâmicas.</li>
+                <li style="margin-bottom: 8px;">Aplica-se na produção de eletrodos para velas de ignição de alto desempenho em motores automotivos e aeronáuticos, garantindo suporte a mais de 100.000 ciclos sem degradação ou erosão por faísca.</li>
+                <li style="margin-bottom: 8px;">Utiliza-se em equipamentos aeroespaciais avançados, tais como no revestimento dos espelhos do telescópio espacial de raios X Chandra (NASA) e como recipiente protetor do combustível de plutônio em geradores nucleares de sondas espaciais.</li>
+                <li style="margin-bottom: 8px;">É aplicado na medicina e na indústria por meio do radioisótopo sintético irídio-192, utilizado em tratamentos oncológicos por braquiterapia e em ensaios não destrutivos por radiografia industrial.</li>
+                <li style="margin-bottom: 8px;">É aplicado na confecção de contatos elétricos pesados, rolamentos de alta precisão, pontas de agulhas cirúrgicas, penas de canetas-tinteiro de luxo e revestimentos de diodos orgânicos emissores de luz (OLED).</li>
               </ul>
             </div>
           `,  
           curiosidades: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">O pó metálico de ósmio reage com o oxigênio do ar mesmo à temperatura ambiente para produzir o tetróxido de ósmio, um composto gasoso altamente volátil, irritante e tóxico para a pele, olhos e pulmões.</li>
-                <li style="margin-bottom: 8px;">A produção mundial de ósmio é medida em quilos devido à sua raridade, com o Serviço Geológico dos Estados Unidos registrando uma produção global de cerca de 25 kg em 2018.</li>
-                <li style="margin-bottom: 8px;">Em 1906, o químico Carl Bosch adotou o ósmio como o primeiro catalisador eficiente na síntese da amônia pelo processo Haber-Bosch, sendo mais tarde substituído pelo ferro devido ao alto custo do ósmio.</li>
-                <li style="margin-bottom: 8px;">A quantidade global de ósmio produzida anualmente em todo o planeta é tão reduzida que equivale aproximadamente ao peso de um único tigre adulto (menos de 100 kg).</li>
+                <li style="margin-bottom: 8px;">A escolha do nome pelo químico Smithson Tennant deu-se em homenagem a Íris, a deusa grega do arco-íris, porque o elemento revela uma impressionante iridescência química em meio ácido: ao tratar os resíduos insolúveis da platina bruta com ácidos e álcalis, os sais formados geravam soluções com um espectro vibrante de cores, variando do amarelo e vermelho ao verde, azul e violeta conforme o estado de oxidação do metal se alterava.</li>
+                <li style="margin-bottom: 8px;">O irídio desempenhou um papel científico histórico no esclarecimento da extinção dos dinossauros há 65 milhões de anos: a descoberta por Luis e Walter Alvarez de uma fina camada de argila sedimentar (a fronteira K-T) globalmente enriquecida com irídio em concentrações até 160 vezes superiores ao normal levou à teoria de que um asteroide com cerca de 10 km de diâmetro atingiu a Terra na Península de Yucatán (cratera de Chicxulub, México), espalhando uma nuvem de poeira carregada do elemento por todo o planeta.</li>
+                <li style="margin-bottom: 8px;">Uma hipótese alternativa para a baixa quantidade de irídio na crosta propõe que o metal tenha sido trazido à superfície por erupções vulcânicas profundas provenientes do centro da Terra, como as do vulcão Piton de la Fournaise na ilha de Reunião, que continua expelindo irídio em suas emissões gasosas.</li>
+                <li style="margin-bottom: 8px;">O irídio foi o elemento escolhido para compor a liga metálica (90% platina e 10% irídio) do Protótipo Internacional do Quilograma (IPK) e da barra do Metro Padrão internacional, criados em 1889 pelo Bureau Internacional de Pesos e Medidas em Sèvres, na França, devido à sua inalterabilidade mecânica e imunidade à corrosão.</li>
+                <li style="margin-bottom: 8px;">Devido à sua extrema raridade e elevada demanda na transição energética para tecnologias sustentáveis, o irídio tornou-se um dos metais mais caros do planeta, chegando a custar cerca de 196 mil dólares por quilo em 2021 (mais de três vezes o valor do ouro na época).</li>
               </ul>
             </div>
           `, 
@@ -5709,34 +5711,317 @@
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">
-                    CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Ósmio</strong>. 
-                    Disponível em: <a href="https://crqsp.org.br/elemento-quimico-osmio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/elemento-quimico-osmio/</a>. 
+                    BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Iridium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/iridium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/iridium</a>. 
                     Acesso em: 03 nov. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Ósmio</strong>. 
-                    Disponível em: <a href="https://pt.webqc.org/periodictable-Osmium-Os.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Osmium-Os.html</a>. 
+                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Iridium</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/iridium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/iridium.html</a>. 
                     Acesso em: 03 nov. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                    ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Osmium - Element information, properties and uses</strong>. 
-                    Disponível em: <a href="https://periodic-table.rsc.org/element/76/osmium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/76/osmium</a>. 
+                    CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Irídio</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/iridio-mais-caro-que-ouro/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/iridio-mais-caro-que-ouro/</a>. 
                     Acesso em: 03 nov. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                    BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Osmium</strong>. 
-                    Disponível em: <a href="https://www.britannica.com/science/osmium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/osmium</a>. 
+                    ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Iridium - Element information, properties and uses</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/77/iridium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/77/iridium</a>. 
                     Acesso em: 03 nov. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Osmium</strong>. 
-                    Disponível em: <a href="https://www.chemicool.com/elements/osmium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/osmium.html</a>. 
+                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Irídio</strong>. 
+                    Disponível em: <a href="https://pt.webqc.org/periodictable-Iridium-Ir.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Iridium-Ir.html</a>. 
                     Acesso em: 03 nov. 2026.
                 </li>
               </ul>
             </div>
           `,
         },
+      78: {
+        numero: 78, simbolo: "Pt", nome: "Platina", familia: "metais-de-transicao", familiaNome: "Metal de Transição",
+        massa: "195,08 u", grupo: "10", periodo: "6", estado: "Sólido", origem: "Natural",
+        pontoFusao: "1768 °C", pontoEbulicao: "3825 °C", densidade: "21,45 g/cm³", fase: "Sólido (20°C)", bloco: "d",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d⁹ 6s¹", eletronegatividade: "2,28", raioAtomico: "139 pm", oxidacao: "+1, +2, +3, +4, +5, +6",
+        descoberta: "1735", descobridor: "Antonio de Ulloa", 
+        etimologia: `
+            <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Platinum:</strong> Surge do espanhol platina, diminutivo de plata ("prata"), significando "pequena prata" ou "prata de menor valor".</span></p>
+        `,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">Povos indígenas das regiões atuais do Equador e da Colômbia (como a cultura La Tolita) já trabalhavam a platina em ligas com ouro séculos antes da chegada dos europeus.</li>
+                <li style="margin-bottom: 8px;">Durante o século XVI, os conquistadores espanhóis encontraram grãos de um metal branco e denso misturados ao ouro nos depósitos aluviais do rio Pinto, na Colômbia. Por ser extremamente difícil de fundir e prejudicar a moldagem do ouro, eles os consideravam uma impureza indesejada, apelidando de platina del Pinto e devolvendo aos rios por acreditarem que se tratava de um "ouro não amadurecido"</li>
+                <li style="margin-bottom: 8px;">Em 1735, Antonio de Ulloa observou e registrou as propriedades do metal nas minas sul-americanas.</li>
+                <li style="margin-bottom: 8px;">Ao retornar à Europa em 1745, seu navio foi capturado por piratas e interceptado pela marinha britânica. Ulloa foi levado a Londres, onde teve suas anotações confiscadas, mas seu valor científico foi reconhecido pela Royal Society, que o acolheu como membro em 1746 e lhe devolveu os manuscritos, permitindo a publicação de relatórios formais em 1748.</li>
+                <li style="margin-bottom: 8px;">O desenvolvimento de métodos para a purificação e fundição da platina maleável ocorreu no final do século XVIII por pesquisadores como Henrik Scheffer, François Chabaneau, Antoine Lavoisier e William Wollaston.</li>
+              </ul>
+            </div>
+        `,
+        caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É um metal de transição nobre, sólido, denso, macio, maleável, dúctil e de coloração branco-prateada lustrosa.</li>
+                <li style="margin-bottom: 8px;">Possui densidade altíssima, figurando entre os elementos naturais mais densos da tabela periódica.</li>
+                <li style="margin-bottom: 8px;">Demonstra inércia química impressionante e imunidade à corrosão e à oxidação ao ar em qualquer temperatura.</li>
+                <li style="margin-bottom: 8px;">Não reage com ácidos clorídrico ou nítrico concentrados isoladamente, mas dissolve-se em água régia formando ácido cloroplatínico.</li>
+                <li style="margin-bottom: 8px;">Não possui papel biológico conhecido em seres vivos e é considerada não tóxica em sua forma metálica.</li>
+              </ul>
+            </div>
+        `,   
+        OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Apresenta abundância crustal extremamente baixa, estimada entre 0,005 ppm e 0,01 ppm, ocupando a 71ª posição entre os elementos da crosta terrestre.</li>
+                <li style="margin-bottom: 8px;">Ocorre em estado metálico nativo (na forma de grãos e pepitas em depósitos aluviais associada a outros metais do grupo da platina) e concentrada em minérios de sulfeto de cobre, níquel e ferro, como a sperrylita, cooperita e braggita.</li>
+                <li style="margin-bottom: 8px;">É extraída e purificada comercialmente a partir de minérios sulfetados por flotação, fusão para obtenção de mata metálica e refinamento químico aquoso complexo com água régia e precipitação fracionada.</li>
+                <li style="margin-bottom: 8px;">Os maiores produtores e detentores de reservas mundiais são a África do Sul (onde o Complexo Bushveld abriga cerca de 75% das reservas globais e 70% da produção), a Rússia e o Zimbábue, seguidos pelo Canadá e Estados Unidos.</li>
+                <li style="margin-bottom: 8px;">O Brasil não possui produção comercial ativa de platina, mas abriga projetos de sondagem exploratória de metais raros em regiões como Curionópolis, no Pará.</li>
+              </ul>
+            </div>
+        `,
+        Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É utilizada como catalisador em conversores catalíticos automotivos (responsáveis por cerca de 45% a 50% da demanda global) para converter emissões de monóxido de carbono e hidrocarbonetos em CO<sub>2</sub> e água.</li>
+                <li style="margin-bottom: 8px;">É empregada na confecção de joias e peças de alto preço devido à sua durabilidade, brilho e imunidade ao escurecimento.</li>
+                <li style="margin-bottom: 8px;">Aplica-se na indústria petroquímica e química como catalisador no refino de petróleo (reforma catalítica para gasolina de alta octanagem) e na fabricação de ácido sulfúrico e ácido nítrico.</li>
+                <li style="margin-bottom: 8px;">É utilizada no desenvolvimento de células de combustível a hidrogênio, catalisando as reações de redução de oxigênio e oxidação de hidrogênio.</li>
+                <li style="margin-bottom: 8px;">É empregada na medicina em medicamentos quimioterápicos para o tratamento de diversos tipos de câncer, destacando-se a cisplatina, carboplatina e oxaliplatina.</li>
+                <li style="margin-bottom: 8px;">Aplica-se na fabricação de equipamentos de laboratório e industriais de alta resistência térmica e química, como cadinhos, eletrodos, alças, termopares, lâminas de turbina e bicos de motores a jato.</li>
+                <li style="margin-bottom: 8px;">Utiliza-se na indústria de tecnologia para revestimentos magnéticos em discos rígidos de computadores, fabricação de fibras ópticas, telas LCD, velas de ignição e marcapassos cardíacos.</li>
+              </ul>
+            </div>
+        `,   
+        curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Um cilindro de liga composta por 90% de platina e 10% de irídio, fabricado em 1879 e apelidado de "Grande K", serviu por mais de 130 anos no Bureau Internacional de Pesos e Medidas em Sèvres (França) como o padrão mundial definitivo da unidade de massa do quilograma.</li>
+                <li style="margin-bottom: 8px;">A descoberta da atividade anticancerígena da cisplatina ocorreu de forma acidental na década de 1960 pelo pesquisador Barnett Rosenberg: ao estudar os efeitos de campos elétricos no crescimento da bactéria E. coli usando eletrodos de platina, observou que os complexos solúveis de platina formados no meio impediam a divisão celular bacteriana, levando ao desenvolvimento do composto usado na quimioterapia.</li>
+                <li style="margin-bottom: 8px;">O termo "loira platinada" (platinum blonde) popularizou-se na década de 1930 nos Estados Unidos inspirado no brilho intenso das joias de platina ostentadas pelas estrelas do cinema no início da era do cinema falado.</li>
+                <li style="margin-bottom: 8px;">Peças e ornamentos refinados de ligas de ouro e platina produzidos pela cultura pré-colombiana La Tolita no Equador e Peru demonstram que os indígenas sul-americanos dominavam técnicas avançadas de sinterização e metalurgia do pó mais de mil anos antes da Europa conseguir fundir o metal.</li>
+              </ul>
+            </div>
+        `, 
+        Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Platinum</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/platinum" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/platinum</a>. 
+                    Acesso em: 03 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Platinum</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/platinum.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/platinum.html</a>. 
+                    Acesso em: 03 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Platina</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/rara-cara-poderosa-esta-e-a-platina/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/rara-cara-poderosa-esta-e-a-platina/</a>. 
+                    Acesso em: 03 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Platinum - Element information, properties and uses</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/78/platinum" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/78/platinum</a>. 
+                    Acesso em: 03 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Platina</strong>. 
+                    Disponível em: <a href="https://pt.webqc.org/periodictable-Platinum-Pt.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Platinum-Pt.html</a>. 
+                    Acesso em: 03 nov. 2026.
+                </li>
+              </ul>
+            </div>
+        `,
+      },
+      79: {
+      numero: 79, simbolo: "Au", nome: "Ouro", familia: "metais-de-transicao", familiaNome: "Metal de Transição",
+      massa: "196,97 u", grupo: "11", periodo: "6", estado: "Sólido", origem: "Natural",
+      pontoFusao: "1064 °C", pontoEbulicao: "2856 °C", densidade: "19,32 g/cm³", fase: "Sólido (20°C)", bloco: "d",
+      config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s¹", eletronegatividade: "2,54", raioAtomico: "144 pm", oxidacao: "+1, +3",
+      descoberta: "Antiguidade", descobridor: "? ? ? ? ?", 
+      etimologia: `
+          <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Aurum:</strong> termo latino para o ouro (que significa "amanhecer brilhante" ou "aurora").</span></p>
+      `,
+      contextoDescoberta: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;"> 
+              <li style="margin-bottom: 8px;">Por ocorrer na natureza em seu estado nativo metálico e em leitos de rios na forma de pepitas ou grãos liberados pela erosão, o ouro atraiu a atenção humana desde a Antiguidade e foi um dos primeiros metais a ser trabalhado.</li>
+              <li style="margin-bottom: 8px;">A partir de 4000 a.C., egípcios e mesopotâmicos coletavam o metal em depósitos aluviais por separação gravimétrica e o moldavam em lâminas, fios e ornamentos.</li>
+              <li style="margin-bottom: 8px;">A refinação de ouro e a cunhagem das primeiras moedas puras foram estabelecidas no século VI a.C. no Reino da Lídia sob o governo do Rei Creso, e a busca incessante por sua síntese impulsionou a Alquimia ao longo de séculos, levando ao desenvolvimento de técnicas fundamentais da química moderna.</li>
+            </ul>
+          </div>
+      `,
+      caracteristicas: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É um metal de transição e de cunhagem, sólido, macio, extremamente maleável e dúctil (sendo o elemento mais maleável e dúctil de toda a tabela periódica, permitindo a confecção de folhas transparentes de 0,1 μm de espessura e fios de largura atômica).</li>
+              <li style="margin-bottom: 8px;">É um excelente condutor térmico e elétrico, correspondendo a cerca de 71% da condutividade do cobre, destacando-se por sua total imunidade à oxidação e corrosão ao ar, água ou álcalis.</li>
+              <li style="margin-bottom: 8px;">É quimicamente inerte e inatacável por oxigênio, enxofre, água e ácidos isolados (como HNO3 e HCl), mas dissolve-se em água régia (mistura de ácido nítrico e clorídrico, produzindo ácido tetracloroáurico, HAuCl<sub>4</sub>) e em soluções de cianeto na presença de oxigênio ou peróxido de hidrogênio.</li>
+              <li style="margin-bottom: 8px;">O ouro natural é 100% monoisotópico, composto pelo isótopo estável ouro-197. Possui cerca de 35 radioisótopos sintéticos conhecidos (do ouro-169 ao ouro-205).</li>
+              <li style="margin-bottom: 8px;">Não possui papel biológico conhecido em seres vivos e é considerado não tóxico na forma metálica.</li>
+            </ul>
+          </div>
+      `,   
+      OndeEncontrado: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Apresenta abundância crustal extremamente baixa, estimada entre 0,0013 ppm e 0,005 ppm, ocupando a 72ª posição entre os elementos da crosta terrestre.</li>
+              <li style="margin-bottom: 8px;">Ocorre predominantemente em seu estado nativo metálico livre (na forma de pepitas, grãos e flocos em veios hidrotermais de quartzo e pirita) e em depósitos aluviais (placeres) originados pela erosão de rochas auríferas. Também ocorre associado à prata (formando a liga natural electro) e em minerais raros de telúrio como a calaverita e a sylvanita.</li>
+              <li style="margin-bottom: 8px;">Encontra-se dissolvido na água do mar em concentração baixíssima (cerca de 4 a 13 partes por trilhão), totalizando um reservatório oceânico estimado em 20 milhões de toneladas, cuja extração é economicamente inviável.</li>
+              <li style="margin-bottom: 8px;">É extraído e processado por lixiviação em pilhas com solução diluída de cianeto sob aeração (cianetação), por flotação, amalgamação com mercúrio, ou recuperado como subproduto do refino de metais base como cobre e chumbo. O refino de alta pureza (até 99,99%) é feito pelos processos eletrolíticos de Wohlwill ou de cloração de Miller.</li>
+              <li style="margin-bottom: 8px;">Os maiores produtores mundiais são a China, Austrália, Estados Unidos, Rússia, Canadá, África do Sul e Peru. O Brasil possui depósitos e reservas relevantes em estados como Pará, Minas Gerais e Goiás.</li>
+            </ul>
+          </div>
+      `,
+      Aplicacoes: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É utilizado em ligas para joalheria e ourivesaria, onde é combinado com prata, cobre, níquel, zinco, platina ou paládio para aumentar a dureza e produzir variedades como ouro amarelo, ouro branco e ouro vermelho, com pureza mensurada em quilates (k) (sendo 24k o ouro puro).</li>
+              <li style="margin-bottom: 8px;">É aplicado na indústria eletrônica e microeletrônica, sendo empregado no revestimento de contatos elétricos, conexões de placas de circuito impresso, pinos de conectores e fios de ligação microscópicos em chips semicondutores devido à sua condutividade e resistência à oxidação.</li>
+              <li style="margin-bottom: 8px;">Fornece proteção e controle térmico na engenharia aeroespacial e arquitetura, integrando películas finas que refletem até 98% da radiação infravermelha e raios UV em visores de capacetes de astronautas, painéis refletores de satélites e janelas de edifícios comerciais.</li>
+              <li style="margin-bottom: 8px;">É reserva financeira internacional e monetária, atuando como ativo de reserva mantido por governos e bancos centrais em lingotes para estabilidade e credibilidade econômica.</li>
+              <li style="margin-bottom: 8px;">Possui papel relevante na restauração odontológica: na fabricação de coroas, obturações e ligas dentárias biocompatíveis.</li>
+              <li style="margin-bottom: 8px;">Tem usos diversos na medicina e farmacologia, o radioisótopo ouro-198 é usado na radioterapia direcionada para tumores (próstata, bexiga e colo do útero), complexos de ouro (I) como a auranofina são usadas no tratamento da artrite reumatoide (crisoterapia) e nanopartículas de ouro são usadas para diagnósticos por imagem, terapia fototérmica no combate ao câncer e veículos de liberação de fármacos.</li>
+            </ul>
+          </div>
+      `,   
+      curiosidades: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">A origem do nome e do símbolo do elemento reflete a sua história linguística global: o símbolo Au deriva do latim aurum ("amanhecer brilhante" ou "aurora"); a palavra em inglês gold provém do anglo-saxão geolo ("amarelo") e do sânscrito jval ("brilhar"); enquanto no Egito Antigo o metal era denominado nub, termo diretamente associado ao nome da região da Núbia, de onde os egípcios extraíam grande parte de suas reservas.</li>
+              <li style="margin-bottom: 8px;">A incrível maleabilidade do ouro permite que um único grama do metal seja martelado até formar uma folha transparente de ouro de um metro quadrado com espessura de apenas 230 átomos (~0,1 μm). Um único grama pode ser esticado em um fio de até 165 metros de comprimento com 20 mícrons de espessura.</li>
+              <li style="margin-bottom: 8px;">A cor amarela metálica do ouro, atípica entre os metais de transição, é consequência direta da relatividade restrita de Einstein: a altíssima carga nuclear de seus 79 prótons faz com que seus elétrons internos orbitem a velocidades relativísticas, contraindo o orbital 6s e aproximando suas energias dos orbitais 5d, o que causa a absorção de luz na faixa do azul/violeta e a reflexão da cor amarela.</li>
+              <li style="margin-bottom: 8px;">Em Roma, no Egito Antigo e na Alquimia medieval, acreditava-se que o ouro era a matéria perfeita e elixir da juventude. Os egípcios associavam o metal à carne dos deuses e utilizaram mais de 100 kg de ouro puro apenas no sarcófago e na máscara funerária do faraó Tutancâmon em 1323 a.C.</li>
+              <li style="margin-bottom: 8px;">Estima-se que todo o ouro extraído em toda a história da humanidade (aproximadamente 200 mil toneladas) caberia em um único cubo de apenas 21 metros de lado, demonstrando a escassez física do elemento.</li>
+              <li style="margin-bottom: 8px;">O antigo hábito de morder moedas de ouro para testar sua autenticidade devia-se à extrema maciez do metal puro, que permitia aos dentes deixar marcas visíveis na superfície do ouro autêntico.</li>
+            </ul>
+          </div>
+      `, 
+      Referencias: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">
+                  BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Gold</strong>. 
+                  Disponível em: <a href="https://www.britannica.com/science/gold-chemical-element" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/gold-chemical-element</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Gold</strong>. 
+                  Disponível em: <a href="https://www.chemicool.com/elements/gold.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/gold.html</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Ouro</strong>. 
+                  Disponível em: <a href="https://crqsp.org.br/elementos-quimicos-ouro/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/elementos-quimicos-ouro/</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Gold - Element information, properties and uses</strong>. 
+                  Disponível em: <a href="https://periodic-table.rsc.org/element/79/gold" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/79/gold</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  WEBQC. <strong style="color: #ffffff; font-weight: bold;">Ouro</strong>. 
+                  Disponível em: <a href="https://pt.webqc.org/periodictable-Gold-Au.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Gold-Au.html</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+            </ul>
+          </div>
+      `,
+  },
+      80: {
+          numero: 80, simbolo: "Hg", nome: "Mercúrio", familia: "metais-de-transicao", familiaNome: "Metal de Transição",
+          massa: "200,59 u", grupo: "12", periodo: "6", estado: "Líquido", origem: "Natural",
+          pontoFusao: "-38,83 °C", pontoEbulicao: "356,73 °C", densidade: "13,53 g/cm³", fase: "Líquido (20°C)", bloco: "d",
+          config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s²", eletronegatividade: "2,00", raioAtomico: "151 pm", oxidacao: "+1, +2",
+          descoberta: "Antiguidade", descobridor: "? ? ? ? ?", 
+          etimologia: `
+              <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Hydragyrum:</strong> nome latino do mercúrio, adaptado do grego 'hydro-argyros' ("água-prata" ou "prata líquida")</span></p>
+              <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">O nome moderno "mercúrio" foi atribuído por alquimistas devido à sua rápida fluidez, o associando ao planeta Mercúrio e ao veloz deus mensageiro da mitologia romana.</span></p>
+          `,
+          contextoDescoberta: `
+              <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+                <ul style="padding-left: 20px; margin: 0;"> 
+                  <li style="margin-bottom: 8px;">O mercúrio é manipulado há milênios por civilizações como os antigos chineses, egípcios, hindus, gregos e romanos. Gregos e romanos extraíam o elemento aquecendo o minério cinábrio e utilizavam o metal para recuperar ouro e prata por amalgamação.</li>
+                  <li style="margin-bottom: 8px;">Na Alquimia medieval, Geber e outros estudiosos acreditavam que todos os metais eram formados por combinações de mercúrio e enxofre em diferentes proporções, considerando o mercúrio o princípio fundamental da fluidez e da transmutação em ouro.</li>
+                  <li style="margin-bottom: 8px;">A natureza metálica do mercúrio foi confirmada experimentalmente em 1759, em São Petersburgo, quando Adam Braun e Mikhail Lomonosov congelaram o líquido em um sólido metálico.</li>
+                  <li style="margin-bottom: 8px;">Na década de 1770, os experimentos de Joseph Priestley e Carl Wilhelm Scheele com a decomposição do óxido de mercúrio levaram à descoberta do gás oxigênio.</li>
+                </ul>
+              </div>
+          `,
+          caracteristicas: `
+              <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+                <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">É um metal de transição e o único elemento metálico que se mantém no estado líquido sob condições normais de temperatura e pressão (25 °C e 1 atm). É um sólido metálico de estrutura romboédrica quando congelado.</li>
+                  <li style="margin-bottom: 8px;">Sofre intensos efeitos relativísticos em sua estrutura eletrônica: a elevada atração nuclear contrai e estabiliza fortemente o orbital 6s, reduzindo a participação desses elétrons na ligação metálica e explicando seu ponto de fusão muito baixo e seu caráter líquido à temperatura ambiente.</li>
+                  <li style="margin-bottom: 8px;">Exibe alta tensão superficial, o que faz com que o líquido se divida em pequenas esferas perfeitas ao ser derramado.</li>
+                  <li style="margin-bottom: 8px;">Dissolve-se e se une facilmente a diversos metais para formar ligas denominadas amálgamas (como com ouro, prata, zinco e césio), mas não forma amálgama com ferro, platina e tungstênio.</li>
+                  <li style="margin-bottom: 8px;">Não possui função biológica conhecida em nenhum organismo vivo, sendo extremamente tóxico, volátil e altamente bioacumulativo na cadeia alimentar na forma de compostos orgânicos como o dimetilmercúrio e metilmercúrio.</li>
+                </ul>
+              </div>
+          `,   
+          OndeEncontrado: `
+              <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+                <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">Apresenta abundância na crosta estimada entre 0,03 ppm e 0,08 ppm por peso, ocupando a 66ª posição em abundância entre os elementos naturais.</li>
+                  <li style="margin-bottom: 8px;">Ocorre raramente em estado metálico nativo livre, sendo encontrado concentrado na forma de minérios de sulfeto de mercúrio, principalmente o cinábrio, em regiões com atividade vulcânica e hidrotermal.</li>
+                  <li style="margin-bottom: 8px;">É extraído industrialmente por tosta (decomposição térmica) do cinábrio em correntes de ar a temperaturas superiores a 580 °C, seguido de condensação do vapor de mercúrio para coleta do metal líquido.</li>
+                  <li style="margin-bottom: 8px;">Os maiores produtores mundiais e detentores de reservas de minério são China, Quirguistão, México, Espanha, Argélia, Chile e Estados Unidos. O Brasil não possui jazidas econômicas do minério cinábrio, dependendo integralmente da importação do elemento para suas atividades industriais permitidas.</li>
+                </ul>
+              </div>
+          `,
+          Aplicacoes: `
+              <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+                <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">É utilizado como catalisador na indústria química para a síntese do monômero de cloreto de vinila e no histórico processo cloro-álcali para a produção de hidróxido de sódio e cloro.</li>
+                  <li style="margin-bottom: 8px;">É empregado em instrumentos de medição tradicionais, como termômetros, barômetros, manômetros e esfigmomanômetros, aproveitando sua expansão térmica linear e alta densidade.</li>
+                  <li style="margin-bottom: 8px;">Aplica-se na fabricação de lâmpadas de vapor de mercúrio e fluorescentes, além de dispositivos eletroeletrônicos como interruptores e relés que permitem a comutação elétrica sem desgaste mecânico ou arco.</li>
+                  <li style="margin-bottom: 8px;">É utilizado na formação de amálgamas para restaurações odontológicas (em liga com prata e estanho) e na mineração artesanal para a extração e concentração de ouro a partir de seus minérios.</li>
+                  <li style="margin-bottom: 8px;">É empregado na formulação de pigmentos industriais, como o vermelhão (sulfeto de mercúrio, HgS), na fabricação de baterias especiais e na composição de cosméticos como máscaras para cílios.</li>
+                </ul>
+              </div>
+          `,   
+          curiosidades: `
+              <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+                <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">Devido à sua densidade ser bastante alta, o mercúrio líquido permite que um objeto denso como uma bola de canhão de ferro flutue facilmente em sua superfície, e uma pessoa conseguiria sentar-se sobre um tanque de mercúrio sem afundar.</li>
+                  <li style="margin-bottom: 8px;">É o único elemento metálico que se mantém no estado líquido em temperatura ambiente (25 °C). Todos os demais metais conhecidos são sólidos nessa temperatura (apesar do gálio, césio e frâncio terem um ponto de fusão pouco maior que essa temperatura).</li>
+                  <li style="margin-bottom: 8px;">O primeiro imperador da China, Qin Shi Huang, acreditava que o mercúrio trazia a imortalidade e consumia misturas com o metal, o que provocou sua morte. Seu túmulo lendário é descrito sendo cercado por rios de mercúrio líquido.</li>
+                  <li style="margin-bottom: 8px;">A expressão "louco como um chapeleiro" (mad as a hatter) surgiu no século XVIII devido aos graves sintomas neuropsiquiátricos sofridos pelos fabricantes de chapéus, que utilizavam nitrato de mercúrio no tratamento do feltro de pele de animal. Daí surgiu o Chapeleiro Maluco, do livro Alice no País das Maravilhas, de Lewis Carroll.</li>
+                  <li style="margin-bottom: 8px;">O grave desastre ambiental ocorrido em 1956 na Baía de Minamata, no Japão, causado pelo despejo industrial de mercúrio que contaminou peixes e afetou milhares de pessoas, deu origem à Convenção de Minamata sobre o Mercúrio em 2013, um tratado global para banir gradualmente o uso e a mineração do metal.</li>
+                </ul>
+              </div>
+          `, 
+          Referencias: `
+              <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+                <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">
+                      CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Mercury</strong>. 
+                      Disponível em: <a href="https://www.chemicool.com/elements/mercury.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/mercury.html</a>. 
+                      Acesso em: 03 nov. 2026.
+                  </li>
+                  <li style="margin-bottom: 8px;">
+                      CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Mercúrio</strong>. 
+                      Disponível em: <a href="https://crqsp.org.br/elementos-quimicos-mercurio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/elementos-quimicos-mercurio/</a>. 
+                      Acesso em: 03 nov. 2026.
+                  </li>
+                  <li style="margin-bottom: 8px;">
+                      ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Mercury - Element information, properties and uses</strong>. 
+                      Disponível em: <a href="https://periodic-table.rsc.org/element/80/mercury" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/80/mercury</a>. 
+                      Acesso em: 03 nov. 2026.
+                  </li>
+                  <li style="margin-bottom: 8px;">
+                      WEBQC. <strong style="color: #ffffff; font-weight: bold;">Mercúrio</strong>. 
+                      Disponível em: <a href="https://pt.webqc.org/periodictable-Mercury-Hg.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Mercury-Hg.html</a>. 
+                      Acesso em: 03 nov. 2026.
+                  </li>
+                </ul>
+              </div>
+          `,
+      },
       81: {
         numero: 81, simbolo: "Tl", nome: "Tálio", familia: "metais-de-pos-transicao", familiaNome: "Metal de Pós-Transição",
         massa: "204,4 u", grupo: "13", periodo: "6", estado: "Sólido", origem: "Natural",
@@ -6497,7 +6782,56 @@
         pontoFusao: "1750 °C", pontoEbulicao: "4820 °C", densidade: "11,72 g/cm³", fase: "Sólido (20°C)", bloco: "f",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 6d¹ 7s²", eletronegatividade: "1,3", raioAtomico: "200 pm", oxidacao: "+4",
         descoberta: "1828", descobridor: "Jöns Jakob Berzelius", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Thorium:</strong> derivado do deus nórdico Thor (deus do trovão), em referência à intensa radiação emitida pelo elemento.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #3c78d8;">Thorium:</strong> derivado do deus nórdico Thor (deus do trovão), em referência à intensa radiação emitida pelo elemento.</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;"></li>   
+              </ul>
+            </div>
+          `,
+          caracteristicas: `<span style="color: #cbd5e1;"></span>`, 
+          OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;"></li>
+              </ul>
+            </div>
+          `,
+          Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;"></li>
+              </ul>
+            </div>
+          `,  
+          curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;"></li>
+              </ul>
+            </div>
+          `, 
+          Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;"></li>
+              </ul>
+            </div>
+          `,
+        },
+      91: {
+        numero: 91, simbolo: "Pa", nome: "Protactínio", familia: "actinideo", familiaNome: "Actinídeo",
+        massa: "[231] u", grupo: "3", periodo: "7", estado: "Sólido", origem: "Natural (Radioativo)",
+        pontoFusao: "1572 °C", pontoEbulicao: "4027 °C", densidade: "15,37 g/cm³", fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 6d¹ 7s²", eletronegatividade: "1,5", raioAtomico: "180 pm", oxidacao: "+5",
+        descoberta: "1918", descobridor: "Friedrich Oskar Giesel", 
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #3c78d8;">Protactinium:</strong> derivado do grego 'pro' (antes) e 'taktinium' (medida), referindo-se à posição do elemento na tabela periódica.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -6546,7 +6880,7 @@
         pontoFusao: "1132 °C", pontoEbulicao: "4131 °C", densidade: "19,05 g/cm³", fase: "Sólido (20°C)", bloco: "f",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 5f³ 6d¹ 7s²", eletronegatividade: "1,38", raioAtomico: "175 pm", oxidacao: "+3, +4, +5, +6",
         descoberta: "1789", descobridor: "Martin Heinrich Klaproth",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Uranium:</strong> derivado do planeta Urano, descoberto poucos anos antes. O planeta, por sua vez, faz alusão a Urano, o deus greco-romano primordial do céu.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #3c78d8;">Uranium:</strong> derivado do planeta Urano, descoberto poucos anos antes. O planeta, por sua vez, faz alusão a Urano, o deus greco-romano primordial do céu.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -7261,6 +7595,91 @@
             </div>
           `,
         },
+      112: {
+      numero: 112, simbolo: "Cn", nome: "Copernício", familia: "metais-de-transicao", familiaNome: "Metal de Transição", 
+      massa: "[285] u", grupo: "12", periodo: "7", estado: "Líquido (previsto)", origem: "Sintético", bloco: "d",
+      pontoFusao: "10 °C (previsto)", pontoEbulicao: "67 °C (previsto)", densidade: "14 g/cm³ (previsto)", fase: "Líquido (20°C / previsto)", 
+      config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s²", eletronegatividade: "—", raioAtomico: "147 pm (previsto)", oxidacao: "+2, 0, +4 (previsto)",
+      descoberta: "1996", descobridor: "Equipe de cientistas liderada por Sigurd Hofmann no Centro de Pesquisas de Íons Pesados (GSI) em Darmstadt, Alemanha",
+      etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Copernicium:</strong> O nome é uma homenagem ao astrônomo e matemático polonês Nicolau Copérnico, idealizador do modelo heliocêntrico.</span>`,
+      contextoDescoberta: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;"> 
+              <li style="margin-bottom: 8px;">Em fevereiro de 1996, a equipe liderada por Sigurd Hofmann no laboratório GSI em Darmstadt, Alemanha, sintetizou o elemento 112 ao bombardear um alvo pesado de chumbo-208 com feixes de íons acelerados de zinco-70 em um acelerador linear. O processo exotérmico de fusão gerou um único átomo do isótopo copernício-277 com a liberação de um nêutron livre, o qual decaiu por emissão alfa em escassos milissegundos.</li>
+              <li style="margin-bottom: 8px;">Experimentos confirmatórios realizados no ano 2000 no GSI e em 2004 e 2013 no centro RIKEN, no Japão, além de detecções no instituto de Dubna (Rússia) como produto de decaimento do fleróvio e do livermório, consolidaram as evidências experimentais da síntese.</li>
+              <li style="margin-bottom: 8px;">Após o reconhecimento oficial da prioridade de descoberta em 2009, os 21 pesquisadores de quatro nações envolvidos no projeto escolheram homenagear Nicolau Copérnico, o responsável por revolucionar o pensamento científico com o modelo heliocêntrico do sistema solar.</li>
+              <li style="margin-bottom: 8px;">O símbolo inicial proposto pela equipe foi Cp, mas a União Internacional de Química Pura e Aplicada (IUPAC) rejeitou a sugestão para evitar confusão com o símbolo histórico do cassiopéio (antigo nome do lutécio) e com a abreviação do ligante ciclopentadienil em química orgânica, aprovando oficialmente o símbolo Cn e o nome copernício em fevereiro de 2010, na data que coincidiu com o 537º aniversário de nascimento do astrônomo. Antes da nomeação definitiva, o elemento utilizava o nome provisório sistemático ununbiu (ununbium, Uub).</li>
+            </ul>
+          </div>
+      `,
+      caracteristicas: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É um elemento químico sintético, superpesado, transactinídeo e altamente radioativo, atuando como homólogo mais pesado do zinco, cádmio e mercúrio.</li>
+              <li style="margin-bottom: 8px;">Possui cerca de 8 isótopos radioativos sintéticos confirmados (com números de massa entre 277 e 286).</li>
+              <li style="margin-bottom: 8px;">Não possui qualquer papel biológico em seres vivos e apresenta elevada periculosidade devido à intensa emissão de radiação ionizante.</li>
+            </ul>
+          </div>
+      `,
+      OndeEncontrado: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Apresenta abundância natural nula na crosta terrestre e no sistema solar, não existindo em amostras geológicas ou ambientais devido à instabilidade radioativa extrema de seus isótopos.</li>
+              <li style="margin-bottom: 8px;">É produzido exclusivamente de forma sintética em aceleradores de partículas de íons pesados por meio de reações de fusão nuclear por bombardeamento de íons.</li>
+              <li style="margin-bottom: 8px;">As taxas de obtenção são extraordinariamente baixas e exigem semanas de bombardeamento contínuo para gerar átomos individuais, resultando em custos de produção maiores que 100 milhões de dólares por átomo.</li>
+              <li style="margin-bottom: 8px;">A separação e análise química dos átomos produzidos são efetuadas por técnicas automatizadas de cromatografia gasosa com dessorção por temperatura sobre superfícies de ouro, aproveitando a volatilidade do elemento.</li>
+            </ul>
+          </div>
+      `,
+      Aplicacoes: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É utilizado exclusivamente em pesquisas científicas fundamentais da física nuclear e atômica.</li>
+              <li style="margin-bottom: 8px;">É empregado como modelo experimental para investigar como os efeitos relativísticos profundos alteram as propriedades químicas e as tendências da tabela periódica.</li>
+              <li style="margin-bottom: 8px;">Aplica-se em experimentos de cromatografia em fase gasosa para estudar a adsorção de átomos individuais em superfícies frias de ouro e comparar sua volatilidade com a do mercúrio e dos gases nobres.</li>
+            </ul>
+          </div>
+      `,   
+      curiosidades: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">A escolha do nome homenageia o astrônomo polonês Nicolau Copérnico (1473 - 1543), formulador do modelo heliocêntrico que colocou o Sol no centro do sistema solar, estabelecendo um paralelo simbólico com os primeiros elementos transurânicos (netúnio, plutônio e urânio) batizados a partir dos planetas do sistema solar.</li>
+              <li style="margin-bottom: 8px;">As investigações químicas do copernício baseiam-se em experimentos de química de átomo único, onde os poucos átomos sintetizados são transportados em fluxo gasoso para colidir e se adsorver sobre uma lâmina de ouro resfriada, permitindo medir suas forças de ligação metálica e volatilidade em frações de segundo.</li>
+            </ul>
+          </div>
+      `, 
+      Referencias: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">
+                  BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Copernicium</strong>. 
+                  Disponível em: <a href="https://www.britannica.com/science/copernicium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/copernicium</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Copernicium</strong>. 
+                  Disponível em: <a href="https://www.chemicool.com/elements/copernicium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/copernicium.html</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Copernício</strong>. 
+                  Disponível em: <a href="https://crqsp.org.br/copernicio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/copernicio/</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Copernicium - Element information, properties and uses</strong>. 
+                  Disponível em: <a href="https://periodic-table.rsc.org/element/112/copernicium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/112/copernicium</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  WEBQC. <strong style="color: #ffffff; font-weight: bold;">Copernício</strong>. 
+                  Disponível em: <a href="https://pt.webqc.org/periodictable-Copernicium-Cn.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Copernicium-Cn.html</a>. 
+                  Acesso em: 06 nov. 2026.
+              </li>
+            </ul>
+          </div>
+      `,
+  },
       113: {
         numero: 113, simbolo: "Nh", nome: "Nihonium", familia: "metais-de-pos-transicao", familiaNome: "Metal de Pós-Transição", 
         massa: "[286] u", grupo: "13", periodo: "7", estado: "Sólido (previsto)", origem: "Sintético", bloco: "p",
@@ -7778,6 +8197,8 @@
         document.getElementById('aba-tabela').classList.add('ativo');
       } else if (aba === 'o-que-e') {
         document.getElementById('aba-o-que-e').classList.add('ativo');
+        } else if (aba === 'linha') {
+        document.getElementById('linha').classList.add('ativo');
       } else if (aba === 'elemento-dia') {
         document.getElementById('aba-elemento-dia').classList.add('ativo');
       } else if (aba === 'duvidas') {
@@ -8488,14 +8909,6 @@
       tdNumero.textContent = chute.numero + setaNumero;
       tdNumero.className = chute.numero === elementoSecreto.numero ? 'correto' : 'incorreto';
       tr.appendChild(tdNumero);
-
-      const tdMassa = document.createElement('td');
-      let setaMassa = '';
-      if (chute.massa < elementoSecreto.massa) setaMassa = ' ↑';
-      else if (chute.massa > elementoSecreto.massa) setaMassa = ' ↓';
-      tdMassa.textContent = chute.massa + setaMassa;
-      tdMassa.className = chute.massa === elementoSecreto.massa ? 'correto' : 'incorreto';
-      tr.appendChild(tdMassa);
 
       const tdBloco = document.createElement('td');
       tdBloco.textContent = chute.bloco;
