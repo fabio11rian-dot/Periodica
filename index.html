@@ -70,7 +70,31 @@
           Próximo elemento em: <span id="timer-text">00:00:00</span> (UTC-3)
         </div>
       </div>
+        <style>
+        .aviso-paisagem {
+          display: none;
+          background-color: rgba(1, 173, 118, 0.12);
+          border: 1px solid rgba(1, 173, 118, 0.35);
+          border-radius: 8px;
+          color: #34d399;
+          font-size: 0.8rem;
+          font-weight: 600;
+          padding: 8px 14px;
+          margin: 10px auto;
+          text-align: center;
+        }
 
+        /* Exibe apenas em telas menores que 768px E na orientação vertical (portrait) */
+        @media (max-width: 768px) and (orientation: portrait) {
+          .aviso-paisagem {
+            display: block;
+          }
+        }
+      </style>
+
+      <p class="aviso-paisagem">
+        📱 Para visualizar a tabela completa, gire o celular (modo paisagem)
+      </p>
       <div id="mensagem-vitoria" class="mensagem-win">
         <h2>🎉 Excelente! Você acertou!</h2>
         <p id="texto-vitoria"></p>
