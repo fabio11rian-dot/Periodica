@@ -70,31 +70,7 @@
           Próximo elemento em: <span id="timer-text">00:00:00</span> (UTC-3)
         </div>
       </div>
-        <style>
-        .aviso-paisagem {
-          display: none;
-          background-color: rgba(1, 173, 118, 0.12);
-          border: 1px solid rgba(1, 173, 118, 0.35);
-          border-radius: 8px;
-          color: #34d399;
-          font-size: 0.8rem;
-          font-weight: 600;
-          padding: 8px 14px;
-          margin: 10px auto;
-          text-align: center;
-        }
-
-        /* Exibe apenas em telas menores que 768px E na orientação vertical (portrait) */
-        @media (max-width: 768px) and (orientation: portrait) {
-          .aviso-paisagem {
-            display: block;
-          }
-        }
-      </style>
-
-      <p class="aviso-paisagem">
-        📱 Para visualizar a tabela completa, gire o celular (modo paisagem)
-      </p>
+        
       <div id="mensagem-vitoria" class="mensagem-win">
         <h2>🎉 Excelente! Você acertou!</h2>
         <p id="texto-vitoria"></p>
@@ -125,7 +101,7 @@
               <th>Bloco</th>
               <th>Grupo</th>
               <th>Período</th>
-              <th>Classificação</th>
+              <th>Família</th>
               <th>Estado</th>
             </tr>
           </thead>
@@ -191,7 +167,7 @@
           <span style="color: #11eebb; font-size: 0.9rem; line-height: 1.6;"><strong>Meia-vida:</strong></span><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"> Tempo que um determinado isótopo radioativo leva para perder metade de sua massa. Quanto mais instável o isótopo menor o seu tempo e meia-vida.</span>
         </p>
         <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin-top: 10px;">
-          <span style="color: #11eebb; font-size: 0.9rem; line-height: 1.6;"><strong>Terra Rara:</strong></span><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"> Tempo que um determinado isótopo radioativo leva para perder metade de sua massa. Quanto mais instável o isótopo menor o seu tempo e meia-vida.</span>
+          <span style="color: #11eebb; font-size: 0.9rem; line-height: 1.6;"><strong>Terras Raras:</strong></span><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"> Grupo de 17 elementos metálicos que são fundamentais para a tecnologia moderna e muito disputados no mercado atual. Todos possuem propriedades semelhantes e são geralmente encontrados nos mesmos depósitos minerais, ainda que de forma dispersa. Os elementos que compõem as terras raras são o ítrio, escândio e todos os 15 lantanídeos.</span>
         </p>
       </details>
     </div>
@@ -491,7 +467,7 @@
           pontoFusao: "-272,2 °C", pontoEbulicao: "-268,93 °C", densidade: "0,1786 g/L", fase: "Gasoso (20°C)",
           config: "1s²", eletronegatividade: "Sem dados", raioAtomico: "31 pm", oxidacao: "0",
           descoberta: "1868", descobridor: "Pierre Janssen & Norman Lockyer", 
-          etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Helium:</strong> vem do grego "helios" (sol).</span>`,
+          etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color:#ec4899";>Helium:</strong> vem do grego "helios" (sol).</span>`,
           contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -613,7 +589,7 @@
         pontoFusao: "180,54 °C", pontoEbulicao: "1342 °C", densidade: "0,534 g/cm³", fase: "Sólido (20°C)",
         config: "1s² 2s¹", eletronegatividade: "0,98", raioAtomico: "145 pm", oxidacao: "+1",
         descoberta: "1817", descobridor: "Johan August Arfwedson",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Lithium:</strong> vem do grego "lithos" (pedra).</span>`, 
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #ef4444; font-weight: bold;">Lithium:</strong> vem do grego "lithos" (pedra).</span>`, 
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -1113,7 +1089,7 @@
       },
       8: {
         numero: 8, simbolo: "O", nome: "Oxigênio", familia: "nao-metal", familiaNome: "Não-Metal",
-        massa: "15,999 u", grupo: "16", periodo: "2", estado: "Gás", origem: "Natural",
+        massa: "15,999 u", grupo: "16", periodo: "2", estado: "Gás", origem: "Natural", bloco:"p",
         pontoFusao: "-218,79 °C", pontoEbulicao: "-182,95 °C", densidade: "1,429 g/L", fase: "Gasoso (20°C)",
         config: "1s² 2s² 2p⁴", eletronegatividade: "3,44", raioAtomico: "60 pm", oxidacao: "-2",
         descoberta: "1774", descobridor: "Carl Wilhelm Scheele & Joseph Priestley",
@@ -1226,7 +1202,7 @@
         pontoFusao: "-219,62 °C", pontoEbulicao: "-188,12 °C", densidade: "1,696 g/L", fase: "Gasoso (20°C)",
         config: "1s² 2s² 2p⁵", eletronegatividade: "3,98", raioAtomico: "50 pm", oxidacao: "-1",
         descoberta: "1813", descobridor: "Sir Humphry Davy",
-          etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Fluorine</strong>: O nome é derivado do latim fluere, que significa "fluir".</span>`, 
+          etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #a855f7; font-weight: bold;">Fluorine:</strong> O nome é derivado do latim fluere, que significa "fluir".</span>`, 
           contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -1322,7 +1298,7 @@
         pontoFusao: "-248,59 °C", pontoEbulicao: "-246,08 °C", densidade: "0,9002 g/L", fase: "Gasoso (20°C)",
         config: "1s² 2s² 2p⁶", eletronegatividade: "Sem dados", raioAtomico: "38 pm", oxidacao: "0",
         descoberta: "1898", descobridor: "William Ramsay & Morris Travers", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Neon:</strong> vem do grego "neos" (novo).</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color:#ec4899";>Neon:</strong> vem do grego "neos" (novo).</span>`,
           contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -1404,7 +1380,7 @@
         config: "1s² 2s² 2p⁶ 3s¹", eletronegatividade: "0,93", raioAtomico: "186 pm", oxidacao: "+1",
         descoberta: "1807", descobridor: "Humphry Davy", 
         etimologia: `
-      <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Natrium:</strong> vem do latim "natron" (referente ao natrão, composto usado pelos egípcios para mumificação).</span></p>
+      <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #ef4444; font-weight: bold;">Natrium:</strong> vem do latim "natron" (referente ao natrão, composto usado pelos egípcios para mumificação).</span></p>
       <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">O nome Sódio vem do termo inglês soda, que tem origem na palavra árabe suda, que significa "dor de cabeça".</span></p>
       `,
           contextoDescoberta: `
@@ -1478,7 +1454,7 @@
         pontoFusao: "649 °C", pontoEbulicao: "1090 °C", densidade: "1,738 g/cm³", fase: "Sólido (20°C)",
         config: "1s² 2s² 2p⁶ 3s²", eletronegatividade: "1,31", raioAtomico: "160 pm", oxidacao: "+2",
         descoberta: "1808", descobridor: "Humphry Davy", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Magnesium:</strong> derivado de Magnésia, distrito da Tessália, na Grécia.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #f97316; font-weight: bold;">Magnesium:</strong> derivado de Magnésia, distrito da Tessália, na Grécia.</span>`,
           contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -1497,7 +1473,7 @@
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">Pode se encontrado em minerais como a magnesita, dolomita e carnalita.</li>
                 <li style="margin-bottom: 8px;">É principalmente obtido pela eletrólise de sais de magnésio, obtidos a partir da água do mar.</li>
-                <li style="margin-bottom: 8px;">O magnésio é um dos íons essenciais para as células e é um componente fundamental de diversas enzimas. O ser humano consome diariamente de 250 a 350 miligramas de magnésio por dia. Cada indivíduo apresenta em média 20 gramas de magnésio no corpo, principalmente nos ossos.</li>
+                <li style="margin-bottom: 8px;">O magnésio é um dos íons essenciais para as células e é um componente fundamental de diversas enzimas. O ser humano consome diariamente de 250 a 350 miligramas de magnésio. Cada indivíduo apresenta em média 20 gramas de magnésio no corpo, principalmente nos ossos.</li>
                 <li style="margin-bottom: 8px;">O magnésio é o componente principal da clorofila, pigmento presente em plantas e cianobactérias. Assim, o magnésio possibilita a fotossíntese, sendo portanto vital para a vida vegetal.</li>
               </ul>
             </div>
@@ -1835,7 +1811,7 @@
       pontoFusao: "-101,5 °C", pontoEbulicao: "-34,04 °C", densidade: "3,214 g/L", fase: "Gasoso (20°C)", 
       config: "1s² 2s² 2p⁶ 3s² 3p⁵", eletronegatividade: "3,16", raioAtomico: "102 pm", oxidacao: "–1, +1, +3, +5, +7", 
       descoberta: "1774", descobridor: "Carl Wilhelm Scheele", 
-      etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Chlorine:</strong> vem do grego "chloros", que significa verde-amarelado ou verde-pálido.</span>`,
+      etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #a855f7; font-weight: bold;">Chlorine:</strong> vem do grego "chloros", que significa verde-amarelado ou verde-pálido.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -1931,7 +1907,7 @@
       pontoFusao: "-189,35 °C", pontoEbulicao: "-185,85 °C", densidade: "1,784 g/L", fase: "Gasoso (20°C)", 
       config: "1s² 2s² 2p⁶ 3s² 3p⁶", eletronegatividade: "Sem dados", raioAtomico: "97 pm", oxidacao: "0", 
       descoberta: "1894", descobridor: "William Ramsay & Lord Rayleigh", 
-      etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Argon:</strong> vem do grego "argos" (preguiçoso).</span>`,
+      etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color:#ec4899";>Argon:</strong> vem do grego "argos" (preguiçoso).</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -2029,7 +2005,7 @@
       config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹", eletronegatividade: "0,82", raioAtomico: "227 pm", oxidacao: "+1", 
       descoberta: "1807", descobridor: "Humphry Davy", 
       etimologia: `
-      <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Kalium:</strong> vem do árabe "al-qalí" (referente à planta de locais salgados Salsola kali ou "herbe kali").</span></p>
+      <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #ef4444; font-weight: bold;">Kalium:</strong> vem do árabe "al-qalí" (referente à planta de locais salgados Salsola kali ou "herbe kali").</span></p>
       <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">O nome potássio vem do neerlandês científico pottasche, que significa "cinza de pote".</span></p>
       `,
         contextoDescoberta: `
@@ -2116,7 +2092,7 @@
       config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s²", eletronegatividade: "1,00", raioAtomico: "197 pm", oxidacao: "+2", 
       descoberta: "1808", descobridor: "Sir Humphry Davy", 
       etimologia: `
-      <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Cálcio:</strong> vem do latim "calx" (referente à cal).</span>
+      <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #f97316; font-weight: bold;">Calcium:</strong> vem do latim "calx" (referente à cal).</span>
       `,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
@@ -2968,7 +2944,7 @@
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d¹⁰", eletronegatividade: "1,90", raioAtomico: "128 pm", oxidacao: "0, +1, +2", 
         descoberta: "Antiguidade", descobridor: "? ? ? ? ?",
         etimologia: `
-        <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Cuprum:</strong> palavra latina relativa ao cobre, derivada de <i>Cyprium</i>, "metal de Chipre", em referência à ilha de Chipre.</span>
+        <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Cuprum:</strong> palavra latina relativa ao cobre, derivada de <i>Cyprium</i>, "metal de Chipre", em referência à ilha de Chipre.</span>
         `,
        contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
@@ -3440,7 +3416,7 @@
         pontoFusao: "-7,2 °C", pontoEbulicao: "58,8 °C", densidade: "3,12 g/mL", fase: "Líquido",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁵", eletronegatividade: "2,96", raioAtomico: "185 pm", oxidacao: "0, -1, +1, +3, +5, +7",
         descoberta: "1826", descobridor: "Antoine-Jérôme Balard & Carl Jacob Löwig", bloco:"p",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Bromine:</strong> O nome é derivado da palavra grega "bromos", que significa “mau cheiro” ou “fedor”.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #a855f7; font-weight: bold;">Bromine:</strong> O nome é derivado da palavra grega "bromos", que significa “mau cheiro” ou “fedor”.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -3537,7 +3513,7 @@
         pontoFusao: "-157,35 °C", pontoEbulicao: "-151,08 °C", densidade: "3,749 g/L", fase: "Gasoso (20°C)",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶", eletronegatividade: "3,0", raioAtomico: "116 pm", oxidacao: "0, +2",
         descoberta: "1898", descobridor: "William Ramsay & Morris Travers", bloco:"p",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Krypton:</strong> vem do grego "kryptos" (escondido ou oculto).</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color:#ec4899";>Krypton:</strong> vem do grego "kryptos" (escondido ou oculto).</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -3618,7 +3594,7 @@
         pontoFusao: "39,31 °C", pontoEbulicao: "688 °C", densidade: "1,532 g/cm³", fase: "Sólido (20°C)",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 5s¹", eletronegatividade: "0,82", raioAtomico: "244 pm", oxidacao: "0, +1",
         descoberta: "1861", descobridor: "Robert Bunsen & Gustav Kirchhoff", bloco:"s",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Rubidium:</strong> vem do latim "rubidus" (vermelho escuro), referindo-se à cor intensa da chama durante sua descoberta.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #ef4444; font-weight: bold;">Rubidium:</strong> vem do latim "rubidus" (vermelho escuro), referindo-se à cor intensa da chama durante sua descoberta.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -3703,7 +3679,7 @@
         pontoFusao: "777 °C", pontoEbulicao: "1380 °C", densidade: "2,64 g/cm³", fase: "Sólido (20°C)",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 5s²", eletronegatividade: "0,95", raioAtomico: "215 pm", oxidacao: "0, +2",
         descoberta: "1790", descobridor: "Adair Crawford", bloco:"s",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Strontium:</strong> vem de Strontian, cidade na Escócia onde o mineral foi descoberto.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #f97316; font-weight: bold;">Strontium:</strong> vem de Strontian, cidade na Escócia onde o mineral foi descoberto.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -3779,6 +3755,104 @@
                     WIKIPÉDIA. <strong style="color: #ffffff; font-weight: bold;">Strontium</strong>. 
                     Disponível em: <a href="https://en.wikipedia.org/wiki/Strontium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://en.wikipedia.org/wiki/Strontium</a>. 
                     Acesso em: 7 set. 2026.
+                </li>
+              </ul>
+            </div>
+          `,
+        },
+      39: {
+        numero: 39, simbolo: "Y", nome: "Ítrio", familia: "metais-de-transicao", familiaNome: "Metais de Transição",
+        massa: "88,91 u", grupo: "3", periodo: "5", estado: "Sólido", origem: "Natural",
+        pontoFusao: "1526 °C", pontoEbulicao: "3336 °C", densidade: "4,47 g/cm³", fase: "Sólido (20°C)",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹ 5s²", eletronegatividade: "1,22", raioAtomico: "180 pm", oxidacao: "0, +3",
+        descoberta: "1794", descobridor: "Johan Gadolin", bloco: "d",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Yttrium:</strong> O nome homenageia a vila de Ytterby, na Suécia.</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">Em 1787, Carl Axel Arrhenius encontrou um mineral preto com propriedades incomuns em uma antiga pedreira de Ytterby, Suécia. Arrhenius acreditava que esse mineral (que chamou de iterbita) continha tungstênio, hipótese com a qual concordava Bengt Geijer, inspetor das minas de Ytterby.</li>
+                <li style="margin-bottom: 8px;">Em 1794, Johan Gadolin recebeu amostras de iterbita e realizou uma análise detalhada, afirmando que continha 31% de sílica, 19% de alumina, 12% de óxido de ferro e 38% de alguma "terra" desconhecida.</li>
+                <li style="margin-bottom: 8px;">Em 1796, o professor Anders Gustav Ekeberg se interessou pelas conclusões de Gadolin e analisou o mineral descoberto por Arrhenius, confirmando que havia um elemento desconhecido em sua composição, presente na forma de um óxido. Ele foi o primeiro a dar um nome ao elemento: ítrio, em homenagem a Ytterby.</li>
+                <li style="margin-bottom: 8px;">Em 1798, com a descoberta do berílio por Nicolas Vauquelin, Ekeberg tornou a avaliar suas amostras e percebeu que a substância que Gadolin antes acreditou ser alumina era, na verdade, óxido de berílio. Em 1800, o minério preto até então conhecido como iterbita recebeu um novo nome: gadolinita, em homenagem a Johan Gadolin.</li>
+                <li style="margin-bottom: 8px;">Em 1828, o químico Friedrich Wöhler conseguiu isolar o ítrio metálico pela primeira vez, na forma de um pó cinzento. Para isso, Wöhler passou gás cloro sobre a gadolinita, produzindo cloreto de ítrio (III) anidro, e depois o reduziu com potássio aquecido.</li>
+                <li style="margin-bottom: 8px;">Em 1843, Carl Gustaf Mosander investigou o óxido de ítrio mais a fundo e descobriu que a ítria (óxido obtido da gadolinita) não era formada por somente um óxido, mas três: óxidos de ítrio, térbio e érbio. Nas décadas seguintes seria revelado que outros elementos também estavam presentes na gadolinita: itérbio, escândio, túlio, hólmio, disprósio e lutécio.</li>
+              </ul>
+            </div>
+          `,
+          caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É um metal macio de coloração prateada e aspecto brilhoso, sendo estável em contato com o ar pela fina camada de óxido que forma em sua superfície.</li>
+                <li style="margin-bottom: 8px;">Sob temperaturas acima de 400 °C pode inflamar-se, e é muito instável no ar quando finamente dividido.</li>
+                <li style="margin-bottom: 8px;">Possui 32 isótopos, sendo que o único estável (e mais comum) é o <sup>89</sup>Y.</li>
+                <li style="margin-bottom: 8px;">A maioria de seus compostos é incolor, e geralmente se apresenta como o íon Y<sup>3+</sup>.</li>
+                <li style="margin-bottom: 8px;">O ítrio possui uma grande semelhança química com os elementos lantanídeos.</li>
+                <li style="margin-bottom: 8px;">Reage em contato com a água, formando hidróxido de ítrio.</li>
+              </ul>
+            </div>
+          `,
+          OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">O ítrio não é encontrado puro na natureza, ocorrendo geralmente combinado em minerais de terras raras ou de urânio.</li>
+                <li style="margin-bottom: 8px;">Sua concentração na crosta terrestre é de cerca de 33 partes por milhão (ppm), sendo mais abundante que o chumbo e a maioria das terras raras.</li>
+                <li style="margin-bottom: 8px;">Rochas e amostras do solo lunar trazidas pelas missões Apollo revelaram que na Lua há uma concentração de 54 a 213 ppm de ítrio.</li>
+                <li style="margin-bottom: 8px;">Industrialmente, é obtido principalmente de fosfatos que contêm outras terras raras. A xenotima pode conter até 50% de fosfato de ítrio, a monazita em torno de 3% e a bastnasita entre 0,12% e 0,2%.</li>
+                <li style="margin-bottom: 8px;">A China e Mianmar (Birmânia) concentram a maior parte da produção mundial de ítrio. Países como Brasil, Austrália, Rússia, EUA e Vietnã detêm grandes reservas de óxidos de terras raras, incluindo o ítrio.</li>
+              </ul>
+            </div>
+          `,
+          Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Fósforos de oxissulfeto de ítrio eram usados em tubos de televisores coloridos, produzindo cores primárias.</li>
+                <li style="margin-bottom: 8px;">O óxido de ítrio também é aplicado na produção de LEDs brancos, fibras ópticas, telas e displays, podendo ser adicionado ao vidro de lentes fotográficas para aumentar a resistência ao calor.</li>
+                <li style="margin-bottom: 8px;">Adicionado a ligas de alumínio e magnésio, aumenta a resistência mecânica e reduz a corrosão.</li>
+                <li style="margin-bottom: 8px;">Ligas de ítrio revestem câmaras de combustão de foguetes e jatos.</li>
+                <li style="margin-bottom: 8px;">É usado como catalisador na polimerização do etileno e na fabricação de nanotubos de carbono.</li>
+                <li style="margin-bottom: 8px;">O isótopo ítrio-90 é utilizado em procedimentos de radioterapia para o tratamento de alguns tipos de câncer, como o câncer de fígado.</li>
+                <li style="margin-bottom: 8px;">Integra o composto YBCO (óxido de ítrio, bário e cobre — YBa<sub>2</sub>Cu<sub>3</sub>O<sub>7</sub>), uma cerâmica supercondutora capaz de conduzir eletricidade praticamente sem resistência, utilizada em trens de levitação magnética, ímãs supercondutores e linhas de transmissão de energia.</li>
+              </ul>
+            </div>
+          `,  
+          curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">O ítrio tem uma afinidade excepcionalmente alta pelo oxigênio, com uma energia livre de formação para o óxido de -1817 kJ mol<sup>-1</sup>, provavelmente a maior entre todos os elementos.</li>
+                <li style="margin-bottom: 8px;">O ítrio foi o primeiro elemento químico a homenagear a vila de Ytterby. Após ele, mais três elementos receberiam nomes derivados do mesmo local: térbio (1843), érbio (1843) e itérbio (1878).</li>
+                <li style="margin-bottom: 8px;">Foi o primeiro elemento das terras raras a ser descoberto (apesar de não ser tão raro quanto o nome indica).</li>
+                <li style="margin-bottom: 8px;">A cor avermelhada dos televisores antigos devia-se ao uso de oxissulfeto de ítrio dopado com európio como fósforo das antigas telas de tubo.</li>
+                <li style="margin-bottom: 8px;">Cristais de YAG (granada de ítrio e alumínio) e YSZ (zircônia estabilizada com ítria) são tão brilhantes e possuem dureza tão elevada que são usados como substitutos sintéticos de diamantes.</li>
+              </ul>
+            </div>
+          `, 
+          Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Yttrium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/yttrium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/yttrium</a>. 
+                    Acesso em: 14 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Yttrium</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/yttrium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/yttrium.html</a>. 
+                    Acesso em: 14 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Ítrio</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/elemento-quimico-itrio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/elemento-quimico-itrio/</a>. 
+                    Acesso em: 14 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    NATIONAL CENTER FOR BIOTECHNOLOGY INFORMATION (NCBI). <strong style="color: #ffffff; font-weight: bold;">PubChem Element Summary for AtomicNumber 39, Yttrium</strong>. 
+                    Disponível em: <a href="https://pubchem.ncbi.nlm.nih.gov/element/39" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pubchem.ncbi.nlm.nih.gov/element/39</a>. 
+                    Acesso em: 14 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Yttrium</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/39/yttrium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/39/yttrium</a>. 
+                    Acesso em: 14 nov. 2026.
                 </li>
               </ul>
             </div>
@@ -3968,59 +4042,59 @@
         },
       44: {
         numero: 44, simbolo: "Ru", nome: "Rutênio", familia: "metais-de-transicao", familiaNome: "Metais de Transição",
-        massa: "10  7,87 u", grupo: "12", periodo: "5", estado: "Sólido", origem: "Natural",
-        pontoFusao: "609,9 °C", pontoEbulicao: "767 °C", densidade: "10,50 g/cm³", fase: "Sólido (20°C)",
-        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s¹", eletronegatividade: "1,95", raioAtomico: "159 pm", oxidacao: "+1",
-        descoberta: "1828", descobridor: "Gottfried Osann", bloco:"d",
+        massa: "101,07 u", grupo: "8", periodo: "5", estado: "Sólido", origem: "Natural",
+        pontoFusao: "2334 °C", pontoEbulicao: "4150 °C", densidade: "12,45 g/cm³", fase: "Sólido (20°C)",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d⁷ 5s¹", eletronegatividade: "2,20", raioAtomico: "134 pm", oxidacao: "+2, +3, +4, +6, +8",
+        descoberta: "1844", descobridor: "Karl Klaus", bloco: "d",
         etimologia: `
-          <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Ruthenium:</strong> Deriva de "ruthenia", nome latino para a Rússia.</span>
+          <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #eab308; font-weight: bold;">Ruthenium:</strong> Deriva de "Ruthenia", nome latino para a Rússia.</span>
           `,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">Em 1808, polonês Jedrzej Sniadecki acreditava ter descoberto um novo metal obtido em meio à platina, que chamou de véstio. Após químicos franceses refazerem os seus experimentos, anos mais tarde, não chegaram a nenhum metal novo, o que levou a Sniadecki assumir estar errado e retirar a sua reinvindicação. Hoje acredita-se que esse elemento era o rutênio.</li>
-                <li style="margin-bottom: 8px;">Em 1828, o químico Gottfried Osann, junto de Jons Jacob Berzellius, investigaro a platina obtida dos Montes Urais, a dissolvendo em água régia e analisando os resíduos deixados pelos minérios. Osann acreditava ter encontrado três novos elementos: o plurânio, o polínio e o rutênio, ainda que Berzelius se mantivesse cético. Apesar desses dois primeiros nunca terem sido isolados ou confirmados, o terceiro se provou verdadeiro anos mais tarde.</li>
-                <li style="margin-bottom: 8px;">Em 1844, o russo Karl Klaus foi capaz de extrair, purificar e enfim confirmar a existência do rutênio como um novo metal. Klaus optou por manter onome atribuido por Gottfried Osann anos antes, em homenagem ao nome latino da Rússia, <i>Ruthenia</i>.</li>
+                <li style="margin-bottom: 8px;">Em 1808, o químico polonês Jędrzej Śniadecki acreditava ter descoberto um novo metal obtido em meio à platina, que chamou de véstio. Após químicos franceses refazerem os seus experimentos anos mais tarde sem isolar nenhum metal novo, Śniadecki assumiu estar errado e retirou a sua reivindicação. Hoje acredita-se que esse elemento era o rutênio.</li>
+                <li style="margin-bottom: 8px;">Em 1828, o químico Gottfried Osann, junto de Jöns Jacob Berzelius, investigaram a platina obtida dos Montes Urais, dissolvendo-a em água-régia e analisando os resíduos deixados pelos minérios. Osann acreditava ter encontrado três novos elementos: o plurânio, o polínio e o rutênio, ainda que Berzelius se mantivesse cético. Apesar de os dois primeiros nunca terem sido confirmados, o terceiro provou-se verdadeiro anos mais tarde.</li>
+                <li style="margin-bottom: 8px;">Em 1844, o químico russo Karl Klaus foi capaz de extrair, purificar e enfim confirmar a existência do rutênio como um novo metal. Klaus optou por manter o nome atribuído por Gottfried Osann anos antes, em homenagem ao nome latino da Rússia, <i>Ruthenia</i>.</li>
               </ul>
             </div>
           `,
           caracteristicas: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">É um metal prateado e brilhante, bastante raro.</li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">É um metal cinza-prateado e brilhante, duro e quebradiço.</li>
+                <li style="margin-bottom: 8px;">É resistente à corrosão e ao ataque da maioria dos ácidos, não escurecendo ao ar sob temperatura ambiente.</li>
+                <li style="margin-bottom: 8px;">Tem propriedades semelhantes às da platina e do paládio.</li>
+                <li style="margin-bottom: 8px;">Não possui qualquer papel biológico conhecido, porém o tetróxido de rutênio (RuO₄) e o dióxido de rutênio (RuO₂) são altamente tóxicos.</li>
               </ul>
             </div>
           `,
           OndeEncontrado: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">É consideravelmente raro, com uma abundância na crosta terrestre de cerca de 0,001 partes por milhão (ppm).</li>
+                <li style="margin-bottom: 8px;">Pode ser encontrado junto do irídio ou ósmio, ambos vistos em sua forma pura na natureza. Porém, é principalmente encontrado associado a outros metais do grupo da platina em minérios de sulfeto de ferro e níquel.</li>
+                <li style="margin-bottom: 8px;">É obtido industrialmente principalmente como subproduto da mineração de outros metais, como níquel, cobre e outros metais do grupo da platina.</li>
               </ul>
             </div>
           `,
           Aplicacoes: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Cerca de 45% do uso industrial do rutênio consiste na produção de eletrônicos, como em resistores de filme espesso, películas magnéticas para armazenamento de dados e contatos elétricos de alta resistência ao desgaste.</li>
+                <li style="margin-bottom: 8px;">É usado como catalisador em processos químicos como a síntese de amônia e de ácido acético.</li>
+                <li style="margin-bottom: 8px;">É utilizado em ligas com platina ou paládio na produção de joias e contatos elétricos.</li>
+                <li style="margin-bottom: 8px;">É aplicado na produção de células solares sensibilizadas por corante para conversão de luz solar em energia elétrica.</li>
+                <li style="margin-bottom: 8px;">O composto vermelho de rutênio é utilizado em microscopia para evidenciar biomoléculas de carga negativa, como ácidos nucleicos e polissacarídeos.</li>
+                <li style="margin-bottom: 8px;">Complexos de rutênio possuem grande potencial no tratamento contra o câncer, incluindo pesquisas voltadas ao melanoma, o tipo mais perigoso de câncer de pele.</li>
               </ul>
             </div>
           `,  
           curiosidades: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">O desenvolvimento dos catalisadores de Grubbs (complexos de rutênio) foi fundamental para a reação de metátese de olefinas, o que rendeu o Prêmio Nobel de Química a Robert H. Grubbs, Richard R. Schrock e Yves Chauvin em 2005.</li>
+                <li style="margin-bottom: 8px;">A adição de apenas 0,1% de rutênio a uma liga de titânio aumenta em até 100 vezes a sua resistência à corrosão.</li>
+                <li style="margin-bottom: 8px;">A clássica caneta-tinteiro Parker 51 (lançada em 1941) possuía uma ponta feita de uma liga de ouro e rutênio.</li>
               </ul>
             </div>
           `, 
@@ -4028,36 +4102,30 @@
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                   <li style="margin-bottom: 8px;">
-                      BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Silver</strong>. 
-                      Disponível em: <a href="https://www.britannica.com/science/silver" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/silver</a>. 
-                      Acesso em: 11 out. 2026.
+                      BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Ruthenium</strong>. 
+                      Disponível em: <a href="https://www.britannica.com/science/ruthenium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/ruthenium</a>. 
+                      Acesso em: 14 nov. 2026.
                   </li>
                   <li style="margin-bottom: 8px;">
-                      CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Silver</strong>. 
-                      Disponível em: <a href="[https://www.chemicool.com/elements/silver.html](https://www.chemicool.com/elements/silver.html)" target="_blank" style="color: #38bdf8; text-decoration: underline;">[https://www.chemicool.com/elements/silver.html](https://www.chemicool.com/elements/silver.html)</a>. 
-                      Acesso em: 11 out. 2026.
+                      CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Ruthenium</strong>. 
+                      Disponível em: <a href="https://www.chemicool.com/elements/ruthenium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/ruthenium.html</a>. 
+                      Acesso em: 14 nov. 2026.
                   </li>
                   <li style="margin-bottom: 8px;">
-                      CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Prata</strong>. 
-                      Disponível em: <a href="https://crqsp.org.br/elementos-quimicos-prata/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/elementos-quimicos-prata/</a>. 
-                      Acesso em: 11 out. 2026.
+                      CONSELHO REGIONAL DE QUÍMICA DE SÃO PAULO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Rutênio</strong>. 
+                      Disponível em: <a href="https://crqsp.org.br/rutenio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/rutenio/</a>. 
+                      Acesso em: 14 nov. 2026.
                   </li>
                   <li style="margin-bottom: 8px;">
-                      DIÁRIO NUMISMÁTICO. <strong style="color: #ffffff; font-weight: bold;">A prata na antiguidade</strong>. 
-                      Disponível em: <a href="https://diarionumismatico.com.br/a-prata-na-antiguidade/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://diarionumismatico.com.br/a-prata-na-antiguidade/</a>. 
-                      Acesso em: 11 out. 2026.
+                      ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Ruthenium</strong>. 
+                      Disponível em: <a href="https://periodic-table.rsc.org/element/44/ruthenium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/44/ruthenium</a>. 
+                      Acesso em: 14 nov. 2026.
                   </li>
                   <li style="margin-bottom: 8px;">
-                      LUCIDARIUM. <strong style="color: #ffffff; font-weight: bold;">Conceito de prata: origem, definição e significado</strong>. 
-                      Disponível em: <a href="https://lucidarium.com.br/conceito-de-prata-origem-definicao-e-significado/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://lucidarium.com.br/conceito-de-prata-origem-definicao-e-significado/</a>. 
-                      Acesso em: 11 out. 2026.
+                      WEBQC. <strong style="color: #ffffff; font-weight: bold;">Ruthenium</strong>. 
+                      Disponível em: <a href="https://www.webqc.org/periodictable-Ruthenium-Ru.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.webqc.org/periodictable-Ruthenium-Ru.html</a>. 
+                      Acesso em: 14 nov. 2026.
                   </li>
-                  <li style="margin-bottom: 8px;">
-                      ROYAL SOCIETY OF CHEMISTRY (RSC). <strong style="color: #ffffff; font-weight: bold;">Silver - Element information, properties and uses</strong>. 
-                      Disponível em: <a href="https://periodic-table.rsc.org/element/47/silver#history" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/47/silver#history</a>. 
-                      Acesso em: 11 out. 2026.
-                  </li>
-              </ul>
               </ul>
             </div>
           `,
@@ -4834,7 +4902,7 @@
         pontoFusao: "-111,75 °C", pontoEbulicao: "-108,09 °C", densidade: "5,894 g/L", fase: "Gasoso (20°C)",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p⁶", eletronegatividade: "2,6", raioAtomico: "130 pm", oxidacao: "0, +2, +4, +6, +8",
         descoberta: "1898", descobridor: "William Ramsay & Morris Travers", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Xenon:</strong> vem do grego "xenon" (estranho).</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color:#ec4899";>Xenon:</strong> vem do grego "xenon" (estranho).</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -4911,7 +4979,7 @@
         pontoFusao: "28,5 °C", pontoEbulicao: "678,4 °C", densidade: "1,873 g/cm³", fase: "Sólido (20°C)",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p⁶ 6s¹", eletronegatividade: "0,79", raioAtomico: "298 pm", oxidacao: "+1",
         descoberta: "1860", descobridor: "Robert Bunsen & Gustav Kirchhoff", bloco:"s",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Cesium:</strong> vem do latim "caesius" (azul-celeste).</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #ef4444; font-weight: bold;">Cesium:</strong> vem do latim "caesius" (azul-celeste).</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -5011,7 +5079,7 @@
         pontoFusao: "725 °C", pontoEbulicao: "1845 °C", densidade: "3,62 g/cm³", fase: "Sólido (20°C)",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 5s² 5p⁶ 6s²", eletronegatividade: "0,89", raioAtomico: "215 pm", oxidacao: "0, +2",
         descoberta: "1808", descobridor: "Sir Humphry Davy", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Barium:</strong> vem de barita, mineral de onde é extraído. Por sua vez, barita vem do grego “barys” (pesado).</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #f97316; font-weight: bold;">Barium:</strong> vem de barita, mineral de onde é extraído. Por sua vez, barita vem do grego “barys” (pesado).</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -5257,74 +5325,287 @@
             </div>
           `,
         },
-      61: {
-        numero: 61, simbolo: "Pm", nome: "Promécio", familia: "lantanídeos", familiaNome: "Lantanídeos",
-        massa: "150,36 u", grupo: "3", periodo: "4", estado: "Sólido", origem: "Natural",
-        pontoFusao: "156,5 °C", pontoEbulicao: "2067 °C", densidade: "7,52 g/cm³", fase: "Sólido (20°C)", bloco:"f",
-        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁶ 5s² 5p⁶ 5d¹⁰ 6s² 6p³", eletronegatividade: "1,8", raioAtomico: "180 pm", oxidacao: "0, +2, +3",
-        descoberta: "1879", descobridor: "Lecoq de Boisbaudran",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">deriva do nome do mineral samarskite, que contém o elemento.</span>`,
+      59: {
+        numero: 59, simbolo: "Pr", nome: "Praseodímio", familia: "lantanideo", familiaNome: "Lantanídeo",
+        massa: "140,91 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural",
+        pontoFusao: "931 °C", pontoEbulicao: "3520 °C", densidade: "6,77 g/cm³", fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f³ 5s² 5p⁶ 6s²", eletronegatividade: "1,13", raioAtomico: "182 pm", oxidacao: "+2, +3, +4",
+        descoberta: "1885", descobridor: "Carl Auer von Welsbach",
+        etimologia: `
+          <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #06b6d4; font-weight: bold;">Praseodymium:</strong> O nome deriva das palavras gregas prasios (ou prasinos, que significa "verde-alface") e didymos ("gêmeo"), significando "gêmeo verde".</span></p>
+          `,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Em 1841, o químico sueco Carl Mosander anunciou a descoberta do "didímio" a partir de sais de cério e lantânio, sendo considerado um elemento químico por mais de 40 anos.</li>
+                <li style="margin-bottom: 8px;">Análises espectroscópicas realizadas em 1882 por Bohuslav Brauner revelaram variações que indicavam que o didímio era uma mistura de elementos.</li>
+                <li style="margin-bottom: 8px;">Em junho de 1885, em Viena, o químico austríaco Carl Auer von Welsbach realizou mais de cem etapas de cristalização fracionada de sais de nitrato duplo de didímio e amônio em ácido nítrico. Welsbach separou o didímio em dois novos elementos: uma fração verde, que nomeou como praseodímio ("gêmeo verde"), e uma fração de tom rosa/lilás, denominada neodímio ("novo gêmeo").</li>
+                <li style="margin-bottom: 8px;">O praseodímio metálico puro foi obtido pela primeira vez em 1931.</li>
               </ul>
             </div>
           `,
-          caracteristicas: `
+        caracteristicas: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É um metal de transição interna e terra rara pertencente à série dos lantanídeos. É um sólido metálico macio, maleável e dúctil de coloração branco-prateada, com ductilidade e maleabilidade comparáveis às da prata.</li>
+              <li style="margin-bottom: 8px;">Reage com o ar úmido oxidando-se e desenvolvendo uma camada superficial esverdeada/escura de óxido que se descasca e não protege o metal de posterior oxidação, devendo ser armazenado em óleo mineral, sob vácuo ou atmosfera inerte de argônio.</li>
+              <li style="margin-bottom: 8px;">Reage com a água formando hidróxido de praseodímio e gás hidrogênio, e dissolve-se rapidamente em ácidos minerais diluídos, mas resiste ao ácido fluorídrico (HF).</li>
+              <li style="margin-bottom: 8px;">O praseodímio natural é composto por 100% do isótopo estável praseodímio-141.</li>
+            </ul>
+          </div>
+        `,    
+        OndeEncontrado: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Apresenta abundância na crosta terrestre de cerca de 8,7 ppm a 9,5 ppm por peso, sendo comparável à concentração do boro.</li>
+              <li style="margin-bottom: 8px;">Não ocorre livre em forma metálica na natureza. Sendo encontrado associado a outros lantanídeos em minerais de terras raras, principalmente na monazita e na bastnasita, onde constitui cerca de 4% a 5% do conteúdo total de terras raras, além de ser gerado em produtos de fissão nuclear.</li>
+              <li style="margin-bottom: 8px;">É extraído e purificado industrialmente a partir de minérios por digestão ácida, seguida de técnicas de cromatografia de troca iônica e extração por solventes orgânicos fosfóricos.</li>
+              <li style="margin-bottom: 8px;">A produção e as reservas mundiais estão concentradas principalmente na China (que responde por mais de 85% a 97% da oferta global de terras raras), seguida por países como Rússia, Malásia e Estados Unidos.</li>
+            </ul>
+          </div>
+        `,
+        Aplicacoes: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Sua principal aplicação tecnológica ocorre no setor de ímãs permanentes de alta performance (ligas de neodímio-ferro-boro), onde a substituição parcial de neodímio por praseodímio aumenta a estabilidade térmica e a coercitividade dos ímãs em motores de veículos elétricos e geradores de turbinas eólicas.</li>
+              <li style="margin-bottom: 8px;">É um dos componentes do mischmetal (~5% de praseodímio), liga de terras raras empregada na fabricação de pedras de isqueiro (que geram faíscas por fricção) e como aditivo purificador em ligas metalúrgicas ferrosas e não ferrosas.</li>
+              <li style="margin-bottom: 8px;">Ligas de praseodímio com magnésio oferecem elevada resistência mecânica e leveza, sendo utilizadas em componentes de alta solicitação para motores de aeronaves.</li>
+              <li style="margin-bottom: 8px;">Na forma de sais e óxidos (como o Pr2O3), é empregado na indústria cerâmica e vidreira para produzir vernizes e vidros de coloração amarela intensa e brilhante.</li>
+              <li style="margin-bottom: 8px;">É o componente ativo (junto com o neodímio) do vidro de didímio, que é utilizado em óculos de proteção para sopradores de vidro e soldadores por atuar como um filtro óptico que bloqueia a radiação da luz amarela de sódio e reduz a transmissão de calor infravermelho.</li>
+              <li style="margin-bottom: 8px;">É utilizado no núcleo de eletrodos para iluminação de arco de carbono em estúdios de cinema e refletores de projeção.</li>
+              <li style="margin-bottom: 8px;">Ligas metálicas contendo praseodímio compõem o anodo de baterias recarregáveis de níquel-hidreto metálico (NiMH) em veículos híbridos.</li>
+            </ul>
+          </div>
+        `,  
+        curiosidades: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">O nome "gêmeo verde" foi atribuído ao elemento devido à intensa coloração verde observada em seus sais e soluções aquosas, associada ao fato de ter sido isolado a partir do "didímio" (termo que significava "gêmeo"), onde permanecia emparelhado e oculto junto ao neodímio.</li>
+              <li style="margin-bottom: 8px;">No final da década de 1920, o vidreiro austríaco Leo Moser pesquisou o uso do óxido de praseodímio como corante para vidros, produzindo uma coloração verde-amarelada batizada de Prasemit. Moser também combinou praseodímio e neodímio para produzir o vidro Heliolite, famoso por mudar de tom conforme a fonte de iluminação.</li>
+              <li style="margin-bottom: 8px;">A incorporação de praseodímio na estrutura cristalina da zircônia serve de base para a fabricação de gemas sintéticas e pigmentos cerâmicos amarelados de alta estabilidade térmica, capazes de suportar temperaturas extremas de queima sem perder a vivacidade da cor.</li>
+              <li style="margin-bottom: 8px;">Embora a produção mundial de minérios de terras raras tenha atingido 385 mil toneladas em 2023, o Serviço Geológico dos Estados Unidos (USGS) não divulga estatísticas isoladas da produção anual específica do praseodímio, uma vez que ele é extraído e comercializado em conjunto com o concentrado dos demais lantanídeos.</li>
+            </ul>
+          </div>
+        `, 
+        Referencias: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `,
-          
-          OndeEncontrado: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `,
-          Aplicacoes: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `,  
-          curiosidades: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `, 
-          Referencias: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                
+                <li style="margin-bottom: 8px;">
+                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Praseodymium Element Facts</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/praseodymium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/praseodymium.html</a>. 
+                    Acesso em: 27 out. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CONSELHO REGIONAL DE QUÍMICA - IV REGIÃO (CRQ-SP). <strong style="color: #ffffff; font-weight: bold;">Praseodímio</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/praseodimio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/praseodimio/</a>. 
+                    Acesso em: 27 out. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    ENCYCLOPÆDIA BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Praseodymium | Chemical Element, Properties, &amp; Facts</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/praseodymium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/praseodymium</a>. 
+                    Acesso em: 27 out. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    ROYAL SOCIETY OF CHEMISTRY. <strong style="color: #ffffff; font-weight: bold;">Praseodymium - Element information, properties and uses</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/59/praseodymium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/59/praseodymium</a>. 
+                    Acesso em: 27 out. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Praseodymium (Pr)</strong>. 
+                    Disponível em: <a href="https://pt.webqc.org/periodictable-Praseodymium-Pr.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Praseodymium-Pr.html</a>. 
+                    Acesso em: 27 out. 2026.
+                </li>
               </ul>
             </div>
           `,
         },
-        62: {
+      60: {
+        numero: 60, simbolo: "Nd", nome: "Neodímio", familia: "lantanideo", familiaNome: "Lantanídeos",
+        massa: "144,24 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural",
+        pontoFusao: "1024 °C", pontoEbulicao: "3074 °C", densidade: "7,01 g/cm³", fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁴ 5s² 5p⁶ 6s²", eletronegatividade: "1,14", raioAtomico: "181 pm", oxidacao: "+2, +3, +4",
+        descoberta: "1885", descobridor: "Carl Auer von Welsbach",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #06b6d4; font-weight: bold;">Neodymium:</Strong> deriva do grego "neos" (novo) e "didymos" (irmão gêmeo).</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">Em 1841, o químico sueco Carl Gustaf Mosander isolou uma substância a partir da "céria" que acreditava ser um novo elemento, batizando-a de "didímio".</li>
+                <li style="margin-bottom: 8px;">Durante mais de quatro décadas, o didímio foi considerado um elemento químico e chegou a constar na tabela periódica com o símbolo Di. Contudo, análises espectroscópicas conduzidas nas décadas de 1870 e 1880 por pesquisadores como Lecoq de Boisbaudran e Bohuslav Brauner revelaram variações que indicavam que o didímio era uma mistura de elementos.</li>
+                <li style="margin-bottom: 8px;">Em 1885, em Viena, o químico austríaco Carl Auer von Welsbach (aluno de Robert Bunsen) realizou mais de cem etapas trabalhosas de cristalização fracionada de sais de nitrato duplo de didímio e amônio em ácido nítrico. Welsbach conseguiu separar o didímio em dois novos elementos com espectros distintos: uma fração rosada, que nomeou como neodímio ("novo gêmeo"), e uma fração esverdeada, denominada praseodímio.</li>
+                <li style="margin-bottom: 8px;">O neodímio metálico em forma pura foi obtido pela primeira vez em 1925 por H. Kremers por meio de processos eletrolíticos de haletos fundidos.</li>
+              </ul>
+            </div>
+          `,
+        caracteristicas: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É um metal de transição interna e terra rara pertencente à série dos lantanídeos. É um sólido metálico macio, maleável e dúctil de coloração brilhante branco-prateada com lustre metálico característico.</li>
+              <li style="margin-bottom: 8px;">Oxida-se rapidamente quando exposto ao ar, desenvolvendo uma camada descamável de óxido que se desprende e não protege o metal de posterior oxidação, devendo ser armazenado selado em revestimento plástico, sob vácuo ou em atmosfera inerte.</li>
+              <li style="margin-bottom: 8px;">Demonstra comportamento paramagnético à temperatura ambiente e ordena-se antiferromagneticamente abaixo de -253,15 °C.</li>
+              <li style="margin-bottom: 8px;">Reage gradualmente com a água e dissolve-se facilmente em ácidos minerais diluídos com liberação de gás hidrogênio, mas resiste ao ácido fluorídrico (HF) por formar uma camada protetora de trifluoreto de neodímio (NdF<sub>3</sub>).</li>
+              <li style="margin-bottom: 8px;">Não possui função biológica conhecida e apresenta toxicidade considerada moderada, sendo irritante para os olhos.</li>
+            </ul>
+          </div>
+        `,
+        OndeEncontrado: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Apresenta abundância na crosta terrestre estimada entre 33 ppm e 41 ppm, sendo o 4º lantanídeo mais abundante e superando a concentração do chumbo em mais de duas vezes, com presença comparável à do cobre, níquel e cobalto.</li>
+              <li style="margin-bottom: 8px;">Não ocorre livre em estado metálico na natureza. É encontrado concentrado em minérios de terras raras, principalmente na bastnasita e na monazita, além da xenotima, e é gerado como produto de fissão nuclear do urânio.</li>
+              <li style="margin-bottom: 8px;">É extraído industrialmente por digestão com ácido sulfúrico concentrado e separado por técnicas de troca iônica e extração por solvente.</li>
+              <li style="margin-bottom: 8px;">A produção mundial é amplamente dominada pela China (responsável por cerca de 85% a 97% da oferta global), seguida por países como Rússia, Malásia e Estados Unidos. O Brasil detém cerca de 18,3% das reservas mundiais de terras raras e desenvolve pesquisas na USP para o domínio da cadeia produtiva e fabricação de ímãs de neodímio.</li>
+            </ul>
+          </div>
+        `,
+        Aplicacoes: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Sua principal e mais importante aplicação tecnológica é na fabricação dos superímãs permanentes de neodímio-ferro-boro (ímãs NIB), que são os ímãs mais fortes conhecidos.</li>
+              <li style="margin-bottom: 8px;">É amplamente utilizado em motores elétricos de veículos híbridos e elétricos (~1 kg de neodímio por veículo), geradores de turbinas eólicas (150 kg a 600 kg por unidade), discos rígidos de computador, acionadores de mísseis guiados, alto-falantes, fones de ouvido e mecanismos de vibração em smartphones.</li>
+              <li style="margin-bottom: 8px;">Na indústria vidreira e cerâmica, o óxido de neodímio é empregado como corante para conferir tons de violeta, rosa e vinho a vidros especiais, além de compor o "vidro de didímio" (junto com o praseodímio) para óculos de proteção de soldadores e sopradores de vidro por bloquear a radiação da linha D do sódio e infravermelho.</li>
+              <li style="margin-bottom: 8px;">É utilizado como componente da liga mischmetal (~15% de neodímio) para pedras de isqueiro, como aditivo na fabricação de aços, como catalisador de polimerização (na forma de óxido e nitrato) e como regenerador para resfriamento em aplicações criogênicas de baixíssimas temperaturas em liga com o érbio.</li>
+            </ul>
+          </div>
+        `,  
+        curiosidades: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Quando Carl Auer von Welsbach apresentou sua descoberta demonstrando que o "didímio" era na verdade a junção de dois elementos, seu orientador Robert Bunsen, que era a maior autoridade em espectroscopia da época e havia defendido a elementaridade do didímio, aceitou imediatamente o trabalho de seu aluno, enquanto a comunidade científica europeia permaneceu cética por vários anos.</li>
+              <li style="margin-bottom: 8px;">A descoberta dos ímãs permanentes de neodímio-ferro-boro em 1983 revolucionou a eletrônica de consumo ao permitir uma miniaturização sem precedentes de alto-falantes, microfones e motores elétricos, viabilizando a criação de celulares finos e tocadores de música portáteis com alta potência sonora.</li>
+              <li style="margin-bottom: 8px;">A análise das proporções de isótopos de neodímio e tungstênio presentes em meteoritos antigos de origem marciana, como o famoso ALH84001 encontrado na Antártida, possibilita a cientistas da NASA calcular a idade exata de formação e a linha do tempo das rochas de Marte.</li>
+            </ul>
+          </div>
+        `, 
+        Referencias: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">
+                  Britannica. <strong style="color: #ffffff; font-weight: bold;">Neodymium</strong>. 
+                  Disponível em: <a href="https://www.britannica.com/science/neodymium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/neodymium</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  Chemicool. <strong style="color: #ffffff; font-weight: bold;">Neodymium Element Facts</strong>. 
+                  Disponível em: <a href="https://www.chemicool.com/elements/neodymium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/neodymium.html</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Lantanídeos: por dentro das novas tecnologias</strong>. 
+                  Disponível em: <a href="https://crqsp.org.br/lantanideos-por-dentro-das-novas-tecnologias/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/lantanideos-por-dentro-das-novas-tecnologias/</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  RSC. <strong style="color: #ffffff; font-weight: bold;">Neodymium</strong>. 
+                  Disponível em: <a href="https://periodic-table.rsc.org/element/60/neodymium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/60/neodymium</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  WEBQC. <strong style="color: #ffffff; font-weight: bold;">Neodymium Nd</strong>. 
+                  Disponível em: <a href="https://pt.webqc.org/periodictable-Neodymium-Nd.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Neodymium-Nd.html</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+            </ul>
+          </div>
+        `,
+    },
+      61: {
+        numero: 61, simbolo: "Pm", nome: "Promécio", familia: "lantanideo", familiaNome: "Lantanídeos",
+        massa: "[145] u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural",
+        pontoFusao: "1042 °C", pontoEbulicao: "3000 °C", densidade: "7,22 g/cm³", fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁵ 5s² 5p⁶ 6s²", eletronegatividade: "1,13", raioAtomico: "180 pm", oxidacao: "+2, +3",
+        descoberta: "1945", descobridor: "Jacob A. Marinsky, Lawrence E. Glendenin e Charles D. Coryell",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #06b6d4; font-weight: bold;">Promethium:</strong> O nome deriva do Titã Prometeu, da mitologia grega, que roubou o fogo do Monte Olimpo para dar à humanidade.</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">Em 1902, o químico tcheco Bohuslav Brauner previu a existência de um elemento entre o neodímio (60) e o samário (62), lacuna confirmada em 1914 pelo físico britânico Henry Moseley ao estruturar a sequência dos números atômicos.</li>
+                <li style="margin-bottom: 8px;">Nas décadas de 1920 e 1930, vários pesquisadores anunciaram descobertas em minérios naturais (como o florentium por Luigi Rolla na Itália e o illinium por B. Smith Hopkins nos EUA), mas todas foram refutadas, pois a regra isóbara de Mattauch indicava que o elemento não possuía isótopos estáveis.</li>
+                <li style="margin-bottom: 8px;">A identificação química definitiva e o isolamento do elemento 61 ocorreram em 1945 no Laboratório Nacional de Oak Ridge (Tennessee), pelos químicos Jacob A. Marinsky, Lawrence E. Glendenin e Charles D. Coryell. Eles produziram e separaram os radioisótopos promécio-147 e promécio-149 a partir dos produtos de fissão nuclear do urânio extraídos de um reator nuclear, utilizando a técnica de cromatografia de troca iônica.</li>
+                <li style="margin-bottom: 8px;">O anúncio oficial ocorreu em 1947 e o nome promécio foi adotado oficialmente pela União Internacional de Química em 1949. O metal na sua forma pura só foi preparado em 1963 por meio da redução do trifluoreto de promécio (PmF<sub>3</sub>) com lítio.</li>
+              </ul>
+            </div>
+          `,
+        caracteristicas: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É um metal de transição interna e de terra rara radioativo pertencente à série dos lantanídeos. É um sólido metálico de coloração cinza-prateada ou branco-prateada.</li>
+              <li style="margin-bottom: 8px;">É o único lantanídeo e um dos apenas dois elementos com número atômico inferior a 83 na tabela periódica que não possuem nenhum isótopo estável (junto com o tecnécio).</li>
+              <li style="margin-bottom: 8px;">Emite luminescência pálida em tons de azul e verde no escuro devido à sua intensa radioatividade e decaimento beta.</li>
+              <li style="margin-bottom: 8px;">Reage com o ar para formar o óxido Pm<sub>2</sub>O<sub>3</sub>, reage com ácido nítrico e ácidos minerais liberando hidrogênio, mas não reage com hidróxido de sódio.</li>
+              <li style="margin-bottom: 8px;">Não possui função biológica conhecida no organismo e apresenta elevada nocividade e periculosidade devido à radiação emitida.</li>
+            </ul>
+          </div>
+        `,
+        OndeEncontrado: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É praticamente inexistente na crosta terrestre devido às curtas meias-vidas de seus isótopos. Ocorre em quantidades vestigiais insignificantes em minérios de urânio (como a pechblenda/uraninita), com concentração de cerca de 4 partes por quintilhão em massa.</li>
+              <li style="margin-bottom: 8px;">Estima-se que existam apenas cerca de 500 a 600 gramas de promécio de origem natural em toda a crosta terrestre a qualquer momento.</li>
+              <li style="margin-bottom: 8px;">O elemento é detectado por espectroscopia nas emissões de luz de estrelas distantes, como a HR 465 (na constelação de Andrômeda), a estrela de Przybylski (Centaurus) e a HD 965 (Sculptor).</li>
+              <li style="margin-bottom: 8px;">É obtido industrialmente e para pesquisas a partir dos subprodutos do processamento de combustível nuclear irradiado (fissão do urânio-235 em reatores) e purificado via cromatografia de troca iônica, além de poder ser preparado pela irradiação de neodímio e praseodímio com nêutrons.</li>
+            </ul>
+          </div>
+        `,
+        Aplicacoes: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">A maior parte do promécio produzido é utilizada exclusivamente em pesquisas científicas.</li>
+              <li style="margin-bottom: 8px;">O isótopo promécio-147 é empregado na produção de baterias atômicas compactas e de longa duração, utilizadas para alimentar marcapassos cardíacos, mísseis guiados, rádios e equipamentos em missões espaciais, fornecendo energia por cerca de 5 a 10 anos.</li>
+              <li style="margin-bottom: 8px;">É utilizado como fonte de radiação beta e raios X em instrumentos de medição industrial de espessura de materiais (como plásticos e folhas metálicas) e em fontes portáteis de raios X.</li>
+              <li style="margin-bottom: 8px;">Apresenta pesquisas e potencial de uso em radioterapia e fontes de energia biomédicas.</li>
+            </ul>
+          </div>
+        `,  
+        curiosidades: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É o único metal de terras raras (lantanídeos) que não possui isótopos estáveis e não pode ser encontrado naturalmente em quantidade observável na Terra.</li>
+              <li style="margin-bottom: 8px;">O nome foi sugerido por Grace Mary Coryell, esposa de Charles Coryell, porque ela sentiu que os cientistas do laboratório de Oak Ridge estavam "roubando o fogo dos deuses" (como o Titã Prometeu) ao desenvolver a energia atômica durante a Segunda Guerra Mundial.</li>
+              <li style="margin-bottom: 8px;">No escuro, os sais e soluções de promécio brilham com uma luminescência azulada ou esverdeada suave, provocada pela sua forte radioatividade intrínseca.</li>
+              <li style="margin-bottom: 8px;">Apesar de ser quase inexistente no nosso planeta, a estrela HR 465, na constelação de Andrômeda, fabrica e expulsa quantidades consideráveis de promécio no espaço.</li>
+              <li style="margin-bottom: 8px;">Durante as décadas em que o elemento esteve "desaparecido", foram registradas alegações de descobertas falsas que lhe renderam nomes como illinium, florentium e cyclonium.</li>
+            </ul>
+          </div>
+        `, 
+        Referencias: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">
+                  Britannica. <strong style="color: #ffffff; font-weight: bold;">Promethium</strong>. 
+                  Disponível em: <a href="https://www.britannica.com/science/promethium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/promethium</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  Chemicool. <strong style="color: #ffffff; font-weight: bold;">Promethium Element Facts</strong>. 
+                  Disponível em: <a href="https://www.chemicool.com/elements/promethium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/promethium.html</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Promécio</strong>. 
+                  Disponível em: <a href="https://crqsp.org.br/promecio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/promecio/</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  RSC. <strong style="color: #ffffff; font-weight: bold;">Promethium</strong>. 
+                  Disponível em: <a href="https://periodic-table.rsc.org/element/61/promethium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/61/promethium</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+              <li style="margin-bottom: 8px;">
+                  WEBQC. <strong style="color: #ffffff; font-weight: bold;">Promethium Pm</strong>. 
+                  Disponível em: <a href="https://pt.webqc.org/periodictable-Promethium-Pm.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Promethium-Pm.html</a>. 
+                  Acesso em: 13 nov. 2026.
+              </li>
+            </ul>
+          </div>
+        `,
+    },
+      62: {
         numero: 62, simbolo: "Sm", nome: "Samário", familia: "lantanideo", familiaNome: "Lantanídeos",
-        massa: "150,36 u", grupo: "3", periodo: "4", estado: "Sólido", origem: "Natural",
-        pontoFusao: "156,5 °C", pontoEbulicao: "2067 °C", densidade: "7,52 g/cm³", fase: "Sólido (20°C)", bloco:"f",
-        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁶ 5s² 5p⁶ 5d¹⁰ 6s² 6p³", eletronegatividade: "1,8", raioAtomico: "180 pm", oxidacao: "0, +2, +3",
+        massa: "150,36 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural",
+        pontoFusao: "1072 °C", pontoEbulicao: "1794 °C", densidade: "7,52 g/cm³", fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁶ 5s² 5p⁶ 6s²", eletronegatividade: "1,17", raioAtomico: "180 pm", oxidacao: "+2, +3",
         descoberta: "1879", descobridor: "Lecoq de Boisbaudran",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><Strong>Samarium:</Strong> deriva do nome do mineral samarskite, que contém o elemento.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #06b6d4; font-weight: bold;">Samarium:</strong> deriva do nome do mineral samarskite, que contém o elemento.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -5334,243 +5615,347 @@
               </ul>
             </div>
           `,
-          caracteristicas: `
+        caracteristicas: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">É um metal de transição interna pertencente ao grupo dos lantanídeos e terras raras, sendo um sólido prateado-claro, moderadamente duro, maleável e brilhante quando cortado.</li>
-                <li style="margin-bottom: 8px;">Oxida-se lentamente em ar seco e mancha em ar úmido. Entra em ignição espontânea no ar em temperaturas a partir de 150 °C para formar óxido de samário (Sm2O3). Dissolve-se rapidamente em ácidos diluídos, mas resiste ao ácido fluorídrico (HF) devido à formação de uma camada protetora de trifluoreto de samário (SmF<sub>3</sub>).</li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Oxida-se lentamente em ar seco e mancha em ar úmido. Entra em ignição espontânea no ar em temperaturas a partir de 150 °C para formar óxido de samário (Sm<sub>2</sub>O<sub>3</sub>). Dissolve-se rapidamente em ácidos diluídos, mas resiste ao ácido fluorídrico (HF) devido à formação de uma camada protetora de trifluoreto de samário (SmF<sub>3</sub>).</li>
               </ul>
             </div>
           `,
-          
-          OndeEncontrado: `
+        OndeEncontrado: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Apresenta abundância na crosta estimada em cerca de 6 ppm a 7 ppm, sendo o 40º elemento mais abundante da crosta terrestre (tão abundante quanto o estanho) e o 5º entre os de terras raras.</li>
+                <li style="margin-bottom: 8px;">Não ocorre livre na natureza, sendo encontrado associado a minerais de terras raras, principalmente a monazita e a bastnasita, além da samarsquita, cerita e gadolinita.</li>
+                <li style="margin-bottom: 8px;">Rocha e amostras de solo lunar trazidas por astronautas das missões Apollo 12 e Apollo 14 da NASA contêm concentrações detectáveis de samário.</li>
+                <li style="margin-bottom: 8px;">É obtido industrialmente por técnicas de troca iônica, extração por solventes fosfóricos orgânicos e deposição eletroquímica, sendo o metal puro reduzido do seu óxido (Sm<sub>2</sub>O<sub>3</sub>) com lantânio ou cálcio em alta temperatura.</li>
+                <li style="margin-bottom: 8px;">Os maiores produtores e detentores de reservas globais de minérios de terras raras incluem a China, os Estados Unidos, a Austrália e a Rússia. O Brasil possui reservas estimadas em 21 milhões de toneladas de terras raras (associadas a rochas carbonáticas em MG, GO, SP e granitos no AM).</li>
               </ul>
             </div>
           `,
-          Aplicacoes: `
+        Aplicacoes: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Sua principal aplicação tecnológica é na fabricação de ímãs permanentes de alta potência de samário-cobalto, que mantêm seu ferromagnetismo e estabilidade operacional em temperaturas extremas de até 700 °C (superando os ímãs de neodímio). São usados em atuadores aeroespaciais, motores elétricos, armas guiadas de precisão, fones de ouvido e captadores magnéticos de guitarras elétricas.</li>
+                <li style="margin-bottom: 8px;">É aplicado na indústria nuclear devido à seção de choque de absorção de nêutrons térmicos do isótopo samário-149, sendo utilizado em barras de controle de reatores e sistemas de blindagem (como a mistura SEG, samário-európio-gadolínio).</li>
+                <li style="margin-bottom: 8px;">Na medicina nuclear, o radioisótopo sintético samário-153 é utilizado em radioterapia para o alívio de dores intensas associadas a metástases ósseas em câncer avançado.</li>
+                <li style="margin-bottom: 8px;">O óxido de samário é utilizado em vidros ópticos especiais para absorver radiação infravermelha, em lâmpadas de arco de carbono para iluminação de estúdios de rádio e cinema, e para dopar cristais de fluoreto de cálcio empregados em lasers ópticos.</li>
               </ul>
             </div>
           `,  
-          curiosidades: `
+        curiosidades: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">A nomenclatura “samário” deriva do mineral samarsquita, que havia sido batizado em 1847 pelo mineralogista Heinrich Rose em homenagem ao oficial e engenheiro de minas russo Vasili Samarsky-Bykhovets. Isso fez do samário o primeiro elemento químico da história a ser nomeado (ainda que indiretamente) em homenagem a uma pessoa real que estava viva no momento da nomeação do mineral.</li>
+                <li style="margin-bottom: 8px;">O isótopo samário-147 possui uma meia-vida de 106 bilhões de anos, cerca de 8 vezes maior do que a própria idade estimada de todo o Universo (~13,8 bilhões de anos). Por ser altamente resistente ao metamorfismo, o par isotópico samário-neodímio é utilizado por geólogos como relógio de geocronologia para datar rochas pré-cambrianas e meteoritos.</li>
+                <li style="margin-bottom: 8px;">Amostras de rochas coletadas na Lua durante as missões Apollo 12 (1969) e Apollo 14 (1971) da NASA continham samário entre seus componentes minerais.</li>
+                <li style="margin-bottom: 8px;">Os ímãs de samário-cobalto foram os grandes responsáveis pela miniaturização de dispositivos eletrônicos de áudio nos anos 1970 e 1980, como os primeiros toca-fitas portáteis (Walkman) e fones de ouvido compactos.</li>
+                <li style="margin-bottom: 8px;">O samário não possui nenhuma função biológica conhecida no corpo humano e apresenta toxicidade moderada.</li>
               </ul>
             </div>
           `, 
-          Referencias: `
+        Referencias: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                
+                <li style="margin-bottom: 8px;">
+                    Britannica. <strong style="color: #ffffff; font-weight: bold;">Samarium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/samarium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/samarium</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    Chemicool. <strong style="color: #ffffff; font-weight: bold;">Samarium Element Facts</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/samarium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/samarium.html</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Samário</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/samario/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/samario/</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    RSC. <strong style="color: #ffffff; font-weight: bold;">Samarium</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/62/samarium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/62/samarium</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Samarium Sm</strong>. 
+                    Disponível em: <a href="https://pt.webqc.org/periodictable-Samarium-Sm.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Samarium-Sm.html</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+              </ul>
+            </div>
+          `,
+    },
+      63: {
+        numero: 63, simbolo: "Eu", nome: "Európio", familia: "lantanideo", familiaNome: "Lantanídeos",
+        massa: "151,96 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural",
+        pontoFusao: "822 °C", pontoEbulicao: "1529 °C", densidade: "5,24 g/cm³", fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁷ 5s² 5p⁶ 6s²", eletronegatividade: "1,2", raioAtomico: "185 pm", oxidacao: "+2, +3",
+        descoberta: "1901", descobridor: "Eugène-Anatole Demarçay",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #06b6d4; font-weight: bold;">Europium:</strong> O nome foi atribuído em homenagem ao continente europeu.</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">Em 1879, Paul-Émile Lecoq de Boisbaudran isolou o samário a partir da samarsquita, mas a amostra continha impurezas de outros lantanídeos.</li>
+                <li style="margin-bottom: 8px;">Em 1886, o cientista britânico Sir William Crookes identificou linhas inéditas nos espectros de amostras de samário e itérbio, sugerindo a presença de um novo elemento, porém sem isolá-lo.</li>
+                <li style="margin-bottom: 8px;">Em 1890, Boisbaudran também detectou uma fração espectral distinta em concentrados de samário e gadolínio.</li>
+                <li style="margin-bottom: 8px;">A confirmação e o isolamento ocorreram em 1901 pelo químico francês Eugène-Anatole Demarçay. Utilizando um espectroscópio de centelha com eletrodos de platina e bobina de indução de alta temperatura desenvolvido por ele, Demarçay realizou uma extensa sequência de cristalizações fracionadas repetidas do nitrato duplo de samário e magnésio, isolando o elemento na forma de sais. Ele batizou o elemento 63 de európio.</li>
+                <li style="margin-bottom: 8px;">Em 1904, Georges Urbain aperfeiçoou a separação usando nitrato de bismuto e magnésio. O metal na sua forma elementar pura foi obtido posteriormente por eletrólise de haletos fundidos e por redução do seu óxido com lantânio metálico sob vácuo e destilação.</li>
+              </ul>
+            </div>
+          `,
+        caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É um metal de transição interna pertencente à série dos lantanídeos e ao grupo das terras raras. É um sólido metálico de coloração branco-prateada com leve tom amarelado, sendo o metal mais macio (com dureza semelhante à do chumbo), mais volátil e mais quimicamente reativo de toda a série dos lantanídeos.</li>
+                <li style="margin-bottom: 8px;">É extremamente reativo e se oxida instantaneamente ao ar seco ou úmido, perdendo o brilho metálico e formando uma camada superficial escura de hidróxido de európio, raramente mantendo o brilho mesmo sob óleo mineral. Reage de forma vigorosa com a água produzindo hidróxido de európio e gás hidrogênio. Dissolve-se rapidamente em ácidos diluídos, mas resiste ao ácido fluorídrico (HF) devido à formação de uma camada protetora insolúvel de fluoreto de európio (EuF<sub>3</sub>).</li>
+                <li style="margin-bottom: 8px;">Inflama-se espontaneamente no ar em temperaturas entre 150 °C e 180 °C.</li>
+                <li style="margin-bottom: 8px;">Não possui função biológica conhecida e apresenta toxicidade considerada baixa a moderada.</li>
+              </ul>
+            </div>
+          `,
+        OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É uma das terras raras mais escassas da crosta terrestre, com abundância estimada entre 0,18 ppm e 2,0 ppm por peso (concentração similar à do bromo).</li>
+                <li style="margin-bottom: 8px;">Não ocorre livre na natureza, sendo encontrado em concentrações minúsculas associado a outros lantanídeos em minérios como a bastnasita e monazita, além da xenotima e loparita, ocorrendo também em argilas de adsorção iônica e como produto de fissão nuclear do urânio.</li>
+                <li style="margin-bottom: 8px;">O elemento foi detectado por análise espectroscópica na atmosfera do Sol e em estrelas distantes.</li>
+                <li style="margin-bottom: 8px;">É extraído e separado industrialmente aproveitando a redução seletiva de Eu<sup>3+</sup> para Eu<sup>2+</sup> (com amálgama de zinco), o qual se precipita facilmente como sulfato insolúvel (separando-se dos lantanídeos trivalentes), seguido de extração por solvente com compostos organofosforados e troca iônica.</li>
+                <li style="margin-bottom: 8px;">Os maiores produtores mundiais de minérios contendo európio são a China, Estados Unidos e Mianmar. No Brasil, a maior mina em operação de argilas iônicas fica em Minaçu, Goiás, com reservas também registradas em Minas Gerais, São Paulo e Amazonas.</li>
+              </ul>
+            </div>
+          `,
+        Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">O európio trivalente (Eu<sup>3+</sup>) é o agente luminescente padrão para emissão de radiação vermelha intensa e pura em tubos de raios catódicos de televisores coloridos e monitores, enquanto o európio bivalente (Eu<sup>2+</sup>) gera emissão azul, permitindo a produção de cores vivas nas telas.</li>
+                <li style="margin-bottom: 8px;">É aplicado em tintas de segurança fosforescentes nas notas da moeda Euro e em documentos bancários. Ao ser exposto à luz ultravioleta, o Eu<sup>3+</sup> emite uma fluorescência vermelha intensa que comprova a autenticidade do documento.</li>
+                <li style="margin-bottom: 8px;">A combinação de luminescentes de Eu<sup>3+</sup> (vermelho) e Eu<sup>2+</sup> (azul) com um terceiro fósforo produz luz branca equilibrada e natural em lâmpadas fluorescentes compactas e dispositivos LED.</li>
+                <li style="margin-bottom: 8px;">Sais e complexos luminescentes de európio atuam como marcadores em cintiladores para tomografia por raios X e em ensaios de fluorescência com resolução temporal para estudo de interações biomoleculares e descoberta de fármacos.</li>
+                <li style="margin-bottom: 8px;">É utilizado como dopante em plásticos para lasers, vidros especiais, componentes para aviação, osciloscópios e na fabricação de ligas supercondutoras finas.</li>
+              </ul>
+            </div>
+          `,  
+        curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Sob condições de pouca oxigenação no magma, o európio transforma-se em Eu<sup>2+</sup> e passa a se comportar como o cálcio. Ele deixa o grupo dos outros lantanídeos e entra no mineral plagioclásio, criando a "anomalia de európio", uma marca geoquímica usada por geólogos para rastrear a origem e a história das rochas.</li>
+                <li style="margin-bottom: 8px;">Embora fosse considerado por mais de um século como um isótopo totalmente estável, verificou-se experimentalmente que o európio-151 é radioativo e sofre decaimento alfa para o samário-147, com uma meia-vida de 5×10<sup>18</sup> anos (período que corresponde a cerca de 360 milhões de vezes a idade do Universo).</li>
+                <li style="margin-bottom: 8px;">Sir William Crookes identificou as linhas espectrais do elemento em 1886 usando um tubo de raios catódicos com eletrodos especiais, mas não o isolou. Por conta disso, historiadores da ciência frequentemente comparam o caso do európio ao da descoberta da penicilina por Alexander Fleming, discutindo se o crédito principal cabe a quem primeiro observou o fenômeno (Crookes) ou a quem finalmente o isolou e purificou em laboratório (Demarçay).</li>
+                <li style="margin-bottom: 8px;">O termo "fluorescência" foi criado a partir do mineral fluorita, e a característica luminescência azul brilhante emitida sob luz ultravioleta por certas amostras naturais de fluorita é causada justamente pela presença de vestígios de íons de európio divalente (Eu<sup>2+</sup>) substituindo átomos de cálcio no cristal.</li>
+              </ul>
+            </div>
+          `, 
+        Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    Britannica. <strong style="color: #ffffff; font-weight: bold;">Europium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/europium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/europium</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    Chemicool. <strong style="color: #ffffff; font-weight: bold;">Europium Element Facts</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/europium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/europium.html</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Európio</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/europio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/europio/</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    RSC. <strong style="color: #ffffff; font-weight: bold;">Europium</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/63/europium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/63/europium</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Europium Eu</strong>. 
+                    Disponível em: <a href="https://pt.webqc.org/periodictable-Europium-Eu.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Europium-Eu.html</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
               </ul>
             </div>
           `,
         },
-        68: {
-        numero: 68, simbolo: "Er", nome: "Erbio", familia: "lantanideo", familiaNome: "Lantanídeo", 
-        massa: "174,97 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural", bloco: "f", 
-        pontoFusao: "1670 °C", pontoEbulicao: "3675 °C", densidade: "9,84 g/cm³", fase: "Sólido", 
-        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s² 4f¹⁴ 5d¹ 6p¹", 
-        eletronegatividade: "1,27", raioAtomico: "139 pm", oxidacao: "+3", descoberta: "1907", descobridor: "André-Louis Debierne",
+      64: {
+        numero: 64, simbolo: "Gd", nome: "Gadolínio", familia: "lantanideo", familiaNome: "Lantanídeos", 
+        massa: "157,25 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural", bloco: "f", 
+        pontoFusao: "1311 °C", pontoEbulicao: "3273 °C", densidade: "7,90 g/cm³", fase: "Sólido (20°C)", 
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁷ 5s² 5p⁶ 5d¹ 6s²", 
+        eletronegatividade: "1,20", raioAtomico: "180 pm", oxidacao: "+3", descoberta: "1880", descobridor: "Jean Charles Galissard de Marignac",
         etimologia: `
-        <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: ##06b6d4; font-weight: bold;">Lutecium:</strong> O nome deriva de Lutetia, a denominação romana para se referir à cidade de Paris.</span></p>
+        <span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #06b6d4; font-weight: bold;">Gadolinium:</strong> Nome dado em homenagem ao químico e geólogo finlandês Johan Gadolin.</span>
+        `,
+        contextoDescoberta: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;"> 
+              <li style="margin-bottom: 8px;">Em 1880, em Genebra, o químico suíço Jean Charles Galissard de Marignac analisava amostras dos minerais cerita e samarsquita (bem como frações de "didímio" e "ítria") quando observou linhas espectrais inéditas pertencentes a um novo elemento, atribuindo-lhe temporariamente a designação Yα.</li>
+              <li style="margin-bottom: 8px;">Em 1886, o químico francês Paul-Émile Lecoq de Boisbaudran isolou uma amostra pura do óxido desse elemento a partir do mineral gadolinita, que havia sido assim nomeado em homenagem a Johan Gadolin, o responsável por isolar a primeira terra rara, e, com a concordância de Marignac, batizou o elemento de gadolínio.</li>
+              <li style="margin-bottom: 8px;">O gadolínio metálico livre e puro só foi isolado em 1935 pelo químico francês Félix Trombe por meio da redução térmica de seu fluoreto com cálcio metálico.</li>
+            </ul>
+          </div>
+          `,
+        caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É um metal de transição interna e de terra rara pertencente à série dos lantanídeos. É um sólido metálico de coloração branco-prateada com brilho metálico, moderadamente duro, maleável e dúctil.</li>
+                <li style="margin-bottom: 8px;">Demonstra comportamento magnético notável: possui o maior momento paramagnético entre todos os elementos à temperatura ambiente, tornando-se ferromagnético abaixo de aproximadamente 20 °C (seu ponto de Curie).</li>
+                <li style="margin-bottom: 8px;">Apresenta relativa estabilidade em ar seco à temperatura ambiente, mas escurece na presença de umidade e desenvolve uma camada superficial de óxido que descasca em lascas.</li>
+                <li style="margin-bottom: 8px;">Reage lentamente com a água liberando gás hidrogênio e dissolve-se rapidamente em ácidos diluídos, mas resiste ao ácido fluorídrico (HF) por formar uma camada protetora insolúvel de fluoreto de gadolínio (GdF<sub>3</sub>).</li>
+                <li style="margin-bottom: 8px;">Não possui função biológica conhecida no organismo e apresenta toxicidade baixa quando devidamente quelado.</li>
+              </ul>
+            </div>
+          `,
+        OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Apresenta abundância na crosta terrestre estimada entre 0,3 ppm e 6,2 ppm, sendo tão abundante na crosta quanto o bismuto e o arsênio.</li>
+                <li style="margin-bottom: 8px;">Não ocorre livre em forma metálica na natureza; encontra-se concentrado em minérios de terras raras como a bastnasita e a monazita (suas principais fontes comerciais), além da samarsquita, gadolinita e xenotima, ocorrendo também em argilas de adsorção iônica (como no sul da China) e como produto de fissão nuclear.</li>
+                <li style="margin-bottom: 8px;">É extraído e purificado industrialmente por digestão ácida seguida de técnicas de cromatografia de troca iônica e extração por solvente.</li>
+                <li style="margin-bottom: 8px;">A produção de terras raras é liderada pela China, Estados Unidos e Mianmar, com o gadolínio figurando na lista de minerais críticos do USGS. O Brasil possui produção e reservas de terras raras registradas.</li>
+              </ul>
+            </div>
+          `,
+        Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">É utilizado em agentes de contraste intravenosos para ressonância magnética (RM) médica, em que complexos quelados hidrossolúveis de alta estabilidade (como Gd-DOTA e Gd-DTPA) aproveitam o paramagnetismo do íon Gd<sup>3+</sup> para encurtar os tempos de relaxamento e destacar tumores e vasos sanguíneos.</li>
+                <li style="margin-bottom: 8px;">É aplicado como aditivo em ligas metálicas de ferro, crômio e superligas (em concentrações de até 1%), aumentando a maleabilidade, a usinabilidade e a resistência à oxidação sob altas temperaturas.</li>
+                <li style="margin-bottom: 8px;">Compõe cerâmicas de granadas de gadolínio-ítrio (YGG) para dispositivos de micro-ondas e circuitos de comunicação de alta frequência.</li>
+                <li style="margin-bottom: 8px;">É empregado em telas intensificadoras de raios-X, fósforos para lâmpadas fluorescentes e cintiladores para tomografia computadorizada. Além de ligas para fabricação de ímãs, componentes eletrônicos e mídias de armazenamento de dados, como memórias de computador e mídias ópticas.</li>
+              </ul>
+            </div>
+          `,  
+        curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">O gadolínio foi o primeiro elemento químico batizado em homenagem a uma pessoa: o químico e geólogo finlandês Johan Gadolin, sendo que o nome do elemento foi derivado do mineral gadolinita, no qual o gadolínio foi identificado.</li>
+                <li style="margin-bottom: 8px;">Apresenta um efeito magnetocalórico gigante em algumas ligas e no metal puro, liberando calor ao ser inserido em um campo magnético e resfriando-se drasticamente ao ser retirado, o que permite criar sistemas de refrigeração magnética ecológicos sem liberação de gases intensificadores do efeito estufa.</li>
+                <li style="margin-bottom: 8px;">Devido à alta semelhança do raio iônico do íon livre Gd<sup>3+</sup> com o do íon de cálcio (Ca<sup>2+</sup>), o gadolínio livre é tóxico ao organismo por interferir nos canais celulares de cálcio, razão pela qual suas aplicações médicas exigem ligantes orgânicos fortemente quelantes (como o DOTA) que o aprisionam.</li>
+                <li style="margin-bottom: 8px;">Em 1933, o químico norte-americano William F. Giauque e D. P. MacDougal utilizaram o sulfato de gadolínio em um experimento de desmagnetização adiabática para alcançar pela primeira vez temperaturas inferiores a 1 Kelvin (-272 °C).</li>
+              </ul>
+            </div>
+          `, 
+        Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    Britannica. <strong style="color: #ffffff; font-weight: bold;">Gadolinium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/gadolinium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/gadolinium</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Gadolínio</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/gadolinio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/gadolinio/</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    RSC. <strong style="color: #ffffff; font-weight: bold;">Gadolinium</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/64/gadolinium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/64/gadolinium</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Gadolinium Gd</strong>. 
+                    Disponível em: <a href="https://pt.webqc.org/periodictable-Gadolinium-Gd.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Gadolinium-Gd.html</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+              </ul>
+            </div>
+          `,
+    },
+      65: {
+        numero: 65, simbolo: "Tb", nome: "Térbio", familia: "lantanideo", familiaNome: "Lantanídeos", 
+        massa: "158,93 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural", bloco: "f", 
+        pontoFusao: "1356 °C", pontoEbulicao: "3230 °C", densidade: "8,23 g/cm³", fase: "Sólido (20°C)", 
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f⁹ 5s² 5p⁶ 6s²", 
+        eletronegatividade: "1,2", raioAtomico: "175 pm", oxidacao: "+3, +4", descoberta: "1843", descobridor: "Carl Gustaf Mosander",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #06b6d4; font-weight: bold;">Terbium:</strong> O nome homenageia a vila de Ytterby, na Suécia.</span>
         `,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Em 1843, no Instituto Karolinska em Estocolmo, o químico sueco Carl Gustaf Mosander analisava amostras do mineral gadolinita (e a fração de óxido de ítrio conhecida como "ítria", descoberta em 1794 por Johan Gadolin). Suspeitando que a ítria pudesse abrigar outros elementos ocultos, assim como a céria havia revelado o lantânio anos antes, Mosander realizou o fracionamento da solução por precipitação parcial utilizando hidróxido de amônio.</li>
+                <li style="margin-bottom: 8px;">A partir desse procedimento, Mosander obteve três compostos: a ítria pura, uma fração rósea (que ele chamou de terbia) e uma amarelada (que chamou de erbia). Devido à semelhança entre as terras raras, pesquisadores das décadas seguintes confundiram as amostras e inverteram os nomes acidentalmente por volta de 1877. Assim, a fração rósea virou o atual érbio e a amarelada, o térbio.</li>
+                <li style="margin-bottom: 8px;">O isolamento completo do elemento livre de impurezas só foi consolidado no início do século XX por Georges Urbain em Paris.</li>
+                <li style="margin-bottom: 8px;">O térbio metálico puro só passou a ser obtido industrialmente com o desenvolvimento das técnicas de separação por troca iônica e redução metalotérmica no século XX.</li>
               </ul>
             </div>
           `,
-          caracteristicas: `
+        caracteristicas: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">É um metal de transição interna e terra rara pesada pertencente à série dos lantanídeos. É um sólido metálico macio, maleável e dúctil de coloração branco-prateada a cinza-prateada, podendo ser facilmente cortado com uma faca.</li>
+                <li style="margin-bottom: 8px;">É relativamente estável no ar seco à temperatura ambiente graças à formação de uma camada superficial protetora de óxido escura. Reage lentamente com a água e dissolve-se rapidamente em ácidos diluídos, mas resiste ao ácido fluorídrico (HF) por formar uma camada insolúvel de trifluoreto de térbio (TbF<sub>3</sub>).</li>
+                <li style="margin-bottom: 8px;">O térbio natural possui apenas 1 isótopo estável, o térbio-159. Porém, possui cerca de 36 radioisótopos sintéticos.</li>
+                <li style="margin-bottom: 8px;">Não possui função biológica conhecida no organismo humano e apresenta toxicidade considerada de baixa a moderada.</li>
               </ul>
             </div>
           `,
-          OndeEncontrado: `
+        OndeEncontrado: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">Apresenta abundância na crosta terrestre estimada entre 0,3 ppm e 1,2 ppm por peso, estando entre os elementos de terras raras mais escassos.</li>
+                <li style="margin-bottom: 8px;">Não ocorre em estado metálico nativo na natureza, sendo encontrado associado a minérios de terras raras como monazita, bastnasita, xenotima, euxenita, cerita e gadolinita, além de estar presente em argilas de adsorção iônica e em produtos de fissão nuclear.</li>
+                <li style="margin-bottom: 8px;">As principais fontes comerciais de térbio derivam das argilas de adsorção iônica do sul da China e do processamento de concentrados do tipo samário-európio-gadolínio extraídos da bastnasita e da monazita.</li>
+                <li style="margin-bottom: 8px;">É separado e purificado industrialmente por métodos de extração por solvente e cromatografia de troca iônica.</li>
               </ul>
             </div>
           `,
-          Aplicacoes: `
+        Aplicacoes: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">É amplamente utilizado na indústria de iluminação e displays como dopante em fósforos verdes para lâmpadas fluorescentes compactas, tubos de raios catódicos de TV, telas de alta definição e iluminação tricromática.</li>
+                <li style="margin-bottom: 8px;">A adição de térbio a ímãs permanentes de neodímio-ferro-boro (NdFeB) melhora a resistência à desmagnetização e eleva a temperatura de operação de motores elétricos para até cerca de 200 °C, tornando-o essencial em veículos elétricos e geradores de turbinas eólicas.</li>
+                <li style="margin-bottom: 8px;">É o principal componente da liga magnetostritiva Terfenol-D (térbio, disprósio e ferro), que se expande e contrai em presença de campo magnético. Ela é aplicada em atuadores de alta precisão, sistemas de sonar naval, sensores de pressão e dispositivos de áudio como o "SoundBug".</li>
+                <li style="margin-bottom: 8px;">Suas propriedades luminescentes e fluorescentes verdes sob iluminação UV são aplicadas em tintas de segurança e mecanismos anti-falsificação em cédulas do Euro e outros documentos bancários.</li>
+                <li style="margin-bottom: 8px;">Na medicina e bioquímica, compostos de térbio atuam como marcadores biológicos em testes de DNA/RNA e detecção rápida de contaminação por endósporos bacterianos, além de melhorarem a segurança em cintiladores para exames de raios-X, reduzindo o tempo de exposição à radiação.</li>
               </ul>
             </div>
           `,  
-          curiosidades: `
+        curiosidades: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
+                <li style="margin-bottom: 8px;">O nome deriva da vila de Ytterby, na Suécia, que foi a fonte dos minérios a partir dos quais Carl Gustaf Mosander o descobriu em 1843, tornando o térbio um dos quatro elementos químicos batizados em homenagem a essa pequena localidade mineradora (junto com o ítrio, o érbio e o itérbio).</li>
+                <li style="margin-bottom: 8px;">O íon Tb<sup>3+</sup> emite uma fluorescência verde brilhante tão intensa ao ser atingido por luz ultravioleta que pode ser facilmente observada a olho nu, exibindo também o fenômeno da triboluminescência (emissão de luz verde quando o cristal de um de seus compostos é fraturado ou sofre estresse mecânico).</li>
+                <li style="margin-bottom: 8px;">Uma aplicação curiosa desenvolvida por cientistas da NASA/JPL utiliza cloreto de térbio para testar rapidamente a descontaminação de naves espaciais: ao aplicar o sal sobre uma superfície, qualquer endósporo bacteriano vivo presente brilha imediatamente em verde sob luz UV.</li>
+                <li style="margin-bottom: 8px;">Devido à sua altíssima relevância estratégica na transição para energias limpas (ímãs de eólicas e carros elétricos) e à concentração de sua produção, o térbio é classificado como um material muito escasso, podendo alcançar cerca de 1.000 dólares por quilograma no mercado internacional.</li>
               </ul>
             </div>
           `, 
-          Referencias: `
+        Referencias: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">
-                    Britannica. <strong style="color: #ffffff; font-weight: bold;">Hafnium</strong>. 
-                    Disponível em: <a href="https://www.britannica.com/science/hafnium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/hafnium</a>. 
-                    Acesso em: 13 set. 2026.
+                    Britannica. <strong style="color: #ffffff; font-weight: bold;">Terbium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/terbium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/terbium</a>. 
+                    Acesso em: 13 nov. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                    CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Elemento químico háfnio</strong>. 
-                    Disponível em: <a href="https://crqsp.org.br/elemento-quimico-hafnio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/elemento-quimico-hafnio/</a>. 
-                    Acesso em: 13 set. 2026.
+                    Chemicool. <strong style="color: #ffffff; font-weight: bold;">Terbium Element Facts</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/terbium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/terbium.html</a>. 
+                    Acesso em: 13 nov. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                    RSC. <strong style="color: #ffffff; font-weight: bold;">Hafnium</strong>. 
-                    Disponível em: <a href="https://periodic-table.rsc.org/element/72/hafnium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/72/hafnium</a>. 
-                    Acesso em: 13 set. 2026.
+                    CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Térbio</strong>. 
+                    Disponível em: <a href="https://crqsp.org.br/terbio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/terbio/</a>. 
+                    Acesso em: 13 nov. 2026.
                 </li>
                 <li style="margin-bottom: 8px;">
-                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Hafnium Hf</strong>. 
-                    Disponível em: <a href="https://pt.webqc.org/periodictable-Hafnium-Hf.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Hafnium-Hf.html</a>. 
-                    Acesso em: 13 set. 2026.
+                    RSC. <strong style="color: #ffffff; font-weight: bold;">Terbium</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/65/terbium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/65/terbium</a>. 
+                    Acesso em: 13 nov. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Terbium Tb</strong>. 
+                    Disponível em: <a href="https://pt.webqc.org/periodictable-Terbium-Tb.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Terbium-Tb.html</a>. 
+                    Acesso em: 13 nov. 2026.
                 </li>
               </ul>
             </div>
           `,
-        },
-        68: {
-        numero: 68, simbolo: "Er", nome: "Erbio", familia: "lantanideo", familiaNome: "Lantanídeo", 
-        massa: "174,97 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural", bloco: "f", 
-        pontoFusao: "1670 °C", pontoEbulicao: "3675 °C", densidade: "9,84 g/cm³", fase: "Sólido", 
-        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p⁶ 6s² 4f¹⁴ 5d¹ 6p¹", 
-        eletronegatividade: "1,27", raioAtomico: "139 pm", oxidacao: "+3", descoberta: "1907", descobridor: "André-Louis Debierne",
-        etimologia: `
-        <p><span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: ##06b6d4; font-weight: bold;">Lutecium:</strong> O nome deriva de Lutetia, a denominação romana para se referir à cidade de Paris.</span></p>
-        `,
-        contextoDescoberta: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;"> 
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `,
-          caracteristicas: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `,
-          OndeEncontrado: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `,
-          Aplicacoes: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `,  
-          curiosidades: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-                <li style="margin-bottom: 8px;"></li>
-              </ul>
-            </div>
-          `, 
-          Referencias: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">
-                    Britannica. <strong style="color: #ffffff; font-weight: bold;">Hafnium</strong>. 
-                    Disponível em: <a href="https://www.britannica.com/science/hafnium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/hafnium</a>. 
-                    Acesso em: 13 set. 2026.
-                </li>
-                <li style="margin-bottom: 8px;">
-                    CRQ-SP. <strong style="color: #ffffff; font-weight: bold;">Elemento químico háfnio</strong>. 
-                    Disponível em: <a href="https://crqsp.org.br/elemento-quimico-hafnio/" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://crqsp.org.br/elemento-quimico-hafnio/</a>. 
-                    Acesso em: 13 set. 2026.
-                </li>
-                <li style="margin-bottom: 8px;">
-                    RSC. <strong style="color: #ffffff; font-weight: bold;">Hafnium</strong>. 
-                    Disponível em: <a href="https://periodic-table.rsc.org/element/72/hafnium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/72/hafnium</a>. 
-                    Acesso em: 13 set. 2026.
-                </li>
-                <li style="margin-bottom: 8px;">
-                    WEBQC. <strong style="color: #ffffff; font-weight: bold;">Hafnium Hf</strong>. 
-                    Disponível em: <a href="https://pt.webqc.org/periodictable-Hafnium-Hf.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://pt.webqc.org/periodictable-Hafnium-Hf.html</a>. 
-                    Acesso em: 13 set. 2026.
-                </li>
-              </ul>
-            </div>
-          `,
-        },
+      },
       66: {
         numero: 66, simbolo: "Dy", nome: "Disprósio", familia: "lantanideo", familiaNome: "Lantanídeo", 
         massa: "162,50 u", grupo: "3", periodo: "6", estado: "Sólido", origem: "Natural", bloco: "f", 
@@ -7306,7 +7691,7 @@
         pontoFusao: "254 °C", pontoEbulicao: "962 °C", densidade: "9,3 g/cm³", fase: "Sólido (20°C)", bloco:"p",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 4f¹⁴ 5d¹⁰ 6p⁵", eletronegatividade: "2,2", raioAtomico: "135 pm", oxidacao: "-1, +1, +3, +5, +7",
         descoberta: "1940", descobridor: "Dale R. Corson, Kenneth Ross MacKenzie e Emilio Segrè", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Astatine:</strong> O nome deriva da palavra grega "astatos", que significa "instável".</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #a855f7; font-weight: bold;">Astatine:</strong> O nome deriva da palavra grega "astatos", que significa "instável".</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -7396,7 +7781,7 @@
         pontoFusao: "-71 °C", pontoEbulicao: "-61,7 °C", densidade: "9,73 g/L", fase: "Gasoso (20°C)", bloco:"p",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶", eletronegatividade: "2,2", raioAtomico: "120 pm", oxidacao: "0, +2",
         descoberta: "1900", descobridor: "Friedrich Ernst Dorn", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Radon:</strong> derivado do elemento "rádio", que o origina a partir de seu decaimento.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color:#ec4899";>Radon:</strong> derivado do elemento "rádio", que o origina a partir de seu decaimento.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -7475,7 +7860,7 @@
         pontoFusao: "27 °C", pontoEbulicao: "650 °C", densidade: "1,85 g/cm³", fase: "Sólido (20°C)", bloco: "s",
         config: "[Rn] 7s¹", eletronegatividade: "0,7", raioAtomico: "185 pm", oxidacao: "+1",
         descoberta: "1939", descobridor: "Marguerite Perey", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Francium:</strong> vem de “França”, em homenagem ao país de origem da descoberta e terra natal de sua descobridora.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #ef4444; font-weight: bold;">Francium:</strong> vem de “França”, em homenagem ao país de origem da descoberta e terra natal de sua descobridora.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -7557,7 +7942,7 @@
         pontoFusao: "700 °C", pontoEbulicao: "1740 °C", densidade: "5,5 g/cm³", fase: "Sólido (20°C)", bloco: "s",
         config: "[Rn] 7s²", eletronegatividade: "0,9", raioAtomico: "215 pm", oxidacao: "+2",
         descoberta: "1898", descobridor: "Marie e Pierre Curie", 
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Radium:</strong> derivado do latim "radius" (raio), devido à intensa radiação emitida pelo elemento.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #f97316; font-weight: bold;">Radium:</strong> derivado do latim "radius" (raio), devido à intensa radiação emitida pelo elemento.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -7868,6 +8253,264 @@
                 <li style="margin-bottom: 8px;">
                     WIKIPEDIA. <strong style="color: #ffffff; font-weight: bold;">Uranium</strong>. 
                     Disponível em: <a href="https://en.wikipedia.org/wiki/Uranium#Human_exposure" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://en.wikipedia.org/wiki/Uranium#Human_exposure</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+              </ul>
+            </div>
+          `,
+        },
+        93: {
+        numero: 96, simbolo: "Cm", nome: "Cúrio", familia: "actinideo", familiaNome: "Actinídeo",
+        massa: "[247] u", grupo: "3", periodo: "7", estado: "Sólido", origem: "Sintético",
+        pontoFusao: "1340 °C", pontoEbulicao: "3110 °C", densidade: "13,51 g/cm³",
+        fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 5f⁷ 6d¹ 7s²", eletronegatividade: "1,30",
+        raioAtomico: "174 pm", oxidacao: "+3, +4",
+        descoberta: "1944", descobridor: "Glenn T. Seaborg, Ralph A. James e Albert Ghiorso",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Curium:</strong> Homenageia o casal de físicos Pierre e Marie Curie, pioneiros do estudo da radioatividade.</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">O cúrio-242 foi produzido em 1944 ao bombardear plutônio-239 com partículas alfa em um ciclotron de Berkeley, Califórnia, por Glenn Seaborg, Ralph James e Albert Ghiorso.</li>
+                <li style="margin-bottom: 8px;">As amostras do elemento produzido em Berkeley foram enviadas ao Laboratório Metalúrgico de Chicago, onde uma pequena quantidade de certo isótopo foi isolada e identificada como um elemento novo.</li>
+                <li style="margin-bottom: 8px;">Em 1947, o hidróxido de cúrio foi isolado em maior quantidade, por Louis Werner e Isadore Perlman, na Universidade da Califórnia. Produziram o cúrio-242 bombardeando o amerício-241 com nêutrons ao longo de um ano.</li>
+                <li style="margin-bottom: 8px;">Em 1952, o cúrio metálico foi preparado pela primeira vez, por William Crane, James Wallmann e Burris Cunningham, novamente em Berkeley, Califórnia.</li>
+                <li style="margin-bottom: 8px;">A divulgação da descoberta do cúrio só ocorreu após o fim da Segunda Guerra Mundial, em 11 de novembro de 1945, quando Seaborg apareceu como convidado em um programa de rádio infantil. Foi oficialmente anunciado na semana seguinte.</li> 
+              </ul>
+            </div>
+          `,
+          caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">É um metal duro, denso, branco-prateado e altamente radioativo.</li>
+                <li style="margin-bottom: 8px;">Oxida lentamente em ar seco, sob temperatura ambiente.</li>
+                <li style="margin-bottom: 8px;">No escuro, emite um brilho avermelhado.</li> 
+              </ul>
+            </div>
+          `,
+          OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Não ocorre naturalmente, é obtido somente através de reatores nucleares ou aceleradores de partículas. Somente alguns gramas de cúrio são produzidos por ano.</li>
+              </ul>
+            </div>
+          `,
+          Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Sua principal aplicação é em pesquisas científicas.</li>
+                <li style="margin-bottom: 8px;">O isótopo cúrio-244 foi utilizado no Espectrômetro de Raios X de Prótons Alfa (APXS), que mediu a abundância de elementos químicos em rochas e solos em Marte.</li>
+                <li style="margin-bottom: 8px;">Por vezes é usado como fonte de energia para equipamentos elétricos em missões espaciais.</li>
+              </ul>
+            </div>
+          `,  
+          curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">Inicialmente, o cúrio era chamado de "delirium", pela dificuldade em isolá-lo de um outro elemento, o amerício (ou "pandemonium", na época).</li>
+                  <li style="margin-bottom: 8px;">O cúrio é notavelmente prejudicial ao corpo humano, pois o corpo o confunde com o cálcio, assim se acumula nos ossos e destrói a medula, impedindo a formação de glóbulos vermelhos.</li>
+                  <li style="margin-bottom: 8px;">Foi o terceiro elemento transurânico descoberto, e foi o primeiro a homenagear algum cientista (algo que se tornaria tradição futuramente).</li>
+                  <li style="margin-bottom: 8px;">A família Curie, homenageada pelo cúrio, detém o recorde de ser a família com mais prêmios Nobel:</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Marie e Pierre Curie, juntamente com Henri Becquerel, receberam o Nobel de Física em 1903 por suas pesquisas acerca da radioatividade.</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Marie Curie recebeu o Nobel de Química em 1911, quando já era viúva, desta vez pela descoberta de dois elementos, o rádio e o polônio.</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Irène Joliot-Curie (filha do casal) e seu marido Frédéric Joliot-Curie, receberam o Nobel de Química em 1935 por suas pesquisas acerca da radioatividade artificial.</li>
+                  <li style="margin-bottom: 8px;">Marie Curie, também, detém o recorde de ser não somente a primeira mulher a receber o prêmio Nobel como também a única pessoa a receber o prêmio em duas áreas científicas diferentes.</li>
+              </ul>
+            </div>
+          `, 
+          Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Curium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/curium-chemical-element" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/curium-chemical-element</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Curium Element Facts</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/curium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/curium.html</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    ROYAL SOCIETY OF CHEMISTRY. <strong style="color: #ffffff; font-weight: bold;">Curium - Element information, properties and uses</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/96/curium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/96/curium</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    STANFORD ADVANCED MATERIALS. <strong style="color: #ffffff; font-weight: bold;">Curium: Propriedades e usos do elemento</strong>. 
+                    Disponível em: <a href="https://www.samaterials.pt/blog/curium-element-properties-and-uses.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.samaterials.pt/blog/curium-element-properties-and-uses.html</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+              </ul>
+            </div>
+          `,
+        },
+        94: {
+        numero: 94, simbolo: "Pu", nome: "Plutônio", familia: "actinideo", familiaNome: "Actinídeo",
+        massa: "[247] u", grupo: "3", periodo: "7", estado: "Sólido", origem: "Sintético",
+        pontoFusao: "1340 °C", pontoEbulicao: "3110 °C", densidade: "13,51 g/cm³",
+        fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 5f⁷ 6d¹ 7s²", eletronegatividade: "1,30",
+        raioAtomico: "174 pm", oxidacao: "+3, +4",
+        descoberta: "1944", descobridor: "Glenn T. Seaborg, Ralph A. James e Albert Ghiorso",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Curium:</strong> Homenageia o casal de físicos Pierre e Marie Curie, pioneiros do estudo da radioatividade.</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">O cúrio-242 foi produzido em 1944 ao bombardear plutônio-239 com partículas alfa em um ciclotron de Berkeley, Califórnia, por Glenn Seaborg, Ralph James e Albert Ghiorso.</li>
+                <li style="margin-bottom: 8px;">As amostras do elemento produzido em Berkeley foram enviadas ao Laboratório Metalúrgico de Chicago, onde uma pequena quantidade de certo isótopo foi isolada e identificada como um elemento novo.</li>
+                <li style="margin-bottom: 8px;">Em 1947, o hidróxido de cúrio foi isolado em maior quantidade, por Louis Werner e Isadore Perlman, na Universidade da Califórnia. Produziram o cúrio-242 bombardeando o amerício-241 com nêutrons ao longo de um ano.</li>
+                <li style="margin-bottom: 8px;">Em 1952, o cúrio metálico foi preparado pela primeira vez, por William Crane, James Wallmann e Burris Cunningham, novamente em Berkeley, Califórnia.</li>
+                <li style="margin-bottom: 8px;">A divulgação da descoberta do cúrio só ocorreu após o fim da Segunda Guerra Mundial, em 11 de novembro de 1945, quando Seaborg apareceu como convidado em um programa de rádio infantil. Foi oficialmente anunciado na semana seguinte.</li> 
+              </ul>
+            </div>
+          `,
+          caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">É um metal duro, denso, branco-prateado e altamente radioativo.</li>
+                <li style="margin-bottom: 8px;">Oxida lentamente em ar seco, sob temperatura ambiente.</li>
+                <li style="margin-bottom: 8px;">No escuro, emite um brilho avermelhado.</li> 
+              </ul>
+            </div>
+          `,
+          OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Não ocorre naturalmente, é obtido somente através de reatores nucleares ou aceleradores de partículas. Somente alguns gramas de cúrio são produzidos por ano.</li>
+              </ul>
+            </div>
+          `,
+          Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Sua principal aplicação é em pesquisas científicas.</li>
+                <li style="margin-bottom: 8px;">O isótopo cúrio-244 foi utilizado no Espectrômetro de Raios X de Prótons Alfa (APXS), que mediu a abundância de elementos químicos em rochas e solos em Marte.</li>
+                <li style="margin-bottom: 8px;">Por vezes é usado como fonte de energia para equipamentos elétricos em missões espaciais.</li>
+              </ul>
+            </div>
+          `,  
+          curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">Inicialmente, o cúrio era chamado de "delirium", pela dificuldade em isolá-lo de um outro elemento, o amerício (ou "pandemonium", na época).</li>
+                  <li style="margin-bottom: 8px;">O cúrio é notavelmente prejudicial ao corpo humano, pois o corpo o confunde com o cálcio, assim se acumula nos ossos e destrói a medula, impedindo a formação de glóbulos vermelhos.</li>
+                  <li style="margin-bottom: 8px;">Foi o terceiro elemento transurânico descoberto, e foi o primeiro a homenagear algum cientista (algo que se tornaria tradição futuramente).</li>
+                  <li style="margin-bottom: 8px;">A família Curie, homenageada pelo cúrio, detém o recorde de ser a família com mais prêmios Nobel:</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Marie e Pierre Curie, juntamente com Henri Becquerel, receberam o Nobel de Física em 1903 por suas pesquisas acerca da radioatividade.</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Marie Curie recebeu o Nobel de Química em 1911, quando já era viúva, desta vez pela descoberta de dois elementos, o rádio e o polônio.</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Irène Joliot-Curie (filha do casal) e seu marido Frédéric Joliot-Curie, receberam o Nobel de Química em 1935 por suas pesquisas acerca da radioatividade artificial.</li>
+                  <li style="margin-bottom: 8px;">Marie Curie, também, detém o recorde de ser não somente a primeira mulher a receber o prêmio Nobel como também a única pessoa a receber o prêmio em duas áreas científicas diferentes.</li>
+              </ul>
+            </div>
+          `, 
+          Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Curium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/curium-chemical-element" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/curium-chemical-element</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Curium Element Facts</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/curium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/curium.html</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    ROYAL SOCIETY OF CHEMISTRY. <strong style="color: #ffffff; font-weight: bold;">Curium - Element information, properties and uses</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/96/curium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/96/curium</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    STANFORD ADVANCED MATERIALS. <strong style="color: #ffffff; font-weight: bold;">Curium: Propriedades e usos do elemento</strong>. 
+                    Disponível em: <a href="https://www.samaterials.pt/blog/curium-element-properties-and-uses.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.samaterials.pt/blog/curium-element-properties-and-uses.html</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+              </ul>
+            </div>
+          `,
+        },
+        95: {
+        numero: 96, simbolo: "Cm", nome: "Cúrio", familia: "actinideo", familiaNome: "Actinídeo",
+        massa: "[247] u", grupo: "3", periodo: "7", estado: "Sólido", origem: "Sintético",
+        pontoFusao: "1340 °C", pontoEbulicao: "3110 °C", densidade: "13,51 g/cm³",
+        fase: "Sólido (20°C)", bloco: "f",
+        config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 5f⁷ 6d¹ 7s²", eletronegatividade: "1,30",
+        raioAtomico: "174 pm", oxidacao: "+3, +4",
+        descoberta: "1944", descobridor: "Glenn T. Seaborg, Ralph A. James e Albert Ghiorso",
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Curium:</strong> Homenageia o casal de físicos Pierre e Marie Curie, pioneiros do estudo da radioatividade.</span>`,
+        contextoDescoberta: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">O cúrio-242 foi produzido em 1944 ao bombardear plutônio-239 com partículas alfa em um ciclotron de Berkeley, Califórnia, por Glenn Seaborg, Ralph James e Albert Ghiorso.</li>
+                <li style="margin-bottom: 8px;">As amostras do elemento produzido em Berkeley foram enviadas ao Laboratório Metalúrgico de Chicago, onde uma pequena quantidade de certo isótopo foi isolada e identificada como um elemento novo.</li>
+                <li style="margin-bottom: 8px;">Em 1947, o hidróxido de cúrio foi isolado em maior quantidade, por Louis Werner e Isadore Perlman, na Universidade da Califórnia. Produziram o cúrio-242 bombardeando o amerício-241 com nêutrons ao longo de um ano.</li>
+                <li style="margin-bottom: 8px;">Em 1952, o cúrio metálico foi preparado pela primeira vez, por William Crane, James Wallmann e Burris Cunningham, novamente em Berkeley, Califórnia.</li>
+                <li style="margin-bottom: 8px;">A divulgação da descoberta do cúrio só ocorreu após o fim da Segunda Guerra Mundial, em 11 de novembro de 1945, quando Seaborg apareceu como convidado em um programa de rádio infantil. Foi oficialmente anunciado na semana seguinte.</li> 
+              </ul>
+            </div>
+          `,
+          caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;"> 
+                <li style="margin-bottom: 8px;">É um metal duro, denso, branco-prateado e altamente radioativo.</li>
+                <li style="margin-bottom: 8px;">Oxida lentamente em ar seco, sob temperatura ambiente.</li>
+                <li style="margin-bottom: 8px;">No escuro, emite um brilho avermelhado.</li> 
+              </ul>
+            </div>
+          `,
+          OndeEncontrado: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Não ocorre naturalmente, é obtido somente através de reatores nucleares ou aceleradores de partículas. Somente alguns gramas de cúrio são produzidos por ano.</li>
+              </ul>
+            </div>
+          `,
+          Aplicacoes: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Sua principal aplicação é em pesquisas científicas.</li>
+                <li style="margin-bottom: 8px;">O isótopo cúrio-244 foi utilizado no Espectrômetro de Raios X de Prótons Alfa (APXS), que mediu a abundância de elementos químicos em rochas e solos em Marte.</li>
+                <li style="margin-bottom: 8px;">Por vezes é usado como fonte de energia para equipamentos elétricos em missões espaciais.</li>
+              </ul>
+            </div>
+          `,  
+          curiosidades: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 8px;">Inicialmente, o cúrio era chamado de "delirium", pela dificuldade em isolá-lo de um outro elemento, o amerício (ou "pandemonium", na época).</li>
+                  <li style="margin-bottom: 8px;">O cúrio é notavelmente prejudicial ao corpo humano, pois o corpo o confunde com o cálcio, assim se acumula nos ossos e destrói a medula, impedindo a formação de glóbulos vermelhos.</li>
+                  <li style="margin-bottom: 8px;">Foi o terceiro elemento transurânico descoberto, e foi o primeiro a homenagear algum cientista (algo que se tornaria tradição futuramente).</li>
+                  <li style="margin-bottom: 8px;">A família Curie, homenageada pelo cúrio, detém o recorde de ser a família com mais prêmios Nobel:</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Marie e Pierre Curie, juntamente com Henri Becquerel, receberam o Nobel de Física em 1903 por suas pesquisas acerca da radioatividade.</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Marie Curie recebeu o Nobel de Química em 1911, quando já era viúva, desta vez pela descoberta de dois elementos, o rádio e o polônio.</li>
+                  <li style="margin-left: 25px; list-style-type: circle; margin-top: 6px; margin-bottom: 6px;">Irène Joliot-Curie (filha do casal) e seu marido Frédéric Joliot-Curie, receberam o Nobel de Química em 1935 por suas pesquisas acerca da radioatividade artificial.</li>
+                  <li style="margin-bottom: 8px;">Marie Curie, também, detém o recorde de ser não somente a primeira mulher a receber o prêmio Nobel como também a única pessoa a receber o prêmio em duas áreas científicas diferentes.</li>
+              </ul>
+            </div>
+          `, 
+          Referencias: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">
+                    BRITANNICA. <strong style="color: #ffffff; font-weight: bold;">Curium</strong>. 
+                    Disponível em: <a href="https://www.britannica.com/science/curium-chemical-element" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.britannica.com/science/curium-chemical-element</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    CHEMICOOL. <strong style="color: #ffffff; font-weight: bold;">Curium Element Facts</strong>. 
+                    Disponível em: <a href="https://www.chemicool.com/elements/curium.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.chemicool.com/elements/curium.html</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    ROYAL SOCIETY OF CHEMISTRY. <strong style="color: #ffffff; font-weight: bold;">Curium - Element information, properties and uses</strong>. 
+                    Disponível em: <a href="https://periodic-table.rsc.org/element/96/curium" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://periodic-table.rsc.org/element/96/curium</a>. 
+                    Acesso em: 1 set. 2026.
+                </li>
+                <li style="margin-bottom: 8px;">
+                    STANFORD ADVANCED MATERIALS. <strong style="color: #ffffff; font-weight: bold;">Curium: Propriedades e usos do elemento</strong>. 
+                    Disponível em: <a href="https://www.samaterials.pt/blog/curium-element-properties-and-uses.html" target="_blank" style="color: #38bdf8; text-decoration: underline;">https://www.samaterials.pt/blog/curium-element-properties-and-uses.html</a>. 
                     Acesso em: 1 set. 2026.
                 </li>
               </ul>
@@ -9316,44 +9959,44 @@
               </ul>
             </div>
           `,
-          caracteristicas: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">É um elemento químico sintético superpesado classificado como um metal de pós-transição.</li>
-                <li style="margin-bottom: 8px;">Previsões teóricas indicam que o nihônio seja um sólido metálico em temperatura ambiente.</li>
-                <li style="margin-bottom: 8px;">É extremamente radioativo e não possui isótopos estáveis. Seus isótopos conhecidos possuem meias-vidas curtas que variam de alguns milissegundos até cerca de 9,5 a 19,6 segundos no caso do nihônio-286.</li>
+        caracteristicas: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">É um elemento químico sintético superpesado classificado como um metal de pós-transição.</li>
+              <li style="margin-bottom: 8px;">Previsões teóricas indicam que o nihônio seja um sólido metálico em temperatura ambiente.</li>
+              <li style="margin-bottom: 8px;">É extremamente radioativo e não possui isótopos estáveis. Seus isótopos conhecidos possuem meias-vidas curtas que variam de alguns milissegundos até cerca de 9,5 a 19,6 segundos no caso do nihônio-286.</li>
+            </ul>
+          </div>
+        `,
+        OndeEncontrado: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Apresenta abundância natural nula na crosta terrestre e no universo, não existindo de forma livre nem em minérios.</li>
+              <li style="margin-bottom: 8px;">Existe exclusivamente como elemento sintético produzido de forma artificial em aceleradores de partículas em laboratórios como o RIKEN no Japão e o GSI na Alemanha.</li>
+              <li style="margin-bottom: 8px;">É obtido em quantidades atômicas individuais por meio do bombardeamento de alvos de bismuto-209 com íons de zinco-70 ou pelo decaimento do moscóvio.</li>
+            </ul>
+          </div>
+        `,
+        Aplicacoes: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Não possui aplicações comerciais, industriais ou biológicas conhecidas devido à sua altíssima instabilidade nuclear e à produção restrita a poucos átomos.</li>
+              <li style="margin-bottom: 8px;">Sua utilização restringe-se exclusivamente à pesquisa científica fundamental em física e química nuclear, servindo para investigar a estrutura dos elementos transurânicos, testar correções relativísticas e explorar a ilha de estabilidade.</li>
+            </ul>
+          </div>
+        `,  
+        curiosidades: `
+          <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">Foi o primeiro elemento químico da história a ser sintetizado e descoberto no continente asiático.</li>
+              <li style="margin-bottom: 8px;">A equipe japonesa liderada por Kosuke Morita trabalhou por cerca de nove anos entre 2003 e 2012 para conseguir observar apenas três átomos de nihônio-278.</li>
+              <li style="margin-bottom: 8px;">Em 2024, cientistas do centro de pesquisas GSI na Alemanha conseguiram realizar estudos de química em fase gasosa com o nihônio, demonstrando que ele é mais reativo do que o fleróvio.</li>
+              <li style="margin-bottom: 8px;">Antes da nomeação oficial em 2016, o elemento utilizou a denominação provisória ununtério (Uut) e a designação eka-tálio.</li>
+              <li style="margin-bottom: 8px;">O nome nihônio significa "Terra do Sol Nascente" e foi aprovado formalmente pela IUPAC junto com o símbolo Nh em novembro de 2016.</li>
               </ul>
-            </div>
-          `,
-          OndeEncontrado: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">Apresenta abundância natural nula na crosta terrestre e no universo, não existindo de forma livre nem em minérios.</li>
-                <li style="margin-bottom: 8px;">Existe exclusivamente como elemento sintético produzido de forma artificial em aceleradores de partículas em laboratórios como o RIKEN no Japão e o GSI na Alemanha.</li>
-                <li style="margin-bottom: 8px;">É obtido em quantidades atômicas individuais por meio do bombardeamento de alvos de bismuto-209 com íons de zinco-70 ou pelo decaimento do moscóvio.</li>
-              </ul>
-            </div>
-          `,
-          Aplicacoes: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">Não possui aplicações comerciais, industriais ou biológicas conhecidas devido à sua altíssima instabilidade nuclear e à produção restrita a poucos átomos.</li>
-                <li style="margin-bottom: 8px;">Sua utilização restringe-se exclusivamente à pesquisa científica fundamental em física e química nuclear, servindo para investigar a estrutura dos elementos transurânicos, testar correções relativísticas e explorar a ilha de estabilidade.</li>
-              </ul>
-            </div>
-          `,  
-          curiosidades: `
-            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
-              <ul style="padding-left: 20px; margin: 0;">
-                <li style="margin-bottom: 8px;">Foi o primeiro elemento químico da história a ser sintetizado e descoberto no continente asiático.</li>
-                <li style="margin-bottom: 8px;">A equipe japonesa liderada por Kosuke Morita trabalhou por cerca de nove anos entre 2003 e 2012 para conseguir observar apenas três átomos de nihônio-278.</li>
-                <li style="margin-bottom: 8px;">Em 2024, cientistas do centro de pesquisas GSI na Alemanha conseguiram realizar estudos de química em fase gasosa com o nihônio, demonstrando que ele é mais reativo do que o fleróvio.</li>
-                <li style="margin-bottom: 8px;">Antes da nomeação oficial em 2016, o elemento utilizou a denominação provisória ununtério (Uut) e a designação eka-tálio.</li>
-                <li style="margin-bottom: 8px;">O nome nihônio significa "Terra do Sol Nascente" e foi aprovado formalmente pela IUPAC junto com o símbolo Nh em novembro de 2016.</li>
-               </ul>
-            </div>
-          `, 
-          Referencias: `
+          </div>
+        `, 
+        Referencias: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">
@@ -9642,7 +10285,7 @@
         pontoFusao: "350 °C - 550 °C (previsto)", pontoEbulicao: "610 °C (previsto)", densidade: "7,2 g/cm³ (previsto)", fase: "Desconhecida", 
         config: "[Rn] 5f¹⁴ 6d¹⁰ 7s² 7p⁵", eletronegatividade: "—", raioAtomico: "138 pm (previsto)", oxidacao: "-1, +1, +3, +5 (previsto)", 
         descoberta: "2010", descobridor: "JINR (Rússia), LLNL e ORNL (Estados Unidos)",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Tennessine:</strong> O nome homenageia o estado do Tennessee, nos Estados Unidos, reconhecendo as contribuições de instituições locais (como o Oak Ridge National Laboratory) e universidades americanas na pesquisa e síntese de elementos superpesados.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color: #a855f7; font-weight: bold;">Tennessine:</strong> O nome homenageia o estado do Tennessee, nos Estados Unidos, reconhecendo as contribuições de instituições locais (como o Oak Ridge National Laboratory) e universidades americanas na pesquisa e síntese de elementos superpesados.</span>`,
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;"> 
@@ -9725,7 +10368,7 @@
         massa: "(294) u", grupo: "18", periodo: "7", estado: "Sólido (previsto)", origem: "Sintético",
         pontoFusao: "77 °C (previsto)", pontoEbulicao: "80 °C (previsto)", densidade: "13,65 g/cm³ (previsto)", fase: "Sólido (previsto)", bloco:"p",
         config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s² 4p⁶ 4d¹⁰ 4f¹⁴ 5s² 5p⁶ 5d¹⁰ 6s² 6p⁶ 5f¹⁴ 6d¹⁰ 7s² 7p⁶ (previsto)", eletronegatividade: "Não determinada", raioAtomico: "152 pm (previsto)", oxidacao: "0, +2, +4 (previsto)",
-        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong>Oganesson:</strong> Nomeado em homenagem ao físico nuclear russo Yuri Oganessian.</span>`,
+        etimologia: `<span style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;"><strong style="color:#ec4899";>Oganesson:</strong> Nomeado em homenagem ao físico nuclear russo Yuri Oganessian.</span>`,
         descobridor: "Cientistas do Joint Institute for Nuclear Research em Dubna, Rússia, e do Lawrence Livermore National Laboratory na Califórnia, EUA", descoberta: "2002",
         contextoDescoberta: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
@@ -9738,7 +10381,14 @@
               </ul>
             </div>
           `,
-          caracteristicas: `<span style="color: #cbd5e1;">A maior parte de suas propriedades é desconhecida e foram inferidas com base em cálculos teóricos. Diferente dos demais gases nobres é previsto ser altamente reativo, semicondutor e sólido em condições normais de temperatura e pressão.</span>`, 
+          caracteristicas: `<div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+            <ul style="padding-left: 20px; margin: 0;">
+              <li style="margin-bottom: 8px;">A maior parte de suas propriedades são desconhecidas e foram inferidas com base em cálculos teóricos.</li>
+              <li style="margin-bottom: 8px;">É um elemento altamente instável, radioativo e efêmero, onde foram produzidos poucos átomos até hoje.</li>
+              <li style="margin-bottom: 8px;">Diferente dos demais gases nobres é previsto ser altamente reativo, semicondutor e sólido em condições normais de temperatura e pressão.</li>
+            </ul>
+          </div>
+          `, 
           
           OndeEncontrado: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
@@ -9758,7 +10408,7 @@
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
                 <li style="margin-bottom: 8px;">É o elemento mais pesado e de maior número atômico dentre todos os elementos conhecidos.</li>
-                <li style="margin-bottom: 8px;">É o único gás nobre sintético.</li>
+                <li style="margin-bottom: 8px;">É o único gás nobre sintético (apesar das previsões dos cientistas levantarem questionamentos se de fato é um gás nobre).</li>
                 <li style="margin-bottom: 8px;">Seu único isótopo sintetizado até então, o oganessônio-294, é altamente radioativo e tem uma meia-vida de apenas 0,89 milissegundos (isto é, leva 0,89 milisegundos para que metade de uma amostra se degrade).</li>
                 <li style="margin-bottom: 8px;">Em tabelas periódicas mais antigas é chamado de ununoctio (Uuo). Esse era seu nome provisório, até ser oficialmente renomeado em 2016.</li>
                 <li style="margin-bottom: 8px;">É provável que a sintetização do oganessônio em 2002 tenha sido a primeira vez que esse elemento tenha existido no universo.</li>
