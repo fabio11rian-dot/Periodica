@@ -769,33 +769,24 @@
   }
 
   .tabela-tentativas {
-    width: max(60%, 600px);
+    width: max(70%, 600px);
     margin: 0 auto;
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 3px 15px;
   }
 
-  @media (max-width: 650px) {
-  .tentativas-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 8px;
-  }
+  @media (max-width: 300px) {
+    .tabela-tentativas {
+      width: 80%;
+      min-width: 80%;
+    }
 
-    .tabela-tentativas th,
-  .tabela-tentativas td {
-    width: auto !important;
-    white-space: nowrap; /* PROÍBE quebrar palavras no meio */
-    padding: 10px 8px;
-    font-size: 0.72rem;
-    border-radius: 6px;
-  }
-  .tabela-tentativas th {
-    font-size: 0.62rem;
-    padding-bottom: 6px;
-  }
+    .tabela-tentativas td, 
+    .tabela-tentativas th {
+      padding: 8px 4px;
+      font-size: 0.4rem;
+    }
   }
 
   .tabela-tentativas th:nth-child(1),
@@ -828,11 +819,12 @@
   }
 
   .tabela-tentativas th {
-    color: #94a3b8;
-    font-size: 0.70rem;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-  }
+  color: #94a3b8;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
 
   .tabela-tentativas td {
     padding: 13px 8px;
@@ -869,20 +861,15 @@
     100% { opacity: 1; transform: scale(1); }
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 500px) {
   .tentativas-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 8px;
+    overflow-x: visible;
   }
 
   .tabela-tentativas {
-    /* Largura mínima suficiente para nenhuma palavra quebrar errado */
+    display: block;
     width: 100%;
-    min-width: 540px; 
-    table-layout: auto; /* Deixa o navegador ajustar a largura ao tamanho do texto */
-    border-spacing: 4px 8px;
+    border-spacing: 0;
   }
 
   .tabela-tentativas thead {
