@@ -769,7 +769,7 @@
   }
 
   .tabela-tentativas {
-    width: max(70%, 600px);
+    width: max(60%, 600px);
     margin: 0 auto;
     table-layout: fixed;
     border-collapse: separate;
@@ -785,7 +785,7 @@
     .tabela-tentativas td, 
     .tabela-tentativas th {
       padding: 8px 4px;
-      font-size: 0.4rem;
+      font-size: 0.5rem;
     }
   }
 
@@ -819,23 +819,20 @@
   }
 
   .tabela-tentativas th {
-  color: #94a3b8;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding-bottom: 8px;
-}
+    color: #94a3b8;
+    font-size: 0.70rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
 
   .tabela-tentativas td {
-  padding: 13px 6px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 0.82rem;
-  border-radius: 10px;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  transition: all 0.3s ease;
-}
+    padding: 13px 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
 
   .tabela-tentativas tbody tr {
     animation: slideDownFade 0.4s ease-out forwards;
@@ -863,7 +860,7 @@
     100% { opacity: 1; transform: scale(1); }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 500px) {
   .tentativas-wrapper {
     overflow-x: visible;
   }
@@ -871,7 +868,6 @@
   .tabela-tentativas {
     display: block;
     width: 100%;
-    min-width: 0;
     border-spacing: 0;
   }
 
@@ -881,7 +877,7 @@
 
   .tabela-tentativas tbody {
     display: grid;
-    gap: 14px;
+    gap: 16px; /* Aumenta o respiro entre um palpite e outro */
   }
 
   .tabela-tentativas tbody tr {
@@ -889,7 +885,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
     padding: 10px;
-    background-color: rgba(15, 23, 42, 0.75);
+    background-color: rgba(15, 23, 42, 0.65); /* Fundo para agrupar o card */
     border: 1px solid rgba(148, 163, 184, 0.25);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -902,7 +898,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 14px;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     font-weight: 700;
   }
 
@@ -911,11 +907,27 @@
     font-size: 0.7rem;
   }
 
+  .tabela-tentativas td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 0;
+    width: auto;
+    padding: 10px 8px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
   .tabela-tentativas td::before {
     content: attr(data-label);
     margin-bottom: 4px;
     color: rgba(255, 255, 255, 0.75);
-    font-size: 0.62rem;
+    font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
