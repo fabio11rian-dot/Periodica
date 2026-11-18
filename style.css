@@ -760,65 +760,49 @@
   }
 
   .btn-reiniciar:hover { background-color: #059669; }
+.tentativas-wrapper {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
-  .tentativas-wrapper {
-    width: 100%;  
-    min-width: 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;      
-  }
+.tabela-tentativas {
+  width: max(70%, 600px);
+  margin: 0 auto;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 6px 10px;
+}
 
-  .tabela-tentativas {
-    width: max(70%, 600px);
-    margin: 0 auto;
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 3px 15px;
-  }
+/* Largura das colunas no Desktop (soma = 100%) */
+.tabela-tentativas th:nth-child(1),
+.tabela-tentativas td:nth-child(1) {
+  width: 25%;
+}
 
-  @media (max-width: 300px) {
-    .tabela-tentativas {
-      width: 80%;
-      min-width: 80%;
-    }
+.tabela-tentativas th:nth-child(2),
+.tabela-tentativas td:nth-child(2),
+.tabela-tentativas th:nth-child(3),
+.tabela-tentativas td:nth-child(3),
+.tabela-tentativas th:nth-child(4),
+.tabela-tentativas td:nth-child(4),
+.tabela-tentativas th:nth-child(5),
+.tabela-tentativas td:nth-child(5) {
+  width: 10%;
+}
 
-    .tabela-tentativas td, 
-    .tabela-tentativas th {
-      padding: 8px 4px;
-      font-size: 0.4rem;
-    }
-  }
+.tabela-tentativas th:nth-child(6),
+.tabela-tentativas td:nth-child(6) {
+  width: 23%;
+}
 
-  .tabela-tentativas th:nth-child(1),
-  .tabela-tentativas td:nth-child(1) {
-    width: 25%;
-    overflow-wrap: anywhere;
-  }
+.tabela-tentativas th:nth-child(7),
+.tabela-tentativas td:nth-child(7) {
+  width: 12%;
+}
 
-
-  .tabela-tentativas th:nth-child(7),
-  .tabela-tentativas td:nth-child(7) {
-    width: 12%;
-  }
-
-  .tabela-tentativas th:nth-child(2),
-  .tabela-tentativas td:nth-child(2),
-  .tabela-tentativas th:nth-child(3),
-  .tabela-tentativas td:nth-child(3),
-  .tabela-tentativas th:nth-child(4),
-  .tabela-tentativas td:nth-child(4),
-  .tabela-tentativas th:nth-child(5),
-  .tabela-tentativas td:nth-child(5) {
-    width: 10%;
-  }
-
-  .tabela-tentativas th:nth-child(6),
-  .tabela-tentativas td:nth-child(6) {
-    width: 23%;
-    overflow-wrap: anywhere;
-  }
-
-  .tabela-tentativas th {
+.tabela-tentativas th {
   color: #94a3b8;
   font-size: 0.7rem;
   letter-spacing: 0.05em;
@@ -826,49 +810,56 @@
   padding-bottom: 8px;
 }
 
-  .tabela-tentativas td {
-    padding: 13px 8px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 0.75rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-  }
+.tabela-tentativas td {
+  padding: 13px 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.78rem;
+  border-radius: 10px;
+  overflow-wrap: break-word;
+  word-break: normal;
+  transition: all 0.3s ease;
+}
 
-  .tabela-tentativas tbody tr {
-    animation: slideDownFade 0.4s ease-out forwards;
-  }
+.tabela-tentativas tbody tr {
+  animation: slideDownFade 0.4s ease-out forwards;
+}
 
-  .correto {
-    background-color: #166534;
-    color: #4ade80;
-    border: 1px solid #22c55e;
-  }
+.correto {
+  background-color: #166534;
+  color: #4ade80;
+  border: 1px solid #22c55e;
+}
 
-  .incorreto {
-    background-color: #991b1b;
-    color: #fbc1c1;
-    border: 1px solid #ef4444;
-  }
+.incorreto {
+  background-color: #991b1b;
+  color: #fbc1c1;
+  border: 1px solid #ef4444;
+}
 
-  @keyframes slideDownFade {
-    0% { opacity: 0; transform: translateY(-15px) scale(0.96); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
-  }
+@keyframes slideDownFade {
+  0% { opacity: 0; transform: translateY(-15px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
 
-  @keyframes popWin {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
-  }
+@keyframes popWin {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
 
-  @media (max-width: 500px) {
+/* =========================================
+   VISUALIZAÇÃO MOBILE (CARDS SEM QUEBRA)
+   ========================================= */
+@media (max-width: 650px) {
   .tentativas-wrapper {
-    overflow-x: visible;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .tabela-tentativas {
     display: block;
     width: 100%;
+    min-width: 0;
     border-spacing: 0;
   }
 
@@ -878,57 +869,62 @@
 
   .tabela-tentativas tbody {
     display: grid;
-    gap: 16px; /* Aumenta o respiro entre um palpite e outro */
+    gap: 16px;
+    width: 100%;
   }
 
   .tabela-tentativas tbody tr {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
+    width: 100%;
     padding: 10px;
-    background-color: rgba(15, 23, 42, 0.65); /* Fundo para agrupar o card */
+    background-color: rgba(15, 23, 42, 0.75);
     border: 1px solid rgba(148, 163, 184, 0.25);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
   }
 
-  /* Faz o primeiro item (Elemento/Símbolo) virar o título do card */
-  .tabela-tentativas tbody tr td:first-child {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 14px;
-    font-size: 0.8rem;
-    font-weight: 700;
-  }
-
-  .tabela-tentativas tbody tr td:first-child::before {
-    margin-bottom: 0;
-    font-size: 0.7rem;
-  }
-
-  .tabela-tentativas td {
+  /* Todas as células ocupam 100% da sua coluna no grid */
+  .tabela-tentativas tbody tr td {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     min-width: 0;
-    width: auto;
-    padding: 10px 8px;
+    width: 100% !important;
+    padding: 10px 6px;
     border-radius: 8px;
-    overflow-wrap: anywhere;
-    font-size: 0.85rem;
+    overflow-wrap: break-word;
+    word-break: normal;
+    font-size: 0.82rem;
     font-weight: 600;
     line-height: 1.25;
+  }
+
+  /* Título do card (1ª coluna - Elemento) ocupando a largura total no topo */
+  .tabela-tentativas tbody tr td:first-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .tabela-tentativas tbody tr td:first-child::before {
+    display: none;
   }
 
   .tabela-tentativas td::before {
     content: attr(data-label);
     margin-bottom: 4px;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.62rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
