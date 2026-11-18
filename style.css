@@ -861,62 +861,76 @@
     100% { opacity: 1; transform: scale(1); }
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 500px) {
   .tentativas-wrapper {
-    width: 100%;
-    overflow-x: hidden; /* Remove o corte lateral */
+    overflow-x: visible;
   }
 
-  .tabela-tentativas,
-  .tabela-tentativas tbody {
+  .tabela-tentativas {
     display: block;
     width: 100%;
-    min-width: 0;
+    border-spacing: 0;
   }
 
   .tabela-tentativas thead {
     display: none;
   }
 
-  .tabela-tentativas tbody tr {
+  .tabela-tentativas tbody {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas exatas dentro da tela */
-    gap: 8px;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    background-color: rgba(15, 23, 42, 0.85);
-    border: 1px solid rgba(148, 163, 184, 0.25);
-    border-radius: 12px;
-    box-sizing: border-box;
+    gap: 16px; /* Aumenta o respiro entre um palpite e outro */
   }
 
-  .tabela-tentativas tbody tr td {
+  .tabela-tentativas tbody tr {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+    background-color: rgba(15, 23, 42, 0.65); /* Fundo para agrupar o card */
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Faz o primeiro item (Elemento/Símbolo) virar o título do card */
+  .tabela-tentativas tbody tr td:first-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .tabela-tentativas tbody tr td:first-child::before {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+
+  .tabela-tentativas td {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100% !important;
-    min-width: 0;
-    padding: 10px 6px;
-    font-size: 0.82rem;
     text-align: center;
-    overflow-wrap: break-word;
+    min-width: 0;
+    width: auto;
+    padding: 10px 8px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.25;
   }
 
-  /* Faz o nome do elemento aparecer centralizado no topo */
-  .tabela-tentativas tbody tr td:first-child {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #ffffff;
-    padding: 10px;
-  }
-
-  .tabela-tentativas tbody tr td:first-child::before {
-    display: none;
+  .tabela-tentativas td::before {
+    content: attr(data-label);
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 }
