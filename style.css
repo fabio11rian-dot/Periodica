@@ -765,12 +765,12 @@
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .tabela-tentativas {
   width: 100%;
-  min-width: 680px; /* Garante a proporção idêntica ao segundo anexo sem esmagar textos */
+  min-width: 680px; /* Impede de ficar compacto demais no modo retrato */
   max-width: 920px;
   margin: 0 auto;
   table-layout: fixed;
@@ -778,7 +778,7 @@
   border-spacing: 6px 12px;
 }
 
-/* Proporção exata das colunas igual à imagem de referência */
+/* Proporções das 7 colunas (soma = 100%) */
 .tabela-tentativas th:nth-child(1),
 .tabela-tentativas td:nth-child(1) { width: 22%; } /* ELEMENTO */
 
@@ -798,6 +798,7 @@
 .tabela-tentativas th:nth-child(7),
 .tabela-tentativas td:nth-child(7) { width: 16%; } /* ESTADO */
 
+/* Cabeçalho sempre visível (tanto em retrato quanto em paisagem) */
 .tabela-tentativas th {
   color: #cbd5e1;
   font-size: 0.72rem;
@@ -809,6 +810,7 @@
   line-height: 1.25;
 }
 
+/* Células com tamanho confortável e sem quebra de palavras */
 .tabela-tentativas td {
   padding: 15px 6px;
   text-align: center;
