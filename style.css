@@ -775,11 +775,8 @@
   border-spacing: 6px 10px;
 }
 
-/* Largura das colunas no Desktop (soma = 100%) */
 .tabela-tentativas th:nth-child(1),
-.tabela-tentativas td:nth-child(1) {
-  width: 25%;
-}
+.tabela-tentativas td:nth-child(1) { width: 25%; }
 
 .tabela-tentativas th:nth-child(2),
 .tabela-tentativas td:nth-child(2),
@@ -788,19 +785,13 @@
 .tabela-tentativas th:nth-child(4),
 .tabela-tentativas td:nth-child(4),
 .tabela-tentativas th:nth-child(5),
-.tabela-tentativas td:nth-child(5) {
-  width: 10%;
-}
+.tabela-tentativas td:nth-child(5) { width: 10%; }
 
 .tabela-tentativas th:nth-child(6),
-.tabela-tentativas td:nth-child(6) {
-  width: 23%;
-}
+.tabela-tentativas td:nth-child(6) { width: 23%; }
 
 .tabela-tentativas th:nth-child(7),
-.tabela-tentativas td:nth-child(7) {
-  width: 12%;
-}
+.tabela-tentativas td:nth-child(7) { width: 12%; }
 
 .tabela-tentativas th {
   color: #94a3b8;
@@ -848,7 +839,7 @@
 }
 
 /* =========================================
-   VISUALIZAÇÃO MOBILE (CARDS SEM QUEBRA)
+   CORREÇÃO DEFINITIVA PARA CELULAR
    ========================================= */
 @media (max-width: 650px) {
   .tentativas-wrapper {
@@ -886,7 +877,6 @@
     box-sizing: border-box;
   }
 
-  /* Todas as células ocupam 100% da sua coluna no grid */
   .tabela-tentativas tbody tr td {
     display: flex;
     flex-direction: column;
@@ -904,7 +894,6 @@
     line-height: 1.25;
   }
 
-  /* Título do card (1ª coluna - Elemento) ocupando a largura total no topo */
   .tabela-tentativas tbody tr td:first-child {
     grid-column: 1 / -1;
     flex-direction: row;
