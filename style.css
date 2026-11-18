@@ -763,14 +763,11 @@
 .tentativas-wrapper {
   width: 100%;
   max-width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 12px;
+  overflow-x: hidden; /* Elimina a barra de rolagem horizontal */
 }
 
 .tabela-tentativas {
   width: 100%;
-  min-width: 680px; /* Impede de ficar compacto demais no modo retrato */
   max-width: 920px;
   margin: 0 auto;
   table-layout: fixed;
@@ -790,15 +787,14 @@
 .tabela-tentativas th:nth-child(4),
 .tabela-tentativas td:nth-child(4),
 .tabela-tentativas th:nth-child(5),
-.tabela-tentativas td:nth-child(5) { width: 9.5%; } /* BLOCO, GRUPO, PERÍODO */
+.tabela-tentativas td:nth-child(5) { width: 9%; } /* BLOCO, GRUPO, PERÍODO */
 
 .tabela-tentativas th:nth-child(6),
-.tabela-tentativas td:nth-child(6) { width: 22.5%; } /* FAMÍLIA */
+.tabela-tentativas td:nth-child(6) { width: 24%; } /* FAMÍLIA */
 
 .tabela-tentativas th:nth-child(7),
 .tabela-tentativas td:nth-child(7) { width: 16%; } /* ESTADO */
 
-/* Cabeçalho sempre visível (tanto em retrato quanto em paisagem) */
 .tabela-tentativas th {
   color: #cbd5e1;
   font-size: 0.72rem;
@@ -807,10 +803,9 @@
   text-transform: uppercase;
   padding-bottom: 6px;
   vertical-align: middle;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
-/* Células com tamanho confortável e sem quebra de palavras */
 .tabela-tentativas td {
   padding: 15px 6px;
   text-align: center;
@@ -818,7 +813,6 @@
   font-weight: 700;
   font-size: 0.82rem;
   border-radius: 12px;
-  white-space: nowrap;
   transition: all 0.3s ease;
 }
 
@@ -846,4 +840,52 @@
 @keyframes popWin {
   0% { opacity: 0; transform: scale(0.8); }
   100% { opacity: 1; transform: scale(1); }
+}
+
+/* =========================================================
+   MODO RETRATO: ENCAIXA AS 7 COLUNAS NA TELA SEM SCROLL
+   ========================================================= */
+@media (max-width: 680px) {
+  .tabela-tentativas {
+    width: 100%;
+    min-width: 0;
+    border-spacing: 2.5px 6px; /* Espaçamento compacto entre os blocos */
+  }
+
+  /* Redistribui as larguras para dar mais espaço às palavras longas no mobile */
+  .tabela-tentativas th:nth-child(1),
+  .tabela-tentativas td:nth-child(1) { width: 23%; } /* ELEMENTO */
+
+  .tabela-tentativas th:nth-child(2),
+  .tabela-tentativas td:nth-child(2) { width: 10.5%; } /* Nº ATÔMICO */
+
+  .tabela-tentativas th:nth-child(3),
+  .tabela-tentativas td:nth-child(3),
+  .tabela-tentativas th:nth-child(4),
+  .tabela-tentativas td:nth-child(4),
+  .tabela-tentativas th:nth-child(5),
+  .tabela-tentativas td:nth-child(5) { width: 8.5%; } /* BLOCO, GRUPO, PERÍODO */
+
+  .tabela-tentativas th:nth-child(6),
+  .tabela-tentativas td:nth-child(6) { width: 25.5%; } /* FAMÍLIA (ex: Metal de Transição) */
+
+  .tabela-tentativas th:nth-child(7),
+  .tabela-tentativas td:nth-child(7) { width: 15.5%; } /* ESTADO */
+
+  .tabela-tentativas th {
+    font-size: clamp(0.42rem, 1.8vw, 0.65rem);
+    letter-spacing: 0;
+    padding-bottom: 4px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .tabela-tentativas td {
+    padding: 9px 2px;
+    font-size: clamp(0.54rem, 2.3vw, 0.78rem);
+    border-radius: 6px;
+    line-height: 1.15;
+    overflow-wrap: break-word; /* Quebra apenas entre palavras (ex: "Metal de / Transição"), nunca no meio da letra */
+    word-break: normal;
+  }
 }
