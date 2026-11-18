@@ -791,7 +791,7 @@
 
   .tabela-tentativas th:nth-child(1),
   .tabela-tentativas td:nth-child(1) {
-    width: 25%;
+    width: 22%;
     overflow-wrap: anywhere;
   }
 
@@ -809,12 +809,12 @@
   .tabela-tentativas td:nth-child(4),
   .tabela-tentativas th:nth-child(5),
   .tabela-tentativas td:nth-child(5) {
-    width: 12,5%;
+    width: 11.5%;
   }
 
   .tabela-tentativas th:nth-child(6),
   .tabela-tentativas td:nth-child(6) {
-    width: 23%;
+    width: 20%;
     overflow-wrap: anywhere;
   }
 
@@ -860,7 +860,7 @@
     100% { opacity: 1; transform: scale(1); }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
   .tentativas-wrapper {
     overflow-x: visible;
   }
@@ -873,6 +873,7 @@
 
   .tabela-tentativas thead {
     display: none;
+    gap: 14px;
   }
 
   .tabela-tentativas tbody {
@@ -885,7 +886,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
     padding: 10px;
-    background-color: rgba(15, 23, 42, 0.65); /* Fundo para agrupar o card */
+    background-color: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(148, 163, 184, 0.25);
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
