@@ -334,6 +334,16 @@
     transition: transform 0.2s ease;
   }
 
+  .tab-content,
+  .tab-content ul,
+  .tab-content li,
+  .tab-content a {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
   .modal-overlay.ativo .modal-container-detalhes {
     transform: translateY(0);
   }
@@ -797,7 +807,7 @@
 
 .tabela-tentativas th {
   color: #cbd5e1;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
