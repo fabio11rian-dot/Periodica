@@ -868,17 +868,17 @@
   .tabela-tentativas {
     display: block;
     width: 100%;
+    min-width: 0; /* Impede de herdar os 600px do desktop */
     border-spacing: 0;
   }
 
   .tabela-tentativas thead {
     display: none;
-    gap: 14px;
   }
 
   .tabela-tentativas tbody {
     display: grid;
-    gap: 16px; /* Aumenta o respiro entre um palpite e outro */
+    gap: 16px;
   }
 
   .tabela-tentativas tbody tr {
