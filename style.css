@@ -776,17 +776,26 @@
     border-spacing: 3px 15px;
   }
 
-  @media (max-width: 500px) {
-    .tabela-tentativas {
-      width: 100% !important;
-      min-width: 80%;
-    }
+  @media (max-width: 650px) {
+  .tentativas-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
 
-    .tabela-tentativas td, 
-    .tabela-tentativas th {
-      padding: 8px 4px;
-      font-size: 0.5rem;
-    }
+    .tabela-tentativas th,
+  .tabela-tentativas td {
+    width: auto !important;
+    white-space: nowrap; /* PROÍBE quebrar palavras no meio */
+    padding: 10px 8px;
+    font-size: 0.72rem;
+    border-radius: 6px;
+  }
+  .tabela-tentativas th {
+    font-size: 0.62rem;
+    padding-bottom: 6px;
+  }
   }
 
   .tabela-tentativas th:nth-child(1),
@@ -860,15 +869,20 @@
     100% { opacity: 1; transform: scale(1); }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
   .tentativas-wrapper {
-    overflow-x: visible;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
   }
 
   .tabela-tentativas {
-    display: block;
+    /* Largura mínima suficiente para nenhuma palavra quebrar errado */
     width: 100%;
-    border-spacing: 0;
+    min-width: 540px; 
+    table-layout: auto; /* Deixa o navegador ajustar a largura ao tamanho do texto */
+    border-spacing: 4px 8px;
   }
 
   .tabela-tentativas thead {
