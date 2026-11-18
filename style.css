@@ -861,76 +861,62 @@
     100% { opacity: 1; transform: scale(1); }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 650px) {
   .tentativas-wrapper {
-    overflow-x: visible;
+    width: 100%;
+    overflow-x: hidden; /* Remove o corte lateral */
   }
 
-  .tabela-tentativas {
+  .tabela-tentativas,
+  .tabela-tentativas tbody {
     display: block;
     width: 100%;
-    border-spacing: 0;
+    min-width: 0;
   }
 
   .tabela-tentativas thead {
     display: none;
   }
 
-  .tabela-tentativas tbody {
-    display: grid;
-    gap: 16px; /* Aumenta o respiro entre um palpite e outro */
-  }
-
   .tabela-tentativas tbody tr {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas exatas dentro da tela */
     gap: 8px;
+    width: 100%;
     padding: 10px;
-    background-color: rgba(15, 23, 42, 0.65); /* Fundo para agrupar o card */
+    margin-bottom: 16px;
+    background-color: rgba(15, 23, 42, 0.85);
     border: 1px solid rgba(148, 163, 184, 0.25);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
   }
 
-  /* Faz o primeiro item (Elemento/Símbolo) virar o título do card */
-  .tabela-tentativas tbody tr td:first-child {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 14px;
-    font-size: 0.8rem;
-    font-weight: 700;
-  }
-
-  .tabela-tentativas tbody tr td:first-child::before {
-    margin-bottom: 0;
-    font-size: 0.7rem;
-  }
-
-  .tabela-tentativas td {
+  .tabela-tentativas tbody tr td {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    width: 100% !important;
     min-width: 0;
-    width: auto;
-    padding: 10px 8px;
-    border-radius: 8px;
-    overflow-wrap: anywhere;
-    font-size: 0.85rem;
-    font-weight: 600;
-    line-height: 1.25;
+    padding: 10px 6px;
+    font-size: 0.82rem;
+    text-align: center;
+    overflow-wrap: break-word;
   }
 
-  .tabela-tentativas td::before {
-    content: attr(data-label);
-    margin-bottom: 4px;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+  /* Faz o nome do elemento aparecer centralizado no topo */
+  .tabela-tentativas tbody tr td:first-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 10px;
+  }
+
+  .tabela-tentativas tbody tr td:first-child::before {
+    display: none;
   }
 }
