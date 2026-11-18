@@ -210,6 +210,27 @@
   .lantanideo { background-color: #06b6d4; }
   .actinideo { background-color: #3c78d8; }
 
+  .btn-guia {
+    background-color: rgba(17, 238, 187, 0.1);
+    color: #11eebb;
+    border: 1px solid #11eebb;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .btn-guia:hover {
+    background-color: #11eebb;
+    color: #0f172a;
+  }
+
   .tabela-wrapper {
     width: 100%;
       overflow-x: auto;
