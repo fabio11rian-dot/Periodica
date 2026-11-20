@@ -273,7 +273,7 @@
     status.style.display = 'none';
     
     // 2. Envio em segundo plano via API
-    fetch('https://formsubmit.co/ajax/84383dc639df7daac18ce1ce564388e1', {
+    fetch('https://formsubmit.co/ajax/periodium15@gmail.com', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
@@ -446,7 +446,16 @@
               </ul>
             </div>
           `,
-          caracteristicas: "Em situações normais é um gás incolor, inodoro, insípido e altamente inflamável, sendo também o gás mais leve. É o elemento químico mais abundante do universo, representando cerca de 75% da matéria visível.", 
+          caracteristicas: `
+            <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
+              <ul style="padding-left: 20px; margin: 0;">
+                <li style="margin-bottom: 8px;">Em situações normais é um gás incolor, inodoro, insípido e altamente inflamável, sendo também o gás mais leve.</li>
+                <li style="margin-bottom: 8px;">É o elemento químico mais abundante do universo, representando cerca de 75% da matéria visível.</li>
+                <li style="margin-bottom: 8px;">Em sua forma mais comum, é encontrado com somente um próton e um elétron, sendo o único elemento que pode existir sem nêutrons.</li>
+                <li style="margin-bottom: 8px;">Forma ligações muito fortes com elementos altamente eletronegativos, como nitrogênio, oxigênio e flúor.</li>
+              </ul>
+            </div>
+          `,
           OndeEncontrado: `
             <div style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.6;">
               <ul style="padding-left: 20px; margin: 0;">
@@ -476,6 +485,7 @@
             <ul style="padding-left: 20px; margin: 0;">
               <li style="margin-bottom: 8px;">Apesar de comumente ser considerado um não-metal (até nesta tabela), o hidrogênio tecnicamente é considerado um elemento sem família. Alguns até o classificam como membro da "Família do Hidrogênio", que contém somente ele, por ter características únicas.</li>
               <li style="margin-bottom: 8px;">Apesar de ser organizado como um elemento da família 1 da tabela periódica, o hidrogênio não tem quaisquer propriedades em comum com os metais alcalinos, só ficando nessa posição na tabela por causa de sua distribuição eletrônica.</li>
+               <li style="margin-bottom: 8px;">É o único elemento que pode existir sem nêutrons.</li>
               <li style="margin-bottom: 8px;">É o elemento mais abundante do universo (cerca de 90% dos átomos do universo são de hidrogênio, e compõe mais de 75% da massa total do universo).</li>
               <li style="margin-bottom: 8px;">Embora seja o mais abundante do universo, o hidrogênio gasoso puro é raríssimo na atmosfera terrestre. Como ele é o elemento mais leve de todos, a gravidade da Terra não consegue segurá-lo e ele escapa para o espaço sideral.</li>
               <li style="margin-bottom: 8px;">A água só é líquida na Terra graças a um comportamento do hidrogênio, que forma ligações fracas entre as moléculas (ligações de hidrogênio). Se essas interações não existissem, o ponto de ebulição da água seria abaixo de -70 °C, o que significa que não haveria água líquida no planeta e a vida como conhecemos seria impossível.</li>
@@ -4130,7 +4140,7 @@
             </div>
           `,
         },
-        40: {
+      40: {
         numero: 40, simbolo: "Zr", nome: "Zircônio", familia: "metais-de-transicao", familiaNome: "Metais de Transição",
         massa: "91,22 u", grupo: "4", periodo: "5", estado: "Sólido", origem: "Natural",
         pontoFusao: "1855 °C", pontoEbulicao: "4373 °C", densidade: "6,52 g/cm³", fase: "Sólido (20°C)",
